@@ -1,0 +1,230 @@
+{
+    "header": {
+        "nav": [
+            {
+                "title": "About",
+                "link": "http://localhost:8080/index.html"
+            },
+            {
+                "title": "Products",
+                "link": "http://localhost:8080/catalog.html"
+            },
+            {
+                "title": "Creators",
+                "link": "/"
+            },
+            {
+                "title": "Blog",
+                "link": "/"
+            },
+            {
+                "title": "Contact",
+                "link": "/"
+            }
+        ]
+    },
+    "catalogbanner": {
+        "title1": "Explore Top",
+        "highlight": "UI Kits",
+        "title2": "Design Assets"
+    },
+    "catalog": {
+        "slidertitle": "Price",
+        "buttonreset": "Clear all filters",
+        "buttonsubmit": "Save",
+        "buttonload": "Load more",
+        "selectors": [
+            {
+                "name": "Best Seller",
+                "value": "bestseller"
+            }
+        ],
+        "text": "Showing 12 out of 120 results.",
+        "viewOptions": {
+            "defaultView": "gallery",
+            "options": [
+                {
+                    "id": "gallery",
+                    "value": "gallery",
+                    "icon": "icon-gallery.svg"
+                },
+                {
+                    "id": "tape",
+                    "value": "tape",
+                    "icon": "icon-tape.svg"
+                }
+            ]
+        },
+        "tags": [
+            "UI Kit",
+            "UI Kit"
+        ],
+        "products": [
+            {
+                "link": "/",
+                "image1": "/",
+                "image2": "/",
+                "title": "Lens Chronicles",
+                "subtitle1": "Photography",
+                "subtitle2": "Creative",
+                "price": "00.00",
+                "status": "soldout"
+            },
+            {
+                "link": "/",
+                "image1": "/",
+                "image2": "/",
+                "title": "Career Success",
+                "subtitle1": "Guidance",
+                "subtitle2": "Jobs",
+                "price": "20.99",
+                "status": "new"
+            },
+            {
+                "link": "/",
+                "image1": "/",
+                "image2": "/",
+                "title": "Travel Hero",
+                "subtitle1": "Real Estate",
+                "subtitle2": "Modern",
+                "price": "45.99",
+                "status": "popular"
+            },
+            {
+                "link": "/",
+                "image1": "/",
+                "image2": "/",
+                "title": "Foodish Catering",
+                "subtitle1": "Food",
+                "subtitle2": "Events",
+                "price": "15.99",
+                "status": "popular"
+            },
+            {
+                "link": "/",
+                "image1": "/",
+                "image2": "/",
+                "title": "Caring Hearts",
+                "subtitle1": "Healthcare",
+                "subtitle2": "Support",
+                "price": "19.99",
+                "status": "new"
+            },
+            {
+                "link": "/",
+                "image1": "/",
+                "image2": "/",
+                "title": "Gaming Rise",
+                "subtitle1": "eSports",
+                "subtitle2": "Trends",
+                "price": "00.00",
+                "status": "soldout"
+            },
+            {
+                "link": "/",
+                "image1": "/",
+                "image2": "/",
+                "title": "Edit Pro",
+                "subtitle1": "Design",
+                "subtitle2": "Tools",
+                "price": "00.00",
+                "status": "soldout"
+            },
+            {
+                "link": "/",
+                "image1": "/",
+                "image2": "/",
+                "title": "Banking Redefined",
+                "subtitle1": "Finance",
+                "subtitle2": "Secure",
+                "price": "25.99",
+                "status": "new"
+            },
+            {
+                "link": "/",
+                "image1": "/",
+                "image2": "/",
+                "title": "Exploring Fun",
+                "subtitle1": "Travel",
+                "subtitle2": "Adventure",
+                "price": "41.99",
+                "status": "popular"
+            },
+            {
+                "link": "/",
+                "image1": "/",
+                "image2": "/",
+                "title": "Admin Dashboard",
+                "subtitle1": "Data",
+                "subtitle2": "Tools",
+                "price": "15.99",
+                "status": "popular"
+            },
+            {
+                "link": "/",
+                "image1": "/",
+                "image2": "/",
+                "title": "Analytical Dashboard",
+                "subtitle1": "Data",
+                "subtitle2": "Tools",
+                "price": "10.99",
+                "status": "new"
+            },
+            {
+                "link": "/",
+                "image1": "/",
+                "image2": "/",
+                "title": "Kindergarten",
+                "subtitle1": "Education",
+                "subtitle2": "Kids",
+                "price": "00.00",
+                "status": "soldout"
+            }
+        ],
+        "filters": [
+            {
+                "title": "Categories",
+                "name": "categories",
+                "type": "checkbox",
+                "default": "All Categories",
+                "options": [
+                    "All Categories",
+                    "Technology",
+                    "Travel & Tourism",
+                    "Health & Fitness",
+                    "E-Commerce",
+                    "Education",
+                    "Entertainment",
+                    "Others",
+                    "Others"
+                ]
+            },
+            {
+                "title": "Format Type",
+                "name": "format",
+                "type": "radio",
+                "default": "Figma",
+                "options": [
+                    "Figma",
+                    "Sketch",
+                    "Adobe XD",
+                    "Adobe Photoshop",
+                    "Adobe Illustration"
+                ]
+            },
+            {
+                "title": "Style",
+                "name": "style",
+                "type": "checkbox",
+                "defaultAll": true,
+                "options": [
+                    "Minimalist",
+                    "Modern",
+                    "Playful",
+                    "Dark Mode",
+                    "Photocentric"
+                ]
+            }
+        ]
+    }
+}

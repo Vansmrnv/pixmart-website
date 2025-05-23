@@ -1,0 +1,11 @@
+{% extends "layouts/base.njk" %}
+
+{% set title = "PixMart Catalog" %}
+{{ title }}
+{% set url = "http://localhost:8080/catalog.html"%}
+
+{% block content %}
+    {% include 'partials/catalog-banner.njk' %}
+
+    {% include 'partials/catalog.njk' %}
+{% endblock %}

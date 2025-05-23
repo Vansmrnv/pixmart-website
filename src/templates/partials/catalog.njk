@@ -1,0 +1,59 @@
+<section class="catalog">
+    <aside class="catalog__sidebar">
+        <form class="catalog__form" action="url" method="post">
+            {% for item in catalog.filters %}
+                <article class="catalog__filter">
+                    <h4 class="catalog__filter-title">{{ item.title }}</h4>
+                    {% if item.type == "checkbox" or item.type == "radio" %}
+                        <div class="catalog__filters">
+                            {% for option in item.options %}
+                                {% set optionId = "input_" + item.name + "_" + loop.index %}
+
+                                <input class="catalog__form-input" id="{{ optionId }}" type="{{ item.type }}" name="{{ item.name }}" {% if item.defaultAll or (item.default == option) %}checked{% endif %}>
+                                <label class="catalog__form-label" for="{{ optionId }}">{{ option }}</label>
+
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </article>
+            {% endfor %}
+            <div class="catalog__slide-box">
+                <h4 class="catalog__slider-title">{{ catalog.slidertitle }}</h4>
+                <input type="range" min="5" max="50" value="25" class="catalog__slider" id="range">
+            </div>
+            <button type="reset" class="tertiary-button">{{ catalog.buttonreset }}</button>
+            <button type="submit" class="primary-button">{{ catalog.buttonsubmit }}</button>
+        </form>
+    </aside>
+    <div class="catalog__box">
+        <div class="catalog__settings">
+            <form action="url" method="post" class="catalog__select-box">
+                <label for="type" hidden></label>
+                <select name="type" id="type" class="catalog__select">
+                    {% for item in catalog.selectors %}
+                        <option value="{{ item.value }}" class="catalog__select-option">{{ item.name }}</option>
+                    {% endfor %}
+                </select>
+            </form>
+            <p class="catalog__settings-text">{{ catalog.text }}</p>
+            <form action="/switch-view" method="post" class="catalog__view">
+                {% for option in catalog.viewOptions.options %}
+                    {% set isChecked = viewOptions.defualtView == option.value %}
+                    <input type="radio" id="{{ option.id }}" name="view" value="{{ option.value }}" class="catalog__view-input" {% if isChecked %}checked{% endif %}>
+                    <label for="{{ option.id }}" class="catalog__view-label {% if isChecked %}primary-button{% else %}tertiary-button{% endif %}"><img src="icon.svg" alt=""></label>
+                {% endfor %}
+            </form>
+            <ul class="catalog__tags">
+                {% for item in catalog.tags %}
+                    <li class="catalog__tag">{{ item }} <img class="catalog__tag-icon" src="icon.svg" alt=""></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <ul class="catalog__products">
+            {% for item in catalog.products %}
+            <li class="catalog__product"><a href="{{ item.link }}">{% include 'partials/product-card.njk'%}</a></li>
+            {% endfor %}
+        </ul>
+        <button type="button" class="tertiary-button">{{catalog.buttonload }}</button>
+    </div>
+</section>

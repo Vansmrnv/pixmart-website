@@ -7,7 +7,7 @@
       },
       {
         "title": "Products",
-        "link": "/"
+        "link": "http://localhost:8080/catalog.html"
       },
       {
         "title": "Creators",
@@ -95,7 +95,8 @@
         "title": "Travel Hero",
         "subtitle1": "Adventure",
         "subtitle2": "Journey",
-        "price": "29.99"
+        "price": "29.99",
+        "status": "popular"
       },
       {
         "link": "/",
@@ -104,7 +105,8 @@
         "title": "Healthcare Pro",
         "subtitle1": "Medical",
         "subtitle2": "Wellness",
-        "price": "15.99"
+        "price": "15.99",
+        "status": "popular"
       },
       {
         "link": "/",
@@ -113,7 +115,8 @@
         "title": "Foodish Delight",
         "subtitle1": "Catering",
         "subtitle2": "Food",
-        "price": "31.99"
+        "price": "31.99",
+        "status": "default"
       },
       {
         "link": "/",
@@ -122,7 +125,8 @@
         "title": "Real Estate",
         "subtitle1": "Modern",
         "subtitle2": "Homes",
-        "price": "40.99"
+        "price": "40.99",
+        "status": "default"
       }
     ]
   },
