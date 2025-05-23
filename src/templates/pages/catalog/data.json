@@ -19,7 +19,7 @@
             },
             {
                 "title": "Contact",
-                "link": "/"
+                "link": "http://localhost:8080/contacts.html"
             }
         ]
     },

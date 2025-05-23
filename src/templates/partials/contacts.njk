@@ -1,0 +1,53 @@
+<section class="contacts">
+    <article class="contacts__info">
+        <span class="contacts__id">{{ contacts.id }}</span>
+        <h1 class="contacts__title">{{ contacts.title }}</h1>
+        <p class="contacts__text">{{ contacts.text }}</p>
+        <a href="{{ contacts.link }}" class="primary-button">{{ contacts.button }}</a>
+        <ul class="contacts__details">
+            {% for item in contacts.details %}
+                <li class="contacts__detail">
+                    <img src="icon.svg" alt="" class="contacts__icon">
+                    <a href="{{ item.link }}">{{ item.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <img src="map.webp" alt="" class="contacts__map">
+        <div class="contacts__tag">
+            <img src="icon.svg" alt="" class="contacts__icon">
+            <span class="contacts__tag-title">{{ contacts.tag.title }}</span>
+            <p class="contacts__tag-text">{{ contacts.tag.text }}</p>
+        </div>
+    </article>
+    <form action="url" method="post" class="contacts__form">
+        <div class="contacts-form__item">
+            <label class="contacts-form__label" for="name">{{ contacts.name }}</label><input class="contacts-form__input" id="name" type="text" placeholder="{{ contacts.exmaple.name }}"/>
+        </div>
+        <div class="contacts-form__item">
+            <label class="contacts-form__label" for="contact_email">{{ contacts.email }}</label>
+            <input type="email" class="contacts-form__input" id="contact_email" placeholder="{{ contacts.exmaple.email }}" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required/>
+        </div>
+
+        <div class="contacts-form__item">
+            <label class="contacts-form__label" for="subject" hidden></label>
+            <select name="subject" id="subject" class="contacts-form__select">
+                {% for item in contacts.selectors %}
+                    <option value="{{ item.value }}" class="contacts__select-option">{{ item.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="contacts-form__item">
+            <label class="contacts-form__label" for="message">{{ contacts.message }}</label>
+            <textarea class="contacts-form__input" name="welcome" id="message" placeholder="{{ contacts.exmaple.message }}" required></textarea>
+        </div>
+        <div class="contacts-form__item">
+            <label for="subscribe_switch">{{ catalog.switch1 }}</label>
+            <input id="subscribe_switch" type="checkbox"/>
+        </div>
+        <div class="contacts-form__item">
+            <label for="agree_switch">{{ catalog.switch2 }}</label>
+            <input id="agree_switch" type="checkbox" checked/>
+        </div>
+        <button class="primary-button" type="submit">{{ contacts.sumbit }}</button>
+    </form>
+</section>
