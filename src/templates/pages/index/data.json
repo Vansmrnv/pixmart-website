@@ -15,7 +15,7 @@
       },
       {
         "title": "Blog",
-        "link": "/"
+        "link": "http://localhost:8080/blog.html"
       },
       {
         "title": "Contact",
@@ -45,18 +45,22 @@
       }
     ]
   },
-
   "utilities": {
-    "title": ["UI Kits", "Social Media", "Presentation", "Fonts", "Illustrations"]
+    "title": [
+      "UI Kits",
+      "Social Media",
+      "Presentation",
+      "Fonts",
+      "Illustrations"
+    ]
   },
-
   "categories": {
     "id": "CATEGORIES",
     "title": "Discover Assets for Every Projects",
     "text": "From fonts and icons to mockups and templates, our comprehensive categories ensure that you find exactly what you need to your projects.",
     "button": "Shop Now",
     "link": "/",
-    "cards":[
+    "cards": [
       {
         "title": "Templates",
         "subtitle1": "For all needs",
@@ -83,7 +87,6 @@
       }
     ]
   },
-
   "products": {
     "id": "TRENDING",
     "title": "Popular Products",
@@ -130,7 +133,6 @@
       }
     ]
   },
-
   "plans": {
     "id": "PRICING PLAN",
     "title": "Choose The Perfect Plan for Creative Potential",
@@ -139,7 +141,12 @@
         "name": "Standard Membership",
         "title": "14.99",
         "text": "/Month",
-        "includes": ["Enhanced Resource Access", "Monthly Credits", "Priority Customer Support", "Community Features Access"],
+        "includes": [
+          "Enhanced Resource Access",
+          "Monthly Credits",
+          "Priority Customer Support",
+          "Community Features Access"
+        ],
         "status": "none",
         "button": "Subscribe"
       },
@@ -147,23 +154,30 @@
         "name": "Plus Membership",
         "title": "29.99",
         "text": "/Month",
-        "includes": ["All Standard Benefits", "Increased Monthly Credits", "Early Access to New Releases", "Member-Only Offers"],
+        "includes": [
+          "All Standard Benefits",
+          "Increased Monthly Credits",
+          "Early Access to New Releases",
+          "Member-Only Offers"
+        ],
         "status": "BEST SELLER",
         "button": "Subscribe"
-
       },
       {
         "name": "Pro Membership",
         "title": "49.99",
         "text": "/Month",
-        "includes": ["All Plus Benefits", "Unlimited Downloads", "Custom Licensing", "Direct Creator Collaboration"],
+        "includes": [
+          "All Plus Benefits",
+          "Unlimited Downloads",
+          "Custom Licensing",
+          "Direct Creator Collaboration"
+        ],
         "status": "none",
         "button": "Subscribe"
-
       }
     ]
   },
-
   "faqs": {
     "id": "F.A.Q",
     "title": "Answers to Your Questions",
@@ -188,7 +202,6 @@
       }
     ]
   },
-
   "articles": {
     "title": "Latest Expert",
     "link": "http://localhost:8080/blog.html",
@@ -210,7 +223,6 @@
       }
     ]
   },
-  
   "footer": {
     "text": "Your premium digital assets solution with high quality and comprehensive range of products and services.",
     "nav": [
