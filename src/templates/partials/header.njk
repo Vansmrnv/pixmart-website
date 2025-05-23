@@ -1,1 +1,23 @@
-header
+<header class="header">
+    <a href="#" class="header__logo">
+        <img src="logo.svg" alt="" class="header__logo"/>
+    </a>
+
+    <nav class="header__nav">
+        <ul class="header__nav-list">
+            {% for item in header.nav %}
+                <li class="header__nav-item">
+                    <a href="{{ item.link }}" class="header__link">{{ item.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <form action="/submit-search" method="post" class="header__search">
+        <img src="icon.svg" alt="">
+        <label for="search"></label>
+        <input id="search" type="text" pattern="^[a-zA-Z0-9\s]+$" placeholder="Search for Digital Assets" class="header__search-input" required>
+        <button type="submit" hidden></button>
+    </form>
+    <button type="button" class="primary-button"></button>
+</header>

@@ -1,0 +1,8 @@
+<article class="article-card">
+    <picture class="article-card__picture">
+        <source srcset="{{ item.image1 }}, {{ item.image2 }} 2x">
+        <img src="{{ item.image1 }}" alt="image" class="article-card__image"/>
+    </picture>
+    <h3 class="article-card__title">{{ item.title }}</h3>
+    <time class="article-card__time" datetime="{{ item.datetime }}">{{ item.date }}</time>
+</article>

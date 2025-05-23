@@ -1,0 +1,13 @@
+<section class="articles">
+    <h2 class="articles__title">{{ articles.title }}</h2>
+    <a href="{{ articles.link }}" class="articles__link">{{ articles.button }}</a>
+    <ul class="articles__list">
+        {% for item in articles.cards %}
+            <li class="articles__item">
+                <a href="{{ item.link }}">
+                    {% include 'partials/article-card.njk' %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

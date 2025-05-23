@@ -1,1 +1,41 @@
-footer
+<footer class="footer">
+    <div class="footer__top">
+        <img src="icon.svg" alt="" class="footer__logo">
+        <p class="footer__text">{{ footer.text }}</p>
+        <nav class="footer__nav">
+            {% for item in footer.nav %}
+                <h5 class="footer__nav-title">{{ item.title }}</h5>
+                <ul class="footer__nav-list">
+                    {% for item in item.items %}
+                        <li class="footer__nav-item">
+                            <a href="#" class="footer__link">{{ item.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </nav>
+    </div>
+    <div class="footer__socials">
+        <ul class="footer__icons">
+            {% for item in footer.socials.links %}
+                <li class="footer__icons-item">
+                    <a href="{{ item.link }}" class="footer__link"><img src="icon.svg" alt="" class="footer__icon"></a>
+                </li>
+            {% endfor %}
+        </ul>
+        <h4 class="footer__socials-title">{{ footer.socials.title }}</h4>
+        <form action="/submit-search" method="post" class="footer__form">
+            <label for="email"></label>
+            <input id="email" type="email" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/." placeholder="{{ socials.placeholder }}" class="footer__input" required>
+            <button type="submit" class="primary-button">{{ footer.socials.submit }}</button>
+        </form>
+    </div>
+    <div class="footer__bottom">
+        <ul class="footer__list">
+            {% for item in footer.bottom.links %}
+                <li class="footer__list-item"><a href="{{ item.link }}" class="footer__link">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+        <p class="footer__bottom-text">{{ footer.bottom.text }}</p>
+    </div>
+</footer>

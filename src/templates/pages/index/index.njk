@@ -1,5 +1,21 @@
 {% extends "layouts/base.njk" %}
 
+{% set title = "PixMart" %}
+{{ title }}
+{% set url = "http://localhost:8080/index.html"%}
+
 {% block content %}
-index page content
+    {% include 'partials/banner.njk' %}
+
+    {% include 'partials/utilities.njk' %}
+
+    {% include 'partials/categories.njk' %}
+
+    {% include 'partials/products.njk' %}
+
+    {% include 'partials/plans.njk' %}
+
+    {% include 'partials/faqs.njk' %}
+
+    {% include 'partials/articles.njk' %}
 {% endblock %}

@@ -1,4 +1,335 @@
 {
-  "title": "test",
-  "h1": ""
+  "header": {
+    "nav": [
+      {
+        "title": "About",
+        "link": "http://localhost:8080/index.html"
+      },
+      {
+        "title": "Products",
+        "link": "/"
+      },
+      {
+        "title": "Creators",
+        "link": "/"
+      },
+      {
+        "title": "Blog",
+        "link": "/"
+      },
+      {
+        "title": "Contact",
+        "link": "/"
+      }
+    ]
+  },
+  "banner": {
+    "title": "Craft Your Success with Our *Digital* Assets",
+    "text": "From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources.",
+    "button1": "Shop Now",
+    "link1": "/",
+    "button2": "Watch About Us",
+    "link2": "/",
+    "pictures": [
+      {
+        "image1": "/",
+        "image2": "/"
+      },
+      {
+        "image1": "/",
+        "image2": "/"
+      },
+      {
+        "image1": "/",
+        "image2": "/"
+      }
+    ]
+  },
+
+  "utilities": {
+    "title": ["UI Kits", "Social Media", "Presentation", "Fonts", "Illustrations"]
+  },
+
+  "categories": {
+    "id": "CATEGORIES",
+    "title": "Discover Assets for Every Projects",
+    "text": "From fonts and icons to mockups and templates, our comprehensive categories ensure that you find exactly what you need to your projects.",
+    "button": "Shop Now",
+    "link": "/",
+    "cards":[
+      {
+        "title": "Templates",
+        "subtitle1": "For all needs",
+        "subtitle2": "Modern",
+        "link": "/"
+      },
+      {
+        "title": "App Icons",
+        "subtitle1": "High-quality",
+        "subtitle2": "Elegant",
+        "link": "/"
+      },
+      {
+        "title": "Slides",
+        "subtitle1": "Pitch-ready",
+        "subtitle2": "Creative",
+        "link": "/"
+      },
+      {
+        "title": "Design Tools",
+        "subtitle1": "Easy to use",
+        "subtitle2": "Unique",
+        "link": "/"
+      }
+    ]
+  },
+
+  "products": {
+    "id": "TRENDING",
+    "title": "Popular Products",
+    "cards": [
+      {
+        "link": "/",
+        "image1": "/",
+        "image2": "/",
+        "title": "Travel Hero",
+        "subtitle1": "Adventure",
+        "subtitle2": "Journey",
+        "price": "29.99"
+      },
+      {
+        "link": "/",
+        "image1": "/",
+        "image2": "/",
+        "title": "Healthcare Pro",
+        "subtitle1": "Medical",
+        "subtitle2": "Wellness",
+        "price": "15.99"
+      },
+      {
+        "link": "/",
+        "image1": "/",
+        "image2": "/",
+        "title": "Foodish Delight",
+        "subtitle1": "Catering",
+        "subtitle2": "Food",
+        "price": "31.99"
+      },
+      {
+        "link": "/",
+        "image1": "/",
+        "image2": "/",
+        "title": "Real Estate",
+        "subtitle1": "Modern",
+        "subtitle2": "Homes",
+        "price": "40.99"
+      }
+    ]
+  },
+
+  "plans": {
+    "id": "PRICING PLAN",
+    "title": "Choose The Perfect Plan for Creative Potential",
+    "cards": [
+      {
+        "name": "Standard Membership",
+        "title": "14.99",
+        "text": "/Month",
+        "includes": ["Enhanced Resource Access", "Monthly Credits", "Priority Customer Support", "Community Features Access"],
+        "status": "none",
+        "button": "Subscribe"
+      },
+      {
+        "name": "Plus Membership",
+        "title": "29.99",
+        "text": "/Month",
+        "includes": ["All Standard Benefits", "Increased Monthly Credits", "Early Access to New Releases", "Member-Only Offers"],
+        "status": "BEST SELLER",
+        "button": "Subscribe"
+
+      },
+      {
+        "name": "Pro Membership",
+        "title": "49.99",
+        "text": "/Month",
+        "includes": ["All Plus Benefits", "Unlimited Downloads", "Custom Licensing", "Direct Creator Collaboration"],
+        "status": "none",
+        "button": "Subscribe"
+
+      }
+    ]
+  },
+
+  "faqs": {
+    "id": "F.A.Q",
+    "title": "Answers to Your Questions",
+    "button": "Ask Us A Question",
+    "link": "http://localhost:8080/contacts.html",
+    "cards": [
+      {
+        "question": "Can I request a refund?"
+      },
+      {
+        "question": "How do I access my purchased products?",
+        "answer": "Accessing your purchased products is seamless and hassle-free on our digital design assets marketplace. Simply log in to your account, navigate to the 'My Purchases' section, and you'll find all your purchased products ready for download."
+      },
+      {
+        "question": "Are there any discounts for bulk purchases?"
+      },
+      {
+        "question": "What payment methods do you accept here?"
+      },
+      {
+        "question": "Can I sell my digital products on this marketplace?"
+      }
+    ]
+  },
+
+  "articles": {
+    "title": "Latest Expert",
+    "link": "http://localhost:8080/blog.html",
+    "button": "Explore All Articles",
+    "cards": [
+      {
+        "image1": "/",
+        "image2": "/",
+        "title": "Creative Blog",
+        "datetime": "2024-04-15",
+        "date": "15 APRIL 2024"
+      },
+      {
+        "image1": "/",
+        "image2": "/",
+        "title": "Best Dishes",
+        "datetime": "2024-05-05",
+        "date": "5 MAY 2024"
+      }
+    ]
+  },
+  
+  "footer": {
+    "text": "Your premium digital assets solution with high quality and comprehensive range of products and services.",
+    "nav": [
+      {
+        "title": "Company",
+        "items": [
+          {
+            "title": "Homepage v1",
+            "link": "/"
+          },
+          {
+            "title": "Homepage v2",
+            "link": "/"
+          },
+          {
+            "title": "Homepage v3",
+            "link": "/"
+          },
+          {
+            "title": "About Us",
+            "link": "/"
+          },
+          {
+            "title": "About Us",
+            "link": "/"
+          },
+          {
+            "title": "Blog Articles",
+            "link": "/"
+          }
+        ]
+      },
+      {
+        "title": "Products",
+        "items": [
+          {
+            "title": "Website",
+            "link": "/"
+          },
+          {
+            "title": "Mobile App",
+            "link": "/"
+          },
+          {
+            "title": "Social Media Feeds",
+            "link": "/"
+          },
+          {
+            "title": "Presentation",
+            "link": "/"
+          },
+          {
+            "title": "Product Mockups",
+            "link": "/"
+          },
+          {
+            "title": "Illustrations",
+            "link": "/"
+          }
+        ]
+      },
+      {
+        "title": "Account",
+        "items": [
+          {
+            "title": "Your Cart",
+            "link": "/"
+          },
+          {
+            "title": "Check Out",
+            "link": "/"
+          },
+          {
+            "title": "Refund Policy",
+            "link": "/"
+          },
+          {
+            "title": "Company Policy",
+            "link": "/"
+          },
+          {
+            "title": "Send A Message",
+            "link": "/"
+          },
+          {
+            "title": "Customer Support",
+            "link": "/"
+          }
+        ]
+      }
+    ],
+    "socials": {
+      "submit": "Subscribe",
+      "placeholder": "Enter your email address ...",
+      "title": "Subscribe to Subscribe to Design Newsletter",
+      "links": [
+        {
+          "link": "/"
+        },
+        {
+          "link": "/"
+        },
+        {
+          "link": "/"
+        }
+      ]
+    },
+    "bottom": {
+      "text": "Copyright © 2024 Pixmart. All rights reserved.",
+      "links": [
+        {
+          "title": "Privacy Policy",
+          "link": "/"
+        },
+        {
+          "title": "Terms and Condition",
+          "link": "/"
+        },
+        {
+          "title": "Site Map",
+          "link": "/"
+        }
+      ]
+    }
+  }
 }

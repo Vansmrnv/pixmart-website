@@ -1,0 +1,15 @@
+<li class="plan-card">
+    <span class="plan-card__tag">{{ item.status }}</span>
+    <h5 class="plan-card__name">{{ item.name }}</h5>
+    <h2 class="plan-card__title">€{{ item.title }}
+        <span class="plan-card__text">{{ item.text }}</span></h2>
+    <ul class="plan-card__list">
+        {% for item in item.includes %}
+            <li class="plan-card__item">
+                <img src="icon.svg" alt="" class="plan-card__icon">
+                <p class="plan-card__subtitle">{{ item }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ item.link }}" class="secondary-button">{{ item.button }}</a>
+</li>

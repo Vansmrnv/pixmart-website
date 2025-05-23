@@ -1,0 +1,17 @@
+<section class="products">
+    <div class="products__details">
+        <span class="products__id">{{ products.id }}</span>
+        <h2 class="products__title">{{ products.title }}</h2>
+        <div class="products__chevrons">
+            <button class="secondary-button"><img src="icon.svg" alt="" class="products__icon"></button>
+            <button class="secondary-button"><img src="icon.svg" alt="" class="products__icon"></button>
+        </div>
+    </div>
+    <ul class="products__list">
+        {% for item in products.cards %}
+            <li class="products__item">
+                <a href="{{ item.link }}">{% include 'partials/product-card.njk'%}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

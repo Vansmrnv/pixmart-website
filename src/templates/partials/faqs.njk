@@ -1,0 +1,8 @@
+<section class="faqs">
+    <span class="faqs__id">{{ faqs.id }}</span>
+    <h2 class="faqs__title">{{ faqs.title }}</h2>
+    {% for item in faqs.cards %}
+        {% include 'partials/faqs-card.njk' %}
+    {% endfor %}
+    <a href="{{ faqs.link }}" class="secondary-button">{{ faqs.button }}</a>
+</section>
