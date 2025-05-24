@@ -1,18 +1,38 @@
-@mixin base-title {
+@mixin heading-1 {
     font-family: var(--title-font);
-    font-weight: 700;
-    color: var(--primary-color);
+    font-size: var(--heading1);
+    line-height: var(--line-height-h1);
+    letter-spacing: var(--letter-spacing);
 }
 
-@mixin medium-title {
+@mixin heading-2 {
     font-family: var(--title-font);
-    font-weight: 600;
+    font-size: var(--heading2);
+    line-height: var(--line-height-h2);
+    letter-spacing: var(--letter-spacing);
 }
 
-@mixin small-title {
+@mixin heading-3 {
     font-family: var(--title-font);
-    font-weight: 500;
+    font-size: var(--heading3);
+    line-height: var(--line-height-h3);
+    letter-spacing: var(--letter-spacing);
+
 }
+
+@mixin heading-4 {
+    font-family: var(--title-font);
+    font-size: var(--heading4);
+    line-height: var(--line-height-h4);
+}
+
+@mixin heading-5 {
+    font-family: var(--title-font);
+    font-size: var(--heading5);
+    line-height: var(--line-height-h5);
+}
+
+
 
 @mixin base-main-text {
     font-family: var(--main-font);

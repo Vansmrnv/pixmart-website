@@ -1,0 +1,21 @@
+@use '../global/mixins.scss' as *;
+
+.utilities-card {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px; 
+    width: fit-content;
+
+    &__title {
+        @include heading-5;
+        color: var(--primary-color);
+        font-weight: var(--weight-5);
+        line-height: 28px;
+    }
+
+    &__box {
+        padding: 32px;
+        border-radius: 20px;
+        background-color: var(--base-alt2-color);
+    }
+}
