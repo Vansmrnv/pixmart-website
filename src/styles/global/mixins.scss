@@ -1,0 +1,20 @@
+@mixin base-title {
+    font-family: var(--title-font);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+@mixin medium-title {
+    font-family: var(--title-font);
+    font-weight: 600;
+}
+
+@mixin small-title {
+    font-family: var(--title-font);
+    font-weight: 500;
+}
+
+@mixin base-main-text {
+    font-family: var(--main-font);
+    font-weight: 400;
+}

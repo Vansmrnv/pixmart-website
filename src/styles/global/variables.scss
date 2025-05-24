@@ -1,0 +1,56 @@
+:root {
+    // fonts
+    --title-font: "Plus Jakarta Sans", sans-serif;
+    --main-font: "Libre Franklin", sans-serif;
+
+    // heading font-size
+    --heading1: 52px;
+    --heading2: 36px;
+    --heading3: 28px;
+    --heading4: 24px;
+    --heading5: 20px;
+
+    // main text font-size
+    --body-text1: 18px;
+    --body-text2: 16px;
+    --body-text3: 14px;
+    --body-text4: 12px;
+    --body-text5: 11px;
+
+
+    // colors
+    // text elements colors
+    --primary-color: #0D0D15;
+    --secondary-color: #2A3541D9;
+    --tertiary-color: #F5F8FB;
+
+    // Background colors
+    --base-color: #FFFFFF;
+    --base-alt1-color: #F8FAFC;
+    --base-alt2-color: #F4F7FA;
+    --base-icon-color: #0D0D15;
+    --base-iconalt1-color: #1A1925;
+    --base-iconalt2-color: #1D1C28;
+
+    // Criticality statuses
+    --neutral-color: #899099;
+    --negative-color: #EA3829;
+    --high-color: #CB5D00;
+    --medium-color: #F8D904;
+    --info-color: #9D57F4;
+    --positive-color: #008F5D;
+
+
+    // Button colors 
+    --primary-button-color: #0265DC;
+    --primary-button-hover: #3892F3;
+    --primary-button-pressed: #0054B6;
+
+    --secondary-button-color: #1D36532B;
+    --secondary-button-hover: #294D7517;
+
+    --tertiary-button-color: #FFFFFF00;
+    --tertiary-button-hover: #294D7517;
+
+    --button-disabled: #1D36532B;
+}

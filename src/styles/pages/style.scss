@@ -1,8 +1,3 @@
-body {
-    color: rgb(0, 0, 0);
-}
-
-.ololo {
-  test: ddd;
-  color: #000000;
-}
+@use '../global/variables.scss';
+@use '../global/global.scss';
+@use '../global/mixins.scss';
