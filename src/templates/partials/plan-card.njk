@@ -1,5 +1,9 @@
-<li class="plan-card">
-    <span class="plan-card__tag">{{ item.status }}</span>
+<li class="{% if item.status == "none" %}plan-card{% endif %}{% if item.status == "BEST SELLER" %}plan-card plan-card--highlight{% endif %}">
+    {% if item.status == "BEST SELLER" %}
+        <div class="plan-card__tag-box">
+            <span class="plan-card__tag">{{ item.status }}</span>
+        </div>
+    {% endif %}
     <h5 class="plan-card__name">{{ item.name }}</h5>
     <h2 class="plan-card__title">€{{ item.title }}
         <span class="plan-card__text">{{ item.text }}</span></h2>
@@ -11,5 +15,10 @@
             </li>
         {% endfor %}
     </ul>
-    <a href="{{ item.link }}" class="secondary-button">{{ item.button }}</a>
+    {% if item.status == "none"%}
+        <a href="{{ item.link }}" class="plan-card__link secondary-button">{{ item.button }}</a>
+    {% endif %}
+    {% if item.status == "BEST SELLER"%}
+        <a href="{{ item.link }}" class="plan-card__link primary-button">{{ item.button }}</a>
+    {% endif %}
 </li>

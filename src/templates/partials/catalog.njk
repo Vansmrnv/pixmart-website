@@ -51,7 +51,7 @@
         </div>
         <ul class="catalog__products">
             {% for item in catalog.products %}
-            <li class="catalog__product"><a href="{{ item.link }}">{% include 'partials/product-card.njk'%}</a></li>
+            <li class="catalog__product"><a href="{{ item.link }}">{% include 'partials/catalog-card.njk'%}</a></li>
             {% endfor %}
         </ul>
         <button type="button" class="tertiary-button">{{catalog.buttonload }}</button>

@@ -10,7 +10,7 @@
     <ul class="products__list">
         {% for item in products.cards %}
             <li class="products__item">
-                <a href="{{ item.link }}">{% include 'partials/product-card.njk'%}</a>
+                {% include 'partials/product-card.njk'%}
             </li>
         {% endfor %}
     </ul>

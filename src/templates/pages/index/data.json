@@ -90,6 +90,7 @@
   "products": {
     "id": "TRENDING",
     "title": "Popular Products",
+    "button": "Go to product",
     "cards": [
       {
         "link": "/",

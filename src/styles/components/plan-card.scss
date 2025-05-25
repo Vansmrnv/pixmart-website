@@ -1,0 +1,69 @@
+@use '../global/mixins.scss' as *;
+
+.plan-card {
+    padding: 32px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+
+    &__tag-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 20px;
+        padding: 7px 24px;
+        background-color: var(--primary-button-color)
+    }
+
+    &__tag {
+        @include heading-5;
+        color: var(--base-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__name {
+        @include heading-5;
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__title {
+        @include heading-2;
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__text {
+        @include base-main-text;
+        color: var(--primary-color);
+        font-size: var(--body-text2);
+        line-height: 24px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        border-top: 1px solid #1F324745;
+        padding:40px 0;
+    }
+
+    &__item {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__subtitle {
+        @include base-main-text;
+        color: var(--primary-color);
+        font-size: var(--body-text2);
+        line-height: 24px;
+    }
+}
+
+.plan-card--highlight {
+    outline: 2px solid var(--primary-button-color);
+    margin-bottom: 32px;
+}

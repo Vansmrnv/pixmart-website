@@ -36,5 +36,5 @@
 
 @mixin base-main-text {
     font-family: var(--main-font);
-    font-weight: 400;
+    font-weight: var(--weight-4);
 }

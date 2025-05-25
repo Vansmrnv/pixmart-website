@@ -1,0 +1,42 @@
+@use '../global/mixins.scss' as *;
+
+.faqs-card {
+
+    padding: 24px;
+    border-radius: 10px;
+    background-color: var(--base-color);
+    width: 100%;
+
+    &[open] {
+        outline: 2px solid var(--primary-button-color);
+    }
+
+    &__question {
+        @include heading-5;
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__question::after {
+        content: '';
+        width: 18px;
+        height: 10px;
+        background: url('arrow.svg');
+        background-size: cover;
+        transition: 0.3s;
+    }
+
+    &[open]>.faqs-card__question::after {
+        transform: rotate(180deg);
+    }
+
+    &__answer {
+        @include base-main-text;
+        color: var(--primary-color);
+        font-size: var(--body-text2);
+        line-height: 24px;
+        margin-top: 16px;
+    }
+}

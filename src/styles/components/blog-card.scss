@@ -1,0 +1,51 @@
+@use '../global/mixins.scss' as *;
+
+.blog-card {
+
+    min-width: 320px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--base-color);
+    filter: drop-shadow(0px 10px 30px #1D395F0D);
+
+    &__picture {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    &__title {
+        @include heading-5;
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin-top: 20px;
+        margin-left: 16px;
+    }
+
+    &__time {
+        @include base-main-text;
+        color: var(--gray-color);
+        font-size: var(--body-text2);
+        line-height: 24px;
+        margin-left: 16px;
+    }
+
+    &__tagger {
+        position: absolute;
+        bottom: 94px;
+        left: 36px;
+        padding: 8px 16px;
+        border-radius: 100px;
+        background-color: var(--primary-button-color);
+    }
+
+    &__tag {
+        @include base-main-text;
+        color: var(--base-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-5);
+        line-height: 24px;
+    }
+}

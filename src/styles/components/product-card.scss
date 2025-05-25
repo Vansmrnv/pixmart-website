@@ -1,0 +1,80 @@
+@use '../global/mixins.scss' as *;
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 305px;
+
+    &__picture {
+        border-radius: 20px;
+        width: fit-content;
+    }
+
+    &__link {
+        opacity: 0;
+        width: 273px;
+        position: absolute;
+        top: 104px;
+        margin: auto;
+    }
+
+    &__picture:hover .product-card__link {
+        opacity: 1;
+    }
+
+    &__tag {
+        position: absolute;
+        visibility: visible;
+        width: fit-content;
+        top: 0;
+        right: 0;
+        border-radius: 0 20px;
+        background-color: var(--primary-button-color);
+    }
+
+
+    &__details {
+        width: 305px;
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 4px;
+    }
+
+    &__title {
+        @include heading-3;
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        justify-self: start;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    &__subtitle {
+        @include base-main-text;
+        color: var(--gray1-color);
+        font-size: var(--body-text2);
+        line-height: 24px;
+        justify-self: start;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    &__text {
+        color: var(--primary-button-color);
+        font-family: var(--main-font);
+        font-weight: 500;
+        font-size: var(--body-text2);
+        line-height: 24px;
+        align-self: center;
+        justify-self: end;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
