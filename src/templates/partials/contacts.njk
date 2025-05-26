@@ -21,15 +21,16 @@
     </article>
     <form action="url" method="post" class="contacts__form">
         <div class="contacts-form__item">
-            <label class="contacts-form__label" for="name">{{ contacts.name }}</label><input class="contacts-form__input" id="name" type="text" placeholder="{{ contacts.exmaple.name }}"/>
+            <label class="contacts-form__label form-label" for="name">{{ contacts.name }}</label>
+            <input class="contacts-form__input text-input" id="name" type="text" placeholder="{{ contacts.example.name }}"/>
         </div>
         <div class="contacts-form__item">
-            <label class="contacts-form__label" for="contact_email">{{ contacts.email }}</label>
-            <input type="email" class="contacts-form__input" id="contact_email" placeholder="{{ contacts.exmaple.email }}" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required/>
+            <label class="contacts-form__label form-label" for="contact_email">{{ contacts.email }}</label>
+            <input type="email" class="contacts-form__input text-input" id="contact_email" placeholder="{{ contacts.example.email }}" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required/>
         </div>
 
         <div class="contacts-form__item">
-            <label class="contacts-form__label" for="subject" hidden></label>
+            <label class="contacts-form__label form-label" for="subject" hidden></label>
             <select name="subject" id="subject" class="contacts-form__select">
                 {% for item in contacts.selectors %}
                     <option value="{{ item.value }}" class="contacts__select-option">{{ item.name }}</option>
@@ -37,16 +38,16 @@
             </select>
         </div>
         <div class="contacts-form__item">
-            <label class="contacts-form__label" for="message">{{ contacts.message }}</label>
-            <textarea class="contacts-form__input" name="welcome" id="message" placeholder="{{ contacts.exmaple.message }}" required></textarea>
+            <label class="contacts-form__label form-label" for="message">{{ contacts.message }}</label>
+            <textarea class="contacts-form__input text-input" name="welcome" id="message" placeholder="{{ contacts.example.message }}" required></textarea>
         </div>
-        <div class="contacts-form__item">
-            <label for="subscribe_switch">{{ catalog.switch1 }}</label>
-            <input id="subscribe_switch" type="checkbox"/>
+        <div class="form-item">
+            <label for="subscribe_switch" class="checkbox-label">{{ contacts.switch1 }}</label>
+            <input id="subscribe_switch" class="checkbox-input" type="checkbox"/>
         </div>
-        <div class="contacts-form__item">
-            <label for="agree_switch">{{ catalog.switch2 }}</label>
-            <input id="agree_switch" type="checkbox" checked/>
+        <div class="form-item">
+            <label for="agree_switch" class="checkbox-label" >{{ contacts.switch2 }}</label>
+            <input id="agree_switch" class="checkbox-input" type="checkbox" checked/>
         </div>
         <button class="button button--primary button--large" type="submit">{{ contacts.sumbit }}</button>
     </form>

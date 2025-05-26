@@ -76,4 +76,25 @@
     --tertiary-button-hover: #294D7517;
 
     --button-disabled: #1D36532B;
+
+
+
+    // Switcher 
+
+    --switcher-width: 40px;
+    --switcher-height: 24px;
+    --switcher-toggle-size: 16px;
+    --switcher-padding: 4px;
+    --switcher-transition: all 0.3s ease;
+
+    --switcher-bg-off: #e5e7eb;
+    --switcher-bg-on: #3892f3;
+    --switcher-bg-disabled: #f3f4f6;
+
+    --switcher-toggle-off: #ffffff;
+    --switcher-toggle-on: #ffffff;
+
+    --switcher-focus: rgba(56, 146, 243, 0.3);
+    --switcher-text: #374151;
+    --switcher-text-disabled: #9ca3af;
 }

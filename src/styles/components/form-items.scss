@@ -1,0 +1,278 @@
+@use '../global/mixins.scss' as *;
+
+
+.form-label {
+    font-family: var(--main-font);
+    color: var(--primary-color);
+    font-size: var(--body-text3);
+    font-weight: var(--weight-4);
+    line-height: var(--line-height-l3);
+
+    &--required::after {
+        content: " *";
+        color: var(--negative-color);
+    }
+}
+
+
+.text-input {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-button-border-color);
+    padding: 20px;
+    font-family: var(--main-font);
+    font-weight: var(--weight-4);
+    color: var(--primary-color);
+    font-size: var(--body-text3);
+    line-height: var(--line-height-l3);
+
+    &:hover {
+        outline: 2px solid var(--primary-button-hover);
+    }
+
+    &:focus-visible {
+        outline: 3px solid var(--primary-button-hover);
+    }
+
+    &:active {
+        outline: 2px solid var(--primary-button-hover);
+    }
+
+    &:invalid {
+        outline: 2px solid var(--negative-color);
+    }
+
+    &::placeholder {
+        opacity: 1;
+        color: var(--gray1-color);
+        font-size: var(--body-text2);
+        line-height: var(--line-height-l2);
+    }
+}
+
+.text-input--small {
+    padding: 10px 12px;
+}
+
+
+.form-select {
+    @extend .text-input;
+    cursor: pointer;
+    background-image: url(icon.svg);
+    background-repeat: no-repeat;
+    background-position: right 20px;
+}
+
+
+
+
+
+
+.checkbox-label {
+    font-family: var(--main-font);
+    font-size: var(--body-text3);
+    font-weight: var(--weight-4);
+    line-height: var(--line-height-l3);
+}
+
+.form-item {
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+    align-items: center;
+}
+
+.checkbox-input:where([type="checkbox"], [type="radio"]) {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    vertical-align: top;
+    border: 2px solid #1f324745;
+    border-radius: 4px;
+    background: #fff no-repeat center center;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+        background-color: #f4f7fa;
+        transition: background-color 0.2s ease;
+    }
+
+    &:active {
+        border: none;
+        background-color: #b5deff;
+        transition: all 0.1s ease;
+    }
+
+    &:invalid {
+        border: 2px solid #ea3829;
+    }
+}
+
+.checkbox-input[type="radio"] {
+    border-radius: 50%;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+
+    &:focus-visible {
+        outline: 2px solid #3892f3;
+        outline-offset: 1px;
+        transition: border 0.2s ease;
+    }
+
+    &:invalid {
+        border: 2px solid #ea3829;
+    }
+}
+
+.checkbox-input:where([type="checkbox"], [type="radio"]):where( :active:not(:disabled),
+    :focus-visible) {
+    border-color: #3892f3;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.checkbox-input:where([type="checkbox"], [type="radio"]):disabled {
+    background: #eee;
+}
+
+.checkbox-input[type="checkbox"]:checked {
+    background-image: url("checkbox.svg");
+    background-color: #0265dc;
+    border: none;
+    transition: background-color 0.3s ease, border 0.3s ease;
+
+    &:hover {
+        background-image: url("checkbox.svg");
+        background-color: #3892f3;
+        transition: background-color 0.2s ease;
+    }
+
+    &:active {
+        background-image: url("checkbox.svg");
+        background-color: #b5deff;
+        transition: background-color 0.1s ease;
+    }
+
+    &:focus-visible {
+        background-image: url("checkbox.svg");
+        border: 2px solid #0265dc;
+        transition: border 0.2s ease;
+    }
+
+    &:invalid {
+        border: 2px solid #ea3829;
+    }
+}
+
+.checkbox-input[type="radio"]:checked {
+    border: 5px solid #0265dc;
+    transition: border 0.3s ease;
+
+    &:focus-visible {
+        outline: 2px solid #3892f3;
+        outline-offset: 1px;
+        transition: border 0.2s ease;
+    }
+
+    &:invalid {
+        border: 2px solid #ea3829;
+    }
+}
+
+
+
+/* Switcher Base Styles */
+.switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    min-height: var(--switcher-height);
+    color: var(--primary-color);
+    font-family: var(--main-font);
+    font-size: var(--body-text3);
+    font-weight: var(--weight-4);
+    line-height: var(--line-height-l3);
+}
+
+.switcher__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Switcher Track */
+.switcher__input+.switcher__label::before {
+    content: "";
+    display: inline-block;
+    width: var(--switcher-width);
+    height: 20px;
+    background-color: var(--switcher-bg-off);
+    border-radius: 19px;
+    transition: var(--switcher-transition);
+    vertical-align: middle;
+}
+
+/* Switcher Toggle (thumb) */
+.switcher__input+.switcher__label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    width: var(--switcher-toggle-size);
+    height: var(--switcher-toggle-size);
+    background-color: var(--switcher-toggle-off);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    transform: translate(0, -50%);
+}
+
+/* Checked State */
+.switcher__input:checked+.switcher__label::before {
+    background-color: var(--switcher-bg-on);
+}
+
+.switcher__input:checked+.switcher__label::after {
+    transform: translate(125%, -50%);
+    transition: all 0.3s ease;
+}
+
+/* Hover State */
+.switcher:hover .switcher__input:not(:checked)+.switcher__label::before {
+    background-color: #d1d5db;
+}
+
+.switcher:hover .switcher__input:checked+.switcher__label::before {
+    background-color: #1d7df2;
+}
+
+/* Focus State */
+.switcher__input:focus-visible+.switcher__label::before {
+    box-shadow: 0 0 0 3px var(--switcher-focus);
+}
+
+/* Active/Pressed State */
+/* .switcher__input:active + .switcher__label::after {
+  width: calc(var(--switcher-toggle-size) + 2px);
+} */
+
+/* Disabled State */
+.switcher__input:disabled+.switcher__label {
+    color: var(--switcher-text-disabled);
+    cursor: not-allowed;
+}
+
+.switcher__input:disabled+.switcher__label::before {
+    background-color: var(--switcher-bg-disabled);
+}
+
+.switcher__input:disabled:checked+.switcher__label::before {
+    background-color: var(--switcher-bg-disabled);
+    opacity: 0.7;
+}
+
+.switcher__input:disabled+.switcher__label::after {
+    background-color: #e5e7eb;
+}

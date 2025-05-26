@@ -26,7 +26,7 @@
         <h4 class="footer__socials-title">{{ footer.socials.title }}</h4>
         <form action="/submit-search" method="post" class="footer__form">
             <label for="email"></label>
-            <input id="email" type="email" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/." placeholder="{{ socials.placeholder }}" class="footer__input" required>
+            <input id="email" type="email" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/." placeholder="{{ socials.placeholder }}" class="footer__input text-input" required>
             <button type="submit" class="button button--primary button--large">{{ footer.socials.submit }}</button>
         </form>
     </div>

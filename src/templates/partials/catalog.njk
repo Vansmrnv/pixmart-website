@@ -8,10 +8,10 @@
                         <div class="catalog__filters">
                             {% for option in item.options %}
                                 {% set optionId = "input_" + item.name + "_" + loop.index %}
-
-                                <input class="catalog__form-input" id="{{ optionId }}" type="{{ item.type }}" name="{{ item.name }}" {% if item.defaultAll or (item.default == option) %}checked{% endif %}>
-                                <label class="catalog__form-label" for="{{ optionId }}">{{ option }}</label>
-
+                                <div class="form-item">
+                                    <input class="catalog__form-input checkbox-input" id="{{ optionId }}" type="{{ item.type }}" name="{{ item.name }}" {% if item.defaultAll or (item.default == option) %}checked{% endif %}>
+                                    <label class="catalog__form-label checkbox-label" for="{{ optionId }}">{{ option }}</label>
+                                </div>
                             {% endfor %}
                         </div>
                     {% endif %}
@@ -45,13 +45,16 @@
             </form>
             <ul class="catalog__tags">
                 {% for item in catalog.tags %}
-                    <li class="catalog__tag">{{ item }} <img class="catalog__tag-icon" src="icon.svg" alt=""></li>
+                    <li class="catalog__tag">{{ item }}
+                        <img class="catalog__tag-icon" src="icon.svg" alt=""></li>
                 {% endfor %}
             </ul>
         </div>
         <ul class="catalog__products">
             {% for item in catalog.products %}
-            <li class="catalog__product"><a href="{{ item.link }}">{% include 'partials/catalog-card.njk'%}</a></li>
+                <li class="catalog__product">
+                    <a href="{{ item.link }}">{% include 'partials/catalog-card.njk'%}</a>
+                </li>
             {% endfor %}
         </ul>
         <button type="button" class="button button--secondary button--large">{{ catalog.buttonload }}</button>
