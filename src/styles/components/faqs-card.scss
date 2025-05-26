@@ -12,7 +12,6 @@
     }
 
     &__question {
-        @include heading-5;
         color: var(--primary-color);
         font-weight: var(--weight-7);
         display: flex;
@@ -33,10 +32,11 @@
     }
 
     &__answer {
-        @include base-main-text;
+        font-family: var(--main-font);
         color: var(--primary-color);
         font-size: var(--body-text2);
-        line-height: 24px;
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
         margin-top: 16px;
     }
 }

@@ -1,11 +1,11 @@
 <li class="{% if item.status == "none" %}plan-card{% endif %}{% if item.status == "BEST SELLER" %}plan-card plan-card--highlight{% endif %}">
     {% if item.status == "BEST SELLER" %}
         <div class="plan-card__tag-box">
-            <span class="plan-card__tag">{{ item.status }}</span>
+            <span class="plan-card__tag section-title--small">{{ item.status }}</span>
         </div>
     {% endif %}
-    <h5 class="plan-card__name">{{ item.name }}</h5>
-    <h2 class="plan-card__title">€{{ item.title }}
+    <h5 class="plan-card__name section-title--small">{{ item.name }}</h5>
+    <h2 class="plan-card__title section-title--great">€{{ item.title }}
         <span class="plan-card__text">{{ item.text }}</span></h2>
     <ul class="plan-card__list">
         {% for item in item.includes %}
@@ -16,9 +16,9 @@
         {% endfor %}
     </ul>
     {% if item.status == "none"%}
-        <a href="{{ item.link }}" class="plan-card__link secondary-button">{{ item.button }}</a>
+        <a href="{{ item.link }}" class="plan-card__link button button--secondary button--large">{{ item.button }}</a>
     {% endif %}
     {% if item.status == "BEST SELLER"%}
-        <a href="{{ item.link }}" class="plan-card__link primary-button">{{ item.button }}</a>
+        <a href="{{ item.link }}" class="plan-card__link button button--primary button--large">{{ item.button }}</a>
     {% endif %}
 </li>

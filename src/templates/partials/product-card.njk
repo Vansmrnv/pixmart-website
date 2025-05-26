@@ -3,14 +3,14 @@
         <source srcset="{{ item.image1 }}, {{ item.image2 }} 2x"/>
         <img src="{{ item.image1 }}" alt="image" class="product-card__image"/>
     </picture>
-    <a href="{{ item.link }}" class="product-card__link button-primary">{{ products.button }}</a>
+    <a href="{{ item.link }}" class="product-card__link button button--primary button--large">{{ products.button }}</a>
     {% if item.status != "default" %}
         <div class="product-card__tag">
             <img src="icon.svg" alt="" class="product-card__icon">
         </div>
     {% endif %}
     <div class="product-card__details">
-        <h3 class="product-card__title">{{ item.title }}</h3>
+        <h3 class="product-card__title section-title--big">{{ item.title }}</h3>
         <span class="product-card__subtitle">{{ item.subtitle1 }} • {{ item.subtitle2 }}</span>
         <span class="product-card__text">€{{ item.price }}</span>
     </div>

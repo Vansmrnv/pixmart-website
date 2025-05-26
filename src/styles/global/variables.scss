@@ -30,6 +30,10 @@
     --line-height-h4: 32px;
     --line-height-h5: 26px;
 
+    --line-height-l1: 28px;
+    --line-height-l2: 24px;
+    --line-height-l3: 20px;
+    
     // letter-spacing
     --letter-spacing: -0.5px;
 
@@ -59,11 +63,13 @@
 
 
     // Button colors 
+    --primary-button-text-color: #F5F8FB;
     --primary-button-color: #0265DC;
     --primary-button-hover: #3892F3;
     --primary-button-pressed: #0054B6;
 
-    --secondary-button-color: #1D36532B;
+    --secondary-button-border-color: #1D36532B;
+    --secondary-button-color: transparent;
     --secondary-button-hover: #294D7517;
 
     --tertiary-button-color: #FFFFFF00;

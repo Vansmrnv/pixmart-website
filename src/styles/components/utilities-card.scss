@@ -7,10 +7,9 @@
     width: fit-content;
 
     &__title {
-        @include heading-5;
         color: var(--primary-color);
         font-weight: var(--weight-5);
-        line-height: 28px;
+        line-height: var(--line-height-l1);
     }
 
     &__box {

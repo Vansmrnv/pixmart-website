@@ -18,28 +18,26 @@
     }
 
     &__tag {
-        @include heading-5;
         color: var(--base-color);
         font-weight: var(--weight-7);
     }
 
     &__name {
-        @include heading-5;
         color: var(--primary-color);
         font-weight: var(--weight-7);
     }
 
     &__title {
-        @include heading-2;
         color: var(--primary-color);
         font-weight: var(--weight-7);
     }
 
     &__text {
-        @include base-main-text;
+        font-family: var(--main-font);
         color: var(--primary-color);
         font-size: var(--body-text2);
-        line-height: 24px;
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
     }
 
     &__list {
@@ -56,10 +54,11 @@
     }
 
     &__subtitle {
-        @include base-main-text;
+        font-family: var(--main-font);
         color: var(--primary-color);
         font-size: var(--body-text2);
-        line-height: 24px;
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
     }
 }
 

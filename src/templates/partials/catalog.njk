@@ -21,8 +21,8 @@
                 <h4 class="catalog__slider-title">{{ catalog.slidertitle }}</h4>
                 <input type="range" min="5" max="50" value="25" class="catalog__slider" id="range">
             </div>
-            <button type="reset" class="tertiary-button">{{ catalog.buttonreset }}</button>
-            <button type="submit" class="primary-button">{{ catalog.buttonsubmit }}</button>
+            <button type="reset" class="button button--secondary button--medium">{{ catalog.buttonreset }}</button>
+            <button type="submit" class="button button--primary button--large">{{ catalog.buttonsubmit }}</button>
         </form>
     </aside>
     <div class="catalog__box">
@@ -40,7 +40,7 @@
                 {% for option in catalog.viewOptions.options %}
                     {% set isChecked = viewOptions.defualtView == option.value %}
                     <input type="radio" id="{{ option.id }}" name="view" value="{{ option.value }}" class="catalog__view-input" {% if isChecked %}checked{% endif %}>
-                    <label for="{{ option.id }}" class="catalog__view-label {% if isChecked %}primary-button{% else %}tertiary-button{% endif %}"><img src="icon.svg" alt=""></label>
+                    <label for="{{ option.id }}" class="catalog__view-label {% if isChecked %}button button--primary button--icon-small{% else %}button button--secondary button--icon-small{% endif %}"><img src="icon.svg" alt=""></label>
                 {% endfor %}
             </form>
             <ul class="catalog__tags">
@@ -54,6 +54,6 @@
             <li class="catalog__product"><a href="{{ item.link }}">{% include 'partials/catalog-card.njk'%}</a></li>
             {% endfor %}
         </ul>
-        <button type="button" class="tertiary-button">{{catalog.buttonload }}</button>
+        <button type="button" class="button button--secondary button--large">{{ catalog.buttonload }}</button>
     </div>
 </section>

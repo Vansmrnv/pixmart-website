@@ -4,7 +4,7 @@
         <h2 class="categories__title">{{ categories.title }}</h2>
         <p class="categories__text">
             {{ categories.text }}</p>
-        <a href="{{ categories.link }}">{{ categories.button }}</a>
+        <a href="{{ categories.link }}" class="button button--primary button--large">{{ categories.button }}</a>
     </div>
     <ul class="categories__list">
         {% for item in categories.cards %}

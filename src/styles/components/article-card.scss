@@ -11,16 +11,16 @@
     }
 
     &__title {
-        @include heading-3;
         color: var(--primary-color);
         font-weight: var(--weight-7);
         margin-top: 8px;
     }
 
     &__time {
-        @include base-main-text;
+        font-family: var(--main-font);
         color: var(--gray1-color);
         font-size: var(--base-text2);
-        line-height: 24px;
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
     }
 }

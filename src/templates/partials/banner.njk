@@ -2,8 +2,8 @@
     <div class="banner__details">
         <h1 class="banner__title">{{ banner.title }}</h1>
         <p class="banner__text">{{ banner.text }}</p>
-        <a href="{{ banner.link1 }}" class="primary-butotn">{{ banner.button1 }}</a>
-        <a href="{{ banner.link2 }}" class="tertiary-button"><img src="icon.svg" alt="" class="banner__icon">{{ banner.button2 }}</a>
+        <a href="{{ banner.link1 }}" class="button button--primary button--large">{{ banner.button1 }}</a>
+        <a href="{{ banner.link2 }}" class="button button--tertiary button--large"><img src="icon.svg" alt="" class="banner__icon">{{ banner.button2 }}</a>
     </div>
     <div class="banner__images">
         {% for item in banner.pictures %}

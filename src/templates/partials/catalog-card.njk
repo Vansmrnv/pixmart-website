@@ -19,14 +19,14 @@
         </div>
     {% endif %}
     <div class="catalog-card__details">
-        <h3 class="catalog-card__title">{{ item.title }}</h3>
+        <h3 class="catalog-card__title section-title--small">{{ item.title }}</h3>
         <span class="catalog-card__subtitle">{{ item.subtitle1 }} • {{ item.subtitle2 }}</span>
-        <span class="catalog-card__text">€{{ item.price }}</span>
+        <span class="catalog-card__text section-title--small">€{{ item.price }}</span>
 
         <div class="catalog-card__buttons">
             {% if item.status != "SOLD OUT" %}
-                <button type="button" class="tertiary-button"><img src="icon.svg" alt="" class="catalog-card__icon"></button>
-                <button type="button" class="primary-button"><img src="icon.svg" alt="" class="catalog-card__icon"></button>
+                <button type="button" class="button button--secondary button--icon-small"><img src="icon.svg" alt="" class="catalog-card__icon"></button>
+                <button type="button" class="button button--primary button--icon-small"><img src="icon.svg" alt="" class="catalog-card__icon"></button>
             {% endif %}
         </div>
     </div>

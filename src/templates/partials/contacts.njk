@@ -3,7 +3,7 @@
         <span class="contacts__id">{{ contacts.id }}</span>
         <h1 class="contacts__title">{{ contacts.title }}</h1>
         <p class="contacts__text">{{ contacts.text }}</p>
-        <a href="{{ contacts.link }}" class="primary-button">{{ contacts.button }}</a>
+        <a href="{{ contacts.link }}" class="button button--primary button--large">{{ contacts.button }}</a>
         <ul class="contacts__details">
             {% for item in contacts.details %}
                 <li class="contacts__detail">
@@ -48,6 +48,6 @@
             <label for="agree_switch">{{ catalog.switch2 }}</label>
             <input id="agree_switch" type="checkbox" checked/>
         </div>
-        <button class="primary-button" type="submit">{{ contacts.sumbit }}</button>
+        <button class="button button--primary button--large" type="submit">{{ contacts.sumbit }}</button>
     </form>
 </section>

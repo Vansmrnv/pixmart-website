@@ -1,0 +1,132 @@
+// Button Styles
+.button {
+    font-family: var(--main-font);
+    font-weight: var(--weight-6);
+    line-height: var(--line-height-l1);
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: relative;
+    white-space: nowrap;
+
+    &:focus-visible {
+        outline: 4px solid var(--primary-button-hover);
+    }
+}
+
+// Button Variants
+.button--primary {
+    color: var(--primary-button-text-color);
+    background-color: var(--primary-button-color);
+    padding: 18px 32px;
+
+    &:hover:not(:disabled) {
+        background-color: var(--primary-button-hover);
+    }
+
+    &:active:not(:disabled) {
+        background-color: var(--primary-button-pressed);
+    }
+
+    &:disabled {
+        background-color: var(--button-disabled);
+    }
+}
+
+.button--secondary {
+    color: var(--primary-color);
+    background-color: var(--secondary-button-color);
+    border: 2px solid var(--secondary-button-border-color);
+    padding: 16px 30px;
+
+    &:hover:not(:disabled) {
+        background-color: var(--secondary-button-hover);
+    }
+
+    &:active:not(:disabled) {
+        background-color: var(--secondary-button-hover);
+    }
+
+    &:focus-visible {
+        border-color: transparent;
+        background-color: var(--secondary-button-hover);
+    }
+
+    &:disabled {
+        background-color: var(--button-disabled);
+    }
+}
+
+.button--tertiary {
+    color: var(--primary-color);
+    background-color: var(--secondary-button-color);
+    padding: 18px 32px;
+
+    &:hover:not(:disabled) {
+        outline: 1px solid var(--primary-button-hover);
+        background-color: var(--tertiary-button-hover);
+    }
+
+    &:active:not(:disabled) {
+        background-color: var(--tertiary-button-hover);
+    }
+
+    &:focus-visible {
+        background-color: var(--secondary-button-hover);
+    }
+
+}
+
+
+// Button Sizes
+.button--small {
+  font-size: var(--body-text-3);
+  line-height: var(--line-height-l3);
+  padding: 6px 12px;
+  
+  &.button--secondary {
+    padding: 4px 10px;
+  }
+}
+
+.button--medium {
+  font-size: var(--body-text-2);
+  padding: 8px 20px;
+}
+
+.button--large {
+  font-size: var(--body-text-1);
+  line-height: var(--line-height-l1);
+  padding: 18px 32px;
+  
+  &.button--secondary {
+    padding: 16px 30px;
+  }
+}
+
+
+// Icon Buttons
+.button--icon {
+  font-size: 0;
+  padding: 12px;
+  
+  &-small {
+    padding: 8px;
+  }
+  
+  &-large {
+    padding: 20px;
+  }
+  
+  svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+  }
+}
