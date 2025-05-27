@@ -6,6 +6,7 @@
     border-radius: 10px;
     background-color: var(--base-color);
     width: 100%;
+    box-shadow: 0 4px 40px #1D395F14;
 
     &[open] {
         outline: 2px solid var(--primary-button-color);

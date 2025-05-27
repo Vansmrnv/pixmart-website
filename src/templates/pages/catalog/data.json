@@ -46,12 +46,14 @@
                 {
                     "id": "gallery",
                     "value": "gallery",
-                    "icon": "icon-gallery.svg"
+                    "icon": "icon-gallery.svg",
+                    "isChecked": true
                 },
                 {
                     "id": "tape",
                     "value": "tape",
-                    "icon": "icon-tape.svg"
+                    "icon": "icon-tape.svg",
+                    "isChecked": false
                 }
             ]
         },

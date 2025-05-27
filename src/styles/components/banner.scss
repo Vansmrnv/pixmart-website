@@ -1,0 +1,32 @@
+.banner {
+    padding: 32px 16px 64px 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 36px;
+    background-image: linear-gradient(to right, #F0F6FD , var(--base-color));
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__title--highlight {
+        color: var(--primary-button-color);
+    }
+
+    &__text {
+        font-family: var(--title-font);
+        color: var(--gray-color);
+        font-weight: var(--weight-5);
+        font-size: var(--heading5);
+        line-height: var(--line-height-l1);
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
+
+}

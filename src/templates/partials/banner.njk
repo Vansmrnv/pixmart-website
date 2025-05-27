@@ -1,9 +1,14 @@
 <section class="banner">
     <div class="banner__details">
-        <h1 class="banner__title">{{ banner.title }}</h1>
+        <h1 class="banner__title section-title">{{ banner.title1 }}
+            <span class="banner__title banner__title--highlight">
+                {{ banner.highlight }}
+            </span>{{ banner.title2 }}</h1>
         <p class="banner__text">{{ banner.text }}</p>
-        <a href="{{ banner.link1 }}" class="button button--primary button--large">{{ banner.button1 }}</a>
-        <a href="{{ banner.link2 }}" class="button button--tertiary button--large"><img src="icon.svg" alt="" class="banner__icon">{{ banner.button2 }}</a>
+        <div class="banner__buttons">
+            <a href="{{ banner.link1 }}" class="button button--primary button--large">{{ banner.button1 }}</a>
+            <a href="{{ banner.link2 }}" class="button button--tertiary button--large"><img src="icon.svg" alt="" class="banner__icon">{{ banner.button2 }}</a>
+        </div>
     </div>
     <div class="banner__images">
         {% for item in banner.pictures %}

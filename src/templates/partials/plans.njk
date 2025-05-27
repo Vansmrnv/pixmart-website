@@ -1,6 +1,6 @@
 <section class="plans">
     <span class= "plans__id">{{ plans.id }}</span>
-    <h2 class= "plans__title">{{ plans.title }}</h2>
+    <h2 class= "plans__title section-title section-title--great">{{ plans.title }}</h2>
     <ul class="plans__list">
         {% for item in plans.cards %}
             {% include 'partials/plan-card.njk' %}

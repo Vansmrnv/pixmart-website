@@ -1,0 +1,32 @@
+.articles {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__link {
+        font-family: var(--main-font);
+        color: var(--primary-button-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-6);
+        line-height: var(--line-height-l2);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        list-style: none;
+    }
+}

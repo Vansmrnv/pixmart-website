@@ -24,7 +24,9 @@
     ]
   },
   "banner": {
-    "title": "Craft Your Success with Our *Digital* Assets",
+    "title1": "Craft Your Success with Our",
+    "highlight": "Digital",
+    "title2": "Assets",
     "text": "From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources.",
     "button1": "Shop Now",
     "link1": "/",

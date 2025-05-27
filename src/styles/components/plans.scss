@@ -1,0 +1,29 @@
+.plans {
+
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__id {
+        font-family: var(--main-font);
+        color: #0F73F6;
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+        text-align: center;
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 32px;
+    }
+}

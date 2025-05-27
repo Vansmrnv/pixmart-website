@@ -1,5 +1,5 @@
 <section class="catalog">
-    <aside class="catalog__sidebar">
+    <aside class="catalog__sidebar" hidden>
         <form class="catalog__form" action="url" method="post">
             {% for item in catalog.filters %}
                 <article class="catalog__filter">
@@ -34,9 +34,11 @@
                         <option value="{{ item.value }}" class="catalog__select-option">{{ item.name }}</option>
                     {% endfor %}
                 </select>
+                <button class="catalog__filter-button button button--primary button--small"><img src="icon.svg" alt=""></button>
             </form>
-            <p class="catalog__settings-text">{{ catalog.text }}</p>
+
             <form action="/switch-view" method="post" class="catalog__view">
+                <p class="catalog__settings-text">{{ catalog.text }}</p>
                 {% for option in catalog.viewOptions.options %}
                     {% set isChecked = viewOptions.defualtView == option.value %}
                     <input type="radio" id="{{ option.id }}" name="view" value="{{ option.value }}" class="catalog__view-input" {% if isChecked %}checked{% endif %}>
@@ -57,6 +59,6 @@
                 </li>
             {% endfor %}
         </ul>
-        <button type="button" class="button button--secondary button--large">{{ catalog.buttonload }}</button>
+        <button type="button" class="catalog__button button button--secondary button--large">{{ catalog.buttonload }}</button>
     </div>
 </section>

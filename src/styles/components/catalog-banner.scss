@@ -1,0 +1,13 @@
+.catalog-banner {
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin-left: 16px;
+        margin-top: 64px;
+    }
+
+    &__title--highlight {
+        color: var(--primary-button-color);
+    }
+}

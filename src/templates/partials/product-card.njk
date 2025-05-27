@@ -4,7 +4,7 @@
         <img src="{{ item.image1 }}" alt="image" class="product-card__image" width="305px" height="272px"/>
     </picture>
     <a href="{{ item.link }}" class="product-card__link button button--primary button--large">{{ products.button }}</a>
-    {% if item.status != "default" %}
+    {% if item.status == "popular" %}
         <div class="product-card__tag">
             <img src="icon.svg" alt="" class="product-card__icon">
         </div>
