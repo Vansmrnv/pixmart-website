@@ -13,10 +13,14 @@
 
     &__picture {
         width: 100%;
+    }
+
+    &__image {
+        object-fit: cover;
         border-radius: 20px;
     }
 
-    &__title {        
+    &__title {
         color: var(--primary-color);
         font-weight: var(--weight-7);
         margin-top: 20px;
@@ -24,7 +28,7 @@
     }
 
     &__time {
-        font-family: var(--main-font) ;
+        font-family: var(--main-font);
         font-weight: var(--weight-4);
         color: var(--gray-color);
         font-size: var(--body-text2);

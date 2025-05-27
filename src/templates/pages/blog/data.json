@@ -28,8 +28,8 @@
         "title": "Mastering the Art of Typography: Tips for Eye-Catching Designs for 2024"
     },
     "article": {
-        "image1": "/",
-        "image2": "/",
+        "image1": "/img/article-1x.webp",
+        "image2": "/img/article-2x.webp",
         "author1": "/",
         "author2": "/",
         "datetime": "04-10-2024",
@@ -87,8 +87,8 @@
                 "description": "White space, or negative space, is a powerful tool in typography. It helps in decluttering designs and allows each typographic element to breathe. Proper use of white space can significantly improve the overall balance and composition of your design."
             }
         ],
-        "listimage1": "/",
-        "listimage2": "/",
+        "listimage1": "/img/article1-1x.webp",
+        "listimage2": "/img/article1-2x.webp",
         "caption": "Example of font usage in typography.",
         "button": "Get this asset",
         "link": "/",
@@ -101,8 +101,8 @@
         "button": "Explore All Articles",
         "cards": [
             {
-                "image1": "/",
-                "image2": "/",
+                "image1": "/img/articledishes-1x.webp",
+                "image2": "/img/articledishes-2x.webp",
                 "title": "Best Dishes",
                 "datetime": "2024-05-05",
                 "date": "15 APRIL 2024",
@@ -110,17 +110,17 @@
                 "tag": "TAG"
             },
             {
-                "image1": "/",
-                "image2": "/",
-                "title": "Best Dishes",
+                "image1": "/img/lotusspa-1x.webp",
+                "image2": "/img/lotusspa-2x.webp",
+                "title": "Contact Us Lotus Spa",
                 "datetime": "2024-05-05",
                 "date": "5 MAY 2024",
                 "link": "/",
                 "tag": "TAG"
             },
             {
-                "image1": "/",
-                "image2": "/",
+                "image1": "/img/creativeblog-1x.webp",
+                "image2": "/img/creativeblog-2x.webp",
                 "title": "Creative Blog",
                 "datetime": "2024-06-20",
                 "date": "20 JUNE 2024",

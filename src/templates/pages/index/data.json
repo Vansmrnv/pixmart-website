@@ -94,8 +94,8 @@
     "cards": [
       {
         "link": "/",
-        "image1": "/",
-        "image2": "/",
+        "image1": "/img/travelhero-1x.webp",
+        "image2": "/img/travelhero-2x.webp",
         "title": "Travel Hero",
         "subtitle1": "Adventure",
         "subtitle2": "Journey",
@@ -114,8 +114,8 @@
       },
       {
         "link": "/",
-        "image1": "/",
-        "image2": "/",
+        "image1": "/img/fooddelight-1x.webp",
+        "image2": "/img/fooddelight-2x.webp",
         "title": "Foodish Delight",
         "subtitle1": "Catering",
         "subtitle2": "Food",
@@ -124,8 +124,8 @@
       },
       {
         "link": "/",
-        "image1": "/",
-        "image2": "/",
+        "image1": "/img/realestate-1x.webp",
+        "image2": "/img/realestate-2x.webp",
         "title": "Real Estate",
         "subtitle1": "Modern",
         "subtitle2": "Homes",
@@ -209,15 +209,15 @@
     "button": "Explore All Articles",
     "cards": [
       {
-        "image1": "/",
-        "image2": "/",
+        "image1": "/img/blogpage-1x.webp",
+        "image2": "/img/blogpage-2x.webp",
         "title": "Creative Blog",
         "datetime": "2024-04-15",
         "date": "15 APRIL 2024"
       },
       {
-        "image1": "/",
-        "image2": "/",
+        "image1": "/img/bestdishes-1x.webp",
+        "image2": "/img/bestdishes-2x.webp",
         "title": "Best Dishes",
         "datetime": "2024-05-05",
         "date": "5 MAY 2024"

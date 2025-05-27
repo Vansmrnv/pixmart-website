@@ -1,7 +1,7 @@
 <section class="article">
     <picture class="article__picture">
         <source srcset="{{ article.image1 }}, {{ article.image2 }} 2x">
-        <img src="{{ article.image1 }}" alt="image" class="article__image"/>
+        <img src="{{ article.image1 }}" alt="image" class="article__image" width="408px" height="127px"/>
     </picture>
     <div class="article__box">
         <aside class="article__side">
@@ -54,7 +54,7 @@
                             <figure class="article__figure">
                                 <picture class="article__picture">
                                     <source srcset="{{ article.listimage1 }}, {{ article.listimage2 }} 2x">
-                                    <img src="{{ article.listimage1 }}" alt="image" class="article__image"/>
+                                    <img src="{{ article.listimage1 }}" alt="image" class="article__image" width="408px" height="462px"/>
                                 </picture>
                                 <figcaption class="article__figure-caption">{{ article.caption }}</figcaption>
                                 <a href="{{ article.link }}">{{ article.button }}</a>
