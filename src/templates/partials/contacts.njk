@@ -1,14 +1,14 @@
 <section class="contacts">
     <article class="contacts__info">
         <span class="contacts__id">{{ contacts.id }}</span>
-        <h1 class="contacts__title">{{ contacts.title }}</h1>
+        <h1 class="contacts__title section-title">{{ contacts.title }}</h1>
         <p class="contacts__text">{{ contacts.text }}</p>
-        <a href="{{ contacts.link }}" class="button button--primary button--large">{{ contacts.button }}</a>
+        <a href="{{ contacts.link }}" class="contacts__link button button--primary button--large">{{ contacts.button }}</a>
         <ul class="contacts__details">
             {% for item in contacts.details %}
                 <li class="contacts__detail">
                     <img src="icon.svg" alt="" class="contacts__icon">
-                    <a href="{{ item.link }}">{{ item.title }}</a>
+                    <a href="{{ item.link }}" class="contacts__detail-link">{{ item.title }}</a>
                 </li>
             {% endfor %}
         </ul>
@@ -41,14 +41,16 @@
             <label class="contacts-form__label form-label" for="message">{{ contacts.message }}</label>
             <textarea class="contacts-form__input text-input" name="welcome" id="message" placeholder="{{ contacts.example.message }}" required></textarea>
         </div>
-        <div class="form-item">
-            <label for="subscribe_switch" class="checkbox-label">{{ contacts.switch1 }}</label>
-            <input id="subscribe_switch" class="checkbox-input" type="checkbox"/>
+        <div class="contacts-form__checkboxes">
+            <div class="contacts-form__checkbox">
+                <label for="subscribe_switch" class="checkbox-label">{{ contacts.switch1 }}</label>
+                <input id="subscribe_switch" class="checkbox-input" type="checkbox"/>
+            </div>
+            <div class="contacts-form__checkbox">
+                <label for="agree_switch" class="checkbox-label" >{{ contacts.switch2 }}</label>
+                <input id="agree_switch" class="checkbox-input" type="checkbox" checked/>
+            </div>
         </div>
-        <div class="form-item">
-            <label for="agree_switch" class="checkbox-label" >{{ contacts.switch2 }}</label>
-            <input id="agree_switch" class="checkbox-input" type="checkbox" checked/>
-        </div>
-        <button class="button button--primary button--large" type="submit">{{ contacts.sumbit }}</button>
+        <button class="contacts__button button button--primary button--large" type="submit">{{ contacts.submit }}</button>
     </form>
 </section>

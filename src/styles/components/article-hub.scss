@@ -1,0 +1,28 @@
+.article-hub {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 32px 16px;
+    background-color: #F0F6FD;
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__link {
+        font-family: var(--main-font);
+        color: var(--primary-button-color);
+        font-size: var(--body-text2);
+        font-weight: var(600);
+        line-height: var(--line-height-l2);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 16px;
+        list-style: none;
+    }
+}

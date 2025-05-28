@@ -10,16 +10,16 @@
                     <source srcset="{{ article.author1 }}, {{ article.author2 }} 2x">
                     <img src="{{ article.author2 }}" alt="image" class="article__author-image"/>
                 </picture>
-                <h5 class="article__author-name">{{ article.name }}</h5>
-                <time datetime="{{ article.datetime }}">{{ article.date }}</time>
+                <h5 class="article__author-name section-title section-title--small">{{ article.name }}</h5>
+                <time datetime="{{ article.datetime }}" class="article__author-date">{{ article.date }}</time>
             </div>
             <div class="article__category">
-                <h4 class="article__category-title">{{ article.list1title }}</h4>
+                <h4 class="article__category-title section-title section-title--medium">{{ article.list1title }}</h4>
                 <ul class="articles__categories">
                     {% for item in article.list1 %}
                         <li class="article__categories-item">
                             {{ item.title}}
-                            <ul>
+                            <ul class="article__categories-items">
                                 {% for item in item.list %}
                                     <li class="article__categories-subitem">{{ item }}</li>
                                 {% endfor %}
@@ -29,12 +29,12 @@
                 </ul>
             </div>
             <div class="article__latest">
-                <h4 class="article__list-title">{{ article.list2title }}</h4>
+                <h4 class="article__list-title section-title section-title--medium">{{ article.list2title }}</h4>
                 <ul class="article__points">
                     {% for item in article.list2 %}
                         <li class="article__point">
-                            <h5 class="article__point-title">{{ item.title }}</h5>
-                            <time datetime="{{ item.datetime }}">{{ item.date }}</time>
+                            <h5 class="article__point-title section-title section-title--small">{{ item.title }}</h5>
+                            <time datetime="{{ item.datetime }}" class="article__point-date">{{ item.date }}</time>
                         </li>
                     {% endfor %}
                 </ul>
@@ -44,10 +44,10 @@
             <p class="article__text">{{ article.paragraph1 }}</p>
             <ul class="article__texts">
                 {% for item in article.texts %}
-                    <ol class="article__texts-item">
-                        <h3 class="article__text-title">{{ item.title }}</h3>
+                    <li class="article__texts-item">
+                        <h3 class="article__text-title section-title section-title--medium">{{ item.title }}</h3>
                         <p class="article__text">{{ item.description }}</p>
-                    </ol>
+                    </li>
 
                     {% if loop.index == 2 %}
                         <li class="article__texts-image">
@@ -65,7 +65,7 @@
             </ul>
             <div class="article__quote-box">
                 <img src="icon.svg" alt="" class="article__quote-icon">
-                <blockquote class="article__quote">
+                <blockquote class="article__quote section-title section-title--medium">
                     {{ article.quote }}
                 </blockquote>
             </div>

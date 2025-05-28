@@ -1,0 +1,28 @@
+.article-banner {
+
+    padding: 0 16px;
+
+    &__box {
+        width: fit-content;
+        padding: 8px 16px;
+        background-color: var(--primary-button-color);
+        border-radius: 100px;
+        margin-top: 64px;
+    }
+
+    &__box-tag {
+        font-family: var(--main-font);
+        color: var(--primary-button-text-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-5);
+        line-height: var(--line-height-l2);
+    }
+
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin-top: 24px;
+    }
+
+}

@@ -1,0 +1,133 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 64px 16px 64px 16px;
+    background-image: linear-gradient(to right, #F0F6FD, #FFFFFF00);
+    position: relative;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: relative;
+    }
+
+    &__id {
+        font-family: var(--main-font);
+        color: var(--primary-button-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__text {
+        font-family: var(--main-font);
+        color: var(--gray-color);
+        font-size: var(--body-text1);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l1);
+    }
+
+    &__link {
+        width: fit-content;
+        margin-top: 16px;
+    }
+
+    &__details {
+        font-family: var(--main-font);
+        font-size: var(--body-text1);
+        font-weight: var(--weight-6);
+        line-height: var(--line-height-l1);
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__detail {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__detail-link {
+        color: var(--primary-color);
+    }
+
+    &__map {
+        margin-top: 32px;
+    }
+
+    &__tag {
+        display: grid;
+        grid-template-columns: auto;
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        background-color: var(--base-color);
+        visibility: hidden;
+    }
+
+    &__icon {
+        grid-row: 1 / span 2;
+    }
+
+    &__tag-title {
+        font-family: var(--main-font);
+        color: var(--primary-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-7);
+        line-height: var(--line-height-l2);
+        grid-column: 2/3;
+    }
+
+    &__tag-text {
+        font-family: var(--main-font);
+        color: var(--gray-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+        grid-column: 2/3;
+    }
+
+    &__form {
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: var(--base-color);
+        box-shadow: 0 4px 40px #1D395F14;
+    }
+
+    &-form__item {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &-form__checkbox {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 9px;
+        align-items: center;
+    }
+
+    &-form__checkboxes {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 4px;
+    }
+
+    &__button {
+        margin-top: 12px;
+        width: fit-content;
+    }
+
+}

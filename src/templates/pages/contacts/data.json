@@ -55,11 +55,12 @@
                 "name": "General Inquiry"
             }
         ],
+        "message": "Message",
         "example":{
             "name": "Amelia Robert Johnson",
             "email": "amelia.robertjohnson@pixmart.com",
             "message": "Enter your message ..."
-        },
+        }, 
         "switch1": "Subscribe me to Newsletter",
         "switch2": "I have read the User & Privacy Policy",
         "submit": "Send Message"
