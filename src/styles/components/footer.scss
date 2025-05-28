@@ -1,0 +1,110 @@
+.footer {
+    padding: 64px 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    &__nav-title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__nav-title:not(:first-child) {
+        margin-top: 8px;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        list-style: none;
+    }
+
+    &__link {
+        font-family: var(--main-font);
+        color: var(--gray-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+    }
+
+
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 8px;
+        list-style: none;
+    }
+
+    &__socials-title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin-top: 8px;
+    }
+
+    &__form {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__form-label {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    &__bottom {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: -8px;
+        background-color: var(--primary-color);
+        padding: 24px 16px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 8px;
+        list-style: none;
+    }
+
+    &__bottom-link {
+        font-family: var(--main-font);
+        color: #E7EEF7A8;
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+    }
+
+    &__bottom-separator {
+        margin-left: 8px;
+    }
+
+    &__bottom-text {
+        font-family: var(--main-font);
+        color: #E7EEF7A8;
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+        margin-top: 32px;
+    }
+}

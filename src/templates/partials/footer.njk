@@ -4,7 +4,7 @@
         <p class="footer__text">{{ footer.text }}</p>
         <nav class="footer__nav">
             {% for item in footer.nav %}
-                <h5 class="footer__nav-title">{{ item.title }}</h5>
+                <h5 class="footer__nav-title section-title section-title--small">{{ item.title }}</h5>
                 <ul class="footer__nav-list">
                     {% for item in item.items %}
                         <li class="footer__nav-item">
@@ -23,17 +23,17 @@
                 </li>
             {% endfor %}
         </ul>
-        <h4 class="footer__socials-title">{{ footer.socials.title }}</h4>
+        <h4 class="footer__socials-title section-title section-title--medium">{{ footer.socials.title }}</h4>
         <form action="/submit-search" method="post" class="footer__form">
-            <label for="email"></label>
-            <input id="email" type="email" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/." placeholder="{{ socials.placeholder }}" class="footer__input text-input" required>
+            <label for="email" class="footer__form-label"></label>
+            <input id="email" type="email" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/." placeholder="{{ footer.socials.placeholder }}" class="footer__input text-input" required>
             <button type="submit" class="button button--primary button--large">{{ footer.socials.submit }}</button>
         </form>
     </div>
     <div class="footer__bottom">
         <ul class="footer__list">
             {% for item in footer.bottom.links %}
-                <li class="footer__list-item"><a href="{{ item.link }}" class="footer__link">{{ item.title }}</a></li>
+                <li class="footer__list-item"><a href="{{ item.link }}" class="footer__bottom-link">{{ item.title }}{% if loop.index != 3 %}<span class="footer__bottom-separator">|</span>{% endif %}</a></li>
             {% endfor %}
         </ul>
         <p class="footer__bottom-text">{{ footer.bottom.text }}</p>

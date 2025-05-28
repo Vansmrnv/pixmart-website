@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    padding: 24px 16px;
+    box-shadow: 0 4px 40px #1D395F05;
+
+
+    &__logo {
+        margin-left: 16px;
+    }
+
+    &__nav {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 44px;
+    } 
+
+    &__link {
+        font-family: var(--main-font);
+        color: var(--primary-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-6);
+        line-height: var(--line-height-l1);
+    }
+
+    &__searcher {
+        margin-left: auto;
+        margin-right: 8px;
+    }
+
+    &__search {
+        visibility: hidden;
+        position: absolute;
+    }
+
+}
