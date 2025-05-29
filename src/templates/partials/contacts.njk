@@ -30,8 +30,8 @@
         </div>
 
         <div class="contacts-form__item">
-            <label class="contacts-form__label form-label" for="subject" hidden></label>
-            <select name="subject" id="subject" class="contacts-form__select">
+            <label class="contacts-form__label form-label" for="subject">{{ contacts.selector }}</label>
+            <select name="subject" id="subject" class="contacts-form__select form-select">
                 {% for item in contacts.selectors %}
                     <option value="{{ item.value }}" class="contacts__select-option">{{ item.name }}</option>
                 {% endfor %}
@@ -39,7 +39,7 @@
         </div>
         <div class="contacts-form__item">
             <label class="contacts-form__label form-label" for="message">{{ contacts.message }}</label>
-            <textarea class="contacts-form__input text-input" name="welcome" id="message" placeholder="{{ contacts.example.message }}" required></textarea>
+            <textarea class="contacts-form__area text-input" name="welcome" id="message" placeholder="{{ contacts.example.message }}" required></textarea>
         </div>
         <div class="contacts-form__checkboxes">
             <div class="contacts-form__checkbox">

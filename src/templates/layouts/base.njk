@@ -10,6 +10,85 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400..600;1,400..600&family=Plus+Jakarta+Sans:ital,wght@0,500..700;1,500..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      window.addEventListener("load", (event) => {
+        const burgerOpener = document.querySelector(".header__burger");
+        const nav = document.querySelector(".header__nav");
+        const searchOpener = document.querySelector(".header__searcher");
+        const search = document.querySelector(".header__search");
+
+        burgerOpener.addEventListener("click", () => {
+          nav
+            .classList
+            .toggle("header__nav--active");
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth >= 500) {
+            nav
+              .classList
+              .remove("header__nav--active");
+            document.body.style.overflow = "";
+          }
+        });
+
+        searchOpener.addEventListener("click", () => {
+          search
+            .classList
+            .toggle("header__search--active")
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth >= 500) {
+            search
+              .classList
+              .remove("header__search--active")
+            document.body.style.overflow = "";
+          }
+        })
+
+      });
+    </script>
+
+    <script>
+      window.addEventListener("load", (event) => {
+        const filterOpener = document.querySelector(".catalog__filter-button");
+        const filters = document.querySelector(".catalog__sidebar");
+        const filterCloser = document.querySelector(".catalog__sidebar-closer")
+
+        filterOpener.addEventListener("click", () => {
+          filters
+            .classList
+            .toggle("catalog__sidebar--active");
+        });
+
+        filterCloser.addEventListener("click", () => {
+          filters
+            .classList
+            .remove("catalog__sidebar--active")
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth >= 500) {
+            filters
+              .classList
+              .remove("catalog__sidebar--active");
+            document.body.style.overflow = "";
+          }
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".header__burger-icon").click(function () {
+          $(this).toggleClass("activated");
+        });
+      });
+    </script>
   </head>
   <body>
     {% include "partials/header.njk" %}

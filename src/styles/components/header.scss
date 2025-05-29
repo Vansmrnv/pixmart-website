@@ -2,22 +2,96 @@
     display: flex;
     padding: 24px 16px;
     box-shadow: 0 4px 40px #1D395F05;
+    position: fixed;
+    top: 0;
+    background-color: #FFFFFF;
+    width: 100%;
+    z-index: 1000;
 
+    &__burger-container {
+        width: 24px;
+        height: 24px;
+        position: relative;
+    }
+
+    &__burger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 20px;
+        height: 14px;
+        cursor: pointer;
+        margin: auto;
+        margin-top: 20px;
+        position: absolute;
+        left: 2px;
+        bottom: 4px;
+    }
+
+    &__burger-icon &__burger-line {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border-radius: 20px;
+    }
+
+    &__burger-icon {
+        transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &__burger-icon.activated {
+        transform: rotate(360deg);
+    }
+
+    &__burger-icon.activated &__burger-line:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+        width: 20px;
+    }
+
+    &__burger-icon.activated &__burger-line:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    &__burger-icon.activated &__burger-line:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+        width: 20px;
+    }
 
     &__logo {
         margin-left: 16px;
     }
 
     &__nav {
-        visibility: hidden;
+        // visibility: hidden;
         position: absolute;
+        position: fixed;
+        top: 92px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #F4F7FA;
+        z-index: 2;
+        transform: translateY(-200%);
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        padding: 34px 48px;
+        // max-height: calc(100vh - 80px);
+    }
+
+    &__nav--active {
+        transform: translateY(0%);
     }
 
     &__nav-list {
         display: flex;
         flex-direction: column;
         gap: 44px;
-    } 
+        list-style: none;
+    }
 
     &__link {
         font-family: var(--main-font);
@@ -33,8 +107,18 @@
     }
 
     &__search {
-        visibility: hidden;
         position: absolute;
+        position: fixed;
+        top: 98px;
+        right: 16px;
+        min-width: 240px;
+        transform: translateY(-300%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 2;
+    }
+
+    &__search--active {
+        transform: translateY(0%);
     }
 
 }

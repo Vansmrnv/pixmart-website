@@ -1,9 +1,14 @@
 <section class="catalog">
-    <aside class="catalog__sidebar" hidden>
+    <aside class="catalog__sidebar">
+        <div class="catalog__sidebar-header">
+            <h4 class="catalog__sidebar-title section-title section-title--medium">{{ catalog.filtertitle }}</h4>
+            <button type="button" class="catalog__sidebar-closer button button--secondary button--icon-small"></button>
+        </div>
         <form class="catalog__form" action="url" method="post">
+            <button type="reset" class="button button--secondary button--medium">{{ catalog.buttonreset }}</button>
             {% for item in catalog.filters %}
                 <article class="catalog__filter">
-                    <h4 class="catalog__filter-title">{{ item.title }}</h4>
+                    <h4 class="catalog__filter-title section-title section-title--medium">{{ item.title }}</h4>
                     {% if item.type == "checkbox" or item.type == "radio" %}
                         <div class="catalog__filters">
                             {% for option in item.options %}
@@ -18,23 +23,22 @@
                 </article>
             {% endfor %}
             <div class="catalog__slide-box">
-                <h4 class="catalog__slider-title">{{ catalog.slidertitle }}</h4>
+                <h4 class="catalog__slider-title section-title section-title--medium">{{ catalog.slidertitle }}</h4>
                 <input type="range" min="5" max="50" value="25" class="catalog__slider" id="range">
             </div>
-            <button type="reset" class="button button--secondary button--medium">{{ catalog.buttonreset }}</button>
-            <button type="submit" class="button button--primary button--large">{{ catalog.buttonsubmit }}</button>
         </form>
+        <button type="submit" class="catalog__sidebar-button button button--primary button--large">{{ catalog.buttonsubmit }}</button>
     </aside>
     <div class="catalog__box">
         <div class="catalog__settings">
             <form action="url" method="post" class="catalog__select-box">
                 <label for="type" hidden></label>
-                <select name="type" id="type" class="catalog__select">
+                <select name="type" id="type" class="catalog__select form-select form-select--small">
                     {% for item in catalog.selectors %}
                         <option value="{{ item.value }}" class="catalog__select-option">{{ item.name }}</option>
                     {% endfor %}
                 </select>
-                <button class="catalog__filter-button button button--primary button--small"><img src="icon.svg" alt=""></button>
+                <button type="button" class="catalog__filter-button button button--primary button--icon-small"><img src="icon.svg" alt=""></button>
             </form>
 
             <form action="/switch-view" method="post" class="catalog__view">

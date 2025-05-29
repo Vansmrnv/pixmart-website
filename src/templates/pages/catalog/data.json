@@ -184,6 +184,7 @@
                 "status": "SOLD OUT"
             }
         ],
+        "filtertitle": "Filters",
         "filters": [
             {
                 "title": "Categories",

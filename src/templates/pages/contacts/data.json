@@ -50,6 +50,7 @@
         },
         "name": "Full Name",
         "email": "Email",
+        "selector": "Subject",
         "selectors": [
             {
                 "value": "generalinquiry",

@@ -63,6 +63,12 @@
     background-position: right 20px;
 }
 
+.form-select--small {
+    @extend .text-input--small;
+}
+
+
+
 
 
 

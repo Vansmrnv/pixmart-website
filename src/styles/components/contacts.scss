@@ -110,6 +110,10 @@
         gap: 6px;
     }
 
+    &-form__area {
+        height: 180px;
+    }
+
     &-form__checkbox {
         display: flex;
         flex-direction: row-reverse;

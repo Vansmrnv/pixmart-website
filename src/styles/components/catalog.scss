@@ -1,12 +1,89 @@
 .catalog {
     padding: 0 16px;
 
+    &__sidebar {
+        width: 100%;
+        position: absolute;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #F4F7FA;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        padding: 34px 48px;
+        z-index: 1001;
+    }
+
+    &__sidebar--active {
+        transform: translateX(0%);
+    }
+
+    &__sidebar-closer {
+        margin-left: auto;
+    }
+
+    &__sidebar-header {
+        display: flex;
+        padding: 24px 16px;
+        box-shadow: 0 4px 40px #1D395F05;
+        position: fixed;
+        top: 0;
+        background-color: #FFFFFF;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 24px 16px;
+        z-index: 1001;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 88px;
+        overflow-y: scroll;
+    }
+
+    &__filter {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__filter-title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__filters {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__slider {
+        margin-top: 24px;
+    }
+
+    &__sidebar-button {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+
+
+
     &__box {
         display: flex;
         flex-direction: column;
         gap: 24px;
     }
-    
+
     &__select-box {
         display: flex;
         gap: 8px;
@@ -38,7 +115,7 @@
         color: var(--primary-color);
         font-size: var(--body-text2);
         font-weight: var(--weight-4);
-        line-height: var(--line-height-l2);        
+        line-height: var(--line-height-l2);
     }
 
     &__products {
