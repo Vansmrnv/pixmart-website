@@ -1,14 +1,27 @@
-.faqs {
+@use '../global/mixins.scss' as *;
 
+.faqs {
     padding: 0 16px;
     display: flex;
     flex-direction: column;
     gap: 64px;
+    justify-content: space-between;
+
+    @include desk {
+        flex-direction: row;
+        padding: 0 80px;
+        gap: 40px;
+        background-image: radial-gradient(#0F73F6 var(--base-color));
+    }
 
     &__details {
         display: flex;
         flex-direction: column;
         gap: 16px;
+
+        @include desk {
+            align-self: center;
+        }
     }
 
     &__id {
@@ -23,6 +36,10 @@
         color: var(--primary-color);
         font-weight: var(--weight-7);
         margin-bottom: 16px;
+    }
+
+    &__link {
+        width: fit-content;
     }
 
     &__list {

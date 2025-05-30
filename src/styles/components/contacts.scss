@@ -1,3 +1,5 @@
+@use '../global/mixins.scss' as *;
+
 .contacts {
     display: flex;
     flex-direction: column;
@@ -5,6 +7,18 @@
     padding: 64px 16px 64px 16px;
     background-image: linear-gradient(to right, #F0F6FD, #FFFFFF00);
     position: relative;
+
+    @include desk {
+        padding: 64px 40px 0 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        align-items: end;
+    }
+
+    @include desk-l {
+        padding: 64px 80px 0 80px;
+    }
 
     &__info {
         display: flex;
@@ -102,19 +116,20 @@
         gap: 20px;
         background-color: var(--base-color);
         box-shadow: 0 4px 40px #1D395F14;
+        border-radius: 20px;
     }
 
-    &-form__item {
+    &__form-item {
         display: flex;
         flex-direction: column;
         gap: 6px;
     }
 
-    &-form__area {
+    &__form-area {
         height: 180px;
     }
 
-    &-form__checkbox {
+    &__form-checkbox {
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
@@ -122,7 +137,7 @@
         align-items: center;
     }
 
-    &-form__checkboxes {
+    &__form-checkboxes {
         display: flex;
         flex-direction: column;
         gap: 6px;

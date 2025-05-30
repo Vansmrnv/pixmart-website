@@ -1,12 +1,28 @@
+@use '../global/mixins.scss' as *;
+
 .header {
     display: flex;
     padding: 24px 16px;
     box-shadow: 0 4px 40px #1D395F05;
     position: fixed;
     top: 0;
-    background-color: #FFFFFF;
+    background-color: var(--base-color);
     width: 100%;
     z-index: 1000;
+
+    @include desk {
+        padding: 24px 40px;
+        align-items: center;
+    }
+
+    &__burger {
+        position: relative;
+
+        @include desk {
+            position: absolute;
+            visibility: hidden;
+        }
+    }
 
     &__burger-container {
         width: 24px;
@@ -62,11 +78,14 @@
 
     &__logo {
         margin-left: 16px;
+
+        @include desk {
+            margin-left: 0px;
+        }
     }
 
     &__nav {
-        // visibility: hidden;
-        position: absolute;
+        display: flex;
         position: fixed;
         top: 92px;
         left: 0;
@@ -76,10 +95,16 @@
         z-index: 2;
         transform: translateY(-200%);
         transition: transform 0.3s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        padding: 34px 48px;
-        // max-height: calc(100vh - 80px);
+        padding: 34px 48px; 
+
+        @include desk {
+            position: relative;
+            padding: 0;
+            height: auto;
+            transform: translateY(0%);
+            top: auto;
+            background-color: transparent;
+        }
     }
 
     &__nav--active {
@@ -91,6 +116,12 @@
         flex-direction: column;
         gap: 44px;
         list-style: none;
+
+        @include desk {
+            flex-direction: row;
+            gap: 32px;
+            margin-left: 44px;
+        }
     }
 
     &__link {
@@ -104,10 +135,14 @@
     &__searcher {
         margin-left: auto;
         margin-right: 8px;
+
+        @include desk {
+            position: absolute;
+            visibility: hidden;
+        }
     }
 
     &__search {
-        position: absolute;
         position: fixed;
         top: 98px;
         right: 16px;
@@ -115,6 +150,15 @@
         transform: translateY(-300%);
         transition: transform 0.3s ease-in-out;
         z-index: 2;
+
+        @include desk {
+            display: flex;
+            position: relative;
+            transform: translate(0%);
+            top: auto;
+            right: auto;
+            margin-right: 8px;
+        }
     }
 
     &__search--active {

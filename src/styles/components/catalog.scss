@@ -1,5 +1,17 @@
+@use '../global/mixins.scss' as *;
+
 .catalog {
     padding: 0 16px;
+
+    @include desk {
+        padding: 0 40px;
+    }
+
+    @include desk-l {
+        padding: 0 80px;
+        display: flex;
+        gap: 24px;
+    }
 
     &__sidebar {
         width: 100%;
@@ -17,6 +29,16 @@
         flex-direction: column;
         padding: 34px 48px;
         z-index: 1001;
+
+        @include desk-l {
+            position: relative;
+            width: 100%;
+            height: auto;
+            transform: translateX(0%);
+            background-color: var(--base-color);
+            padding: 0;
+            z-index: auto;
+        }
     }
 
     &__sidebar--active {
@@ -25,6 +47,14 @@
 
     &__sidebar-closer {
         margin-left: auto;
+    }
+
+    &__sidebar-reset {
+        @include desk-l {
+            position: absolute;
+            bottom: -80px;
+            width: 217px;
+        }
     }
 
     &__sidebar-header {
@@ -39,6 +69,11 @@
         transform: translateX(-50%);
         padding: 24px 16px;
         z-index: 1001;
+
+        @include desk-l {
+            position: absolute;
+            visibility: hidden;
+        }
     }
 
     &__form {
@@ -47,6 +82,10 @@
         gap: 40px;
         margin-top: 88px;
         overflow-y: scroll;
+
+        @include desk-l {
+            margin-top: auto;
+        }
     }
 
     &__filter {
@@ -73,26 +112,59 @@
     &__sidebar-button {
         margin-top: 16px;
         margin-bottom: 16px;
+
+        @include desk-l {
+            position: absolute;
+            visibility: hidden;
+        }
     }
-
-
 
 
     &__box {
         display: flex;
         flex-direction: column;
         gap: 24px;
+
+        @include desk {
+            gap: 0;
+        }
+    }
+
+    &__settings {
+        display: block;
+
+        @include desk {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__filter-button {
+        @include desk-l {
+            position: absolute;
+            visibility: hidden;
+        }
     }
 
     &__select-box {
         display: flex;
         gap: 8px;
+
+        @include desk {
+            align-items: center;
+        }
     }
 
     &__view {
         display: flex;
         gap: 24px;
         margin-top: 24px;
+
+        @include desk {
+            margin-top: 0;
+            align-self: center;
+        }
     }
 
     &__tags {
@@ -122,9 +194,21 @@
         display: grid;
         grid-template-columns: auto;
         list-style: none;
+
+        @include desk {
+            margin-top: 48px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
     }
 
     &__button {
         margin-top: 24px;
+
+        @include desk {
+            width: fit-content;
+            align-self: center;
+            margin-top: 48px;
+        }
     }
 }

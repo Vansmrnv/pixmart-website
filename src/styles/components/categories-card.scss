@@ -12,6 +12,13 @@
     background-color: var(--base-alt2-color);
     transition: all 0.3s ease;
 
+    @include desk {
+        max-width: 210px;
+    }
+
+    @include desk-l {
+        max-width: 294px;
+    }
 
     &__title {
         color: var(--primary-color);

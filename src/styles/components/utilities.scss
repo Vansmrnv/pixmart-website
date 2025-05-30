@@ -1,5 +1,15 @@
+@use '../global/mixins.scss' as *;
+
 .utilities {
     padding: 0 16px;
+
+    @include desk {
+        padding: 0 40px;
+    }
+
+    @include desk-l {
+        padding: 0 80px;
+    }
 
     &__list {
         display: flex;
@@ -7,5 +17,9 @@
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
+
+        @include desk {
+            overflow-x: hidden;
+        }
     }
 }

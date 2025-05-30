@@ -1,9 +1,19 @@
+@use '../global/mixins.scss' as *;
+
 .plans {
 
     padding: 0 16px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @include desk {
+        padding: 0 40px;
+    }
+
+    @include desk-l {
+        padding: 0 80px;
+    }
 
     &__id {
         font-family: var(--main-font);
@@ -25,5 +35,12 @@
         flex-direction: column;
         gap: 16px;
         margin-top: 32px;
+        
+
+        @include desk {
+            flex-direction: row;
+            justify-content: center;
+            align-items: end;
+        }
     }
 }

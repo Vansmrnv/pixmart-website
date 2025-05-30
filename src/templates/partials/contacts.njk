@@ -20,33 +20,33 @@
         </div>
     </article>
     <form action="url" method="post" class="contacts__form">
-        <div class="contacts-form__item">
-            <label class="contacts-form__label form-label" for="name">{{ contacts.name }}</label>
-            <input class="contacts-form__input text-input" id="name" type="text" placeholder="{{ contacts.example.name }}"/>
+        <div class="contacts__form-item">
+            <label class="contacts__form-label form-label" for="name">{{ contacts.name }}</label>
+            <input class="contacts__form-input text-input" id="name" type="text" placeholder="{{ contacts.example.name }}"/>
         </div>
-        <div class="contacts-form__item">
-            <label class="contacts-form__label form-label" for="contact_email">{{ contacts.email }}</label>
-            <input type="email" class="contacts-form__input text-input" id="contact_email" placeholder="{{ contacts.example.email }}" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required/>
+        <div class="contacts__form-item">
+            <label class="contacts__form-label form-label" for="contact_email">{{ contacts.email }}</label>
+            <input type="email" class="contacts__form-input text-input" id="contact_email" placeholder="{{ contacts.example.email }}" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required/>
         </div>
 
-        <div class="contacts-form__item">
-            <label class="contacts-form__label form-label" for="subject">{{ contacts.selector }}</label>
-            <select name="subject" id="subject" class="contacts-form__select form-select">
+        <div class="contacts__form-item">
+            <label class="contacts__form-label form-label" for="subject">{{ contacts.selector }}</label>
+            <select name="subject" id="subject" class="contacts__form-select form-select">
                 {% for item in contacts.selectors %}
                     <option value="{{ item.value }}" class="contacts__select-option">{{ item.name }}</option>
                 {% endfor %}
             </select>
         </div>
-        <div class="contacts-form__item">
-            <label class="contacts-form__label form-label" for="message">{{ contacts.message }}</label>
-            <textarea class="contacts-form__area text-input" name="welcome" id="message" placeholder="{{ contacts.example.message }}" required></textarea>
+        <div class="contacts__form-item">
+            <label class="contacts__form-label form-label" for="message">{{ contacts.message }}</label>
+            <textarea class="contacts__form-area text-input" name="welcome" id="message" placeholder="{{ contacts.example.message }}" required></textarea>
         </div>
-        <div class="contacts-form__checkboxes">
-            <div class="contacts-form__checkbox">
+        <div class="contacts__form-checkboxes">
+            <div class="contacts__form-checkbox">
                 <label for="subscribe_switch" class="checkbox-label">{{ contacts.switch1 }}</label>
                 <input id="subscribe_switch" class="checkbox-input" type="checkbox"/>
             </div>
-            <div class="contacts-form__checkbox">
+            <div class="contacts__form-checkbox">
                 <label for="agree_switch" class="checkbox-label" >{{ contacts.switch2 }}</label>
                 <input id="agree_switch" class="checkbox-input" type="checkbox" checked/>
             </div>

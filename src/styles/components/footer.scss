@@ -1,13 +1,33 @@
+@use '../global/mixins.scss' as *;
+
 .footer {
     padding: 64px 16px 0 16px;
     display: flex;
     flex-direction: column;
     gap: 64px;
 
+    @include desk {
+        padding: 64px 40px;
+        gap: 72px;
+    }
+
     &__top {
         display: flex;
         flex-direction: column;
         gap: 16px;
+
+        @include desk {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__details {
+        @include desk {
+            display: flex;
+            flex-direction: column;
+            max-width: 320px;
+        }
     }
 
     &__nav {
@@ -15,11 +35,18 @@
         flex-direction: column;
         gap: 16px;
         margin-top: 16px;
+
+        @include desk {
+            flex-direction: row;
+            gap: 64px;
+            margin-top: auto;
+        }
     }
 
     &__nav-title {
         color: var(--primary-color);
         font-weight: var(--weight-7);
+        margin-bottom: 16px;
     }
 
     &__nav-title:not(:first-child) {
@@ -47,6 +74,22 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
+
+        @include desk {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__socials-box {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include desk {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     &__icons {
@@ -59,6 +102,10 @@
         color: var(--primary-color);
         font-weight: var(--weight-7);
         margin-top: 8px;
+
+        @include desk {
+            align-self: center;
+        }
     }
 
     &__form {
@@ -79,6 +126,12 @@
         margin-top: -8px;
         background-color: var(--primary-color);
         padding: 24px 16px;
+
+        @include desk {
+            padding: 24px 80px;
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__list {
@@ -106,5 +159,9 @@
         font-weight: var(--weight-4);
         line-height: var(--line-height-l2);
         margin-top: 32px;
+
+        @include desk {
+            margin-top: auto;
+        }
     }
 }

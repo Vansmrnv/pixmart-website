@@ -5,7 +5,7 @@
             <button type="button" class="catalog__sidebar-closer button button--secondary button--icon-small"></button>
         </div>
         <form class="catalog__form" action="url" method="post">
-            <button type="reset" class="button button--secondary button--medium">{{ catalog.buttonreset }}</button>
+            <button type="reset" class="catalog__sidebar-reset button button--secondary button--medium">{{ catalog.buttonreset }}</button>
             {% for item in catalog.filters %}
                 <article class="catalog__filter">
                     <h4 class="catalog__filter-title section-title section-title--medium">{{ item.title }}</h4>
@@ -49,13 +49,13 @@
                     <label for="{{ option.id }}" class="catalog__view-label {% if isChecked %}button button--primary button--icon-small{% else %}button button--secondary button--icon-small{% endif %}"><img src="icon.svg" alt=""></label>
                 {% endfor %}
             </form>
-            <ul class="catalog__tags">
-                {% for item in catalog.tags %}
-                    <li class="catalog__tag">{{ item }}
-                        <img class="catalog__tag-icon" src="icon.svg" alt=""></li>
-                {% endfor %}
-            </ul>
         </div>
+        <ul class="catalog__tags">
+            {% for item in catalog.tags %}
+                <li class="catalog__tag">{{ item }}
+                    <img class="catalog__tag-icon" src="icon.svg" alt=""></li>
+            {% endfor %}
+        </ul>
         <ul class="catalog__products">
             {% for item in catalog.products %}
                 <li class="catalog__product">

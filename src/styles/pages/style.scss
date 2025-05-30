@@ -1,6 +1,6 @@
 @use '../global/variables.scss';
 @use '../global/global.scss';
-@use '../global/mixins.scss';
+@use '../global/mixins.scss' as *;
 @use '../components/titles.scss';
 @use '../components/buttons.scss';
 @use '../components/form-items.scss';

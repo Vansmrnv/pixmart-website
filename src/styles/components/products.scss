@@ -1,8 +1,22 @@
+@use '../global/mixins.scss' as *;
+
 .products {
     padding: 0 16px;
 
+    @include desk {
+        padding: 0px 40px;
+    }
+
+    @include desk-l {
+        padding: 0px 80px;
+    }
+
     &__details {
         margin-bottom: 48px;
+
+        @include desk {
+            display: flex;
+        }
     }
 
     &__text {
@@ -27,6 +41,15 @@
     &__chevrons {
         position: absolute;
         visibility: hidden;
+
+        @include desk {
+            position: relative;
+            visibility: visible;
+            margin-left: auto;
+            align-self: flex-end;
+            display: flex;
+            gap: 12px;
+        }
     }
 
 

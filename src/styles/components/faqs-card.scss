@@ -5,11 +5,16 @@
     padding: 24px;
     border-radius: 10px;
     background-color: var(--base-color);
-    width: 100%;
+    max-width: 412px;
     box-shadow: 0 4px 40px #1D395F14;
+
+    @include desk-l {
+        max-width: 620px;
+    }
 
     &[open] {
         outline: 2px solid var(--primary-button-color);
+        width: 100%;
     }
 
     &__question {

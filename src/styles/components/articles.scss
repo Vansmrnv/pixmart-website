@@ -1,13 +1,29 @@
+@use '../global/mixins.scss' as *;
+
 .articles {
     padding: 0 16px;
     display: flex;
     flex-direction: column;
     gap: 48px;
 
+    @include desk {
+        padding: 0 40px;
+    }
+
+    @include desk-l {
+        padding: 0 80px;
+    }
+
     &__details {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        @include desk {
+            flex-direction: row;
+            gap: 16px;
+            align-items: end;
+        }
     }
     
     &__title {
@@ -21,6 +37,10 @@
         font-size: var(--body-text2);
         font-weight: var(--weight-6);
         line-height: var(--line-height-l2);
+        
+        @include desk {
+            margin-left: auto;
+        }
     }
 
     &__list {
@@ -28,5 +48,10 @@
         flex-direction: column;
         gap: 28px;
         list-style: none;
+
+        @include desk {
+            flex-direction: row;
+            gap: 32px;
+        }
     }
 }

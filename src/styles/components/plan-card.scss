@@ -5,8 +5,8 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
     position: relative;
+    width: 100%;
 
     &__tag-box {
         position: absolute;
@@ -30,6 +30,8 @@
     &__title {
         color: var(--primary-color);
         font-weight: var(--weight-7);
+        margin-bottom: 32px;
+        margin-top: 16px;
     }
 
     &__text {
@@ -45,7 +47,7 @@
         flex-direction: column;
         gap: 16px;
         border-top: 1px solid #1F324745;
-        padding:40px 0;
+        padding: 40px 0;
     }
 
     &__item {
@@ -65,4 +67,13 @@
 .plan-card--highlight {
     outline: 2px solid var(--primary-button-color);
     margin-bottom: 32px;
+
+    @include desk {
+        padding: 56px 32px 32px 32px;
+    }
+
+    @include desk-l {
+        padding: 32px;
+    }
+
 }

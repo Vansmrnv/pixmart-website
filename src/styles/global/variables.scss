@@ -33,7 +33,7 @@
     --line-height-l1: 28px;
     --line-height-l2: 24px;
     --line-height-l3: 20px;
-    
+
     // letter-spacing
     --letter-spacing: -0.5px;
 
@@ -98,3 +98,9 @@
     --switcher-text: #374151;
     --switcher-text-disabled: #9ca3af;
 }
+
+// Screen sizes 
+
+$screen-desk-l: 1440px;
+$screen-desk: 1024px;
+$screen-mobile: 440px;
