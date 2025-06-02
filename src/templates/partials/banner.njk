@@ -7,7 +7,10 @@
         <p class="banner__text">{{ banner.text }}</p>
         <div class="banner__buttons">
             <a href="{{ banner.link1 }}" class="button button--primary button--large">{{ banner.button1 }}</a>
-            <a href="{{ banner.link2 }}" class="button button--tertiary button--large"><img src="icon.svg" alt="" class="banner__icon">{{ banner.button2 }}</a>
+            <a href="{{ banner.link2 }}" class="button button--tertiary button--large">
+                <svg class="banner__icon">
+                    <use href="img/sprite.svg#play"></use>
+                </svg>{{ banner.button2 }}</a>
         </div>
     </div>
     <div class="banner__images">

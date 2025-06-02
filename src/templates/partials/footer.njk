@@ -1,7 +1,9 @@
 <footer class="footer">
     <div class="footer__top">
         <div class="footer__details">
-            <img src="icon.svg" alt="" class="footer__logo">
+            <svg class="footer__logo">
+                <use href="img/sprite.svg#logo_white"></use>
+            </svg>
             <p class="footer__text">{{ footer.text }}</p>
         </div>
         <nav class="footer__nav">
@@ -23,7 +25,11 @@
         <ul class="footer__icons">
             {% for item in footer.socials.links %}
                 <li class="footer__icons-item">
-                    <a href="{{ item.link }}" class="footer__link button button--secondary button--icon-large"><img src="icon.svg" alt="" class="footer__icon"></a>
+                    <a href="{{ item.link }}" class="footer__link button button--secondary button--icon-large">
+                        <svg class="footer__icon">
+                            <use href="{{ item.icon }}"></use>
+                        </svg>
+                    </a>
                 </li>
             {% endfor %}
         </ul>

@@ -22,11 +22,17 @@
         }
     }
 
+    &__logo {
+        width: 300px;
+    }
+
     &__details {
+        
         @include desk {
+            max-width: 320px;
             display: flex;
             flex-direction: column;
-            max-width: 320px;
+            gap: 16px;
         }
     }
 
@@ -90,6 +96,11 @@
             flex-direction: row;
             justify-content: space-between;
         }
+    }
+
+    &__icon {
+        height: 24px;
+        width: 24px;
     }
 
     &__icons {

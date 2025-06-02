@@ -31,8 +31,8 @@
     "article": {
         "image1": "/img/article-1x.webp",
         "image2": "/img/article-2x.webp",
-        "author1": "/",
-        "author2": "/",
+        "author1": "/img/author-1x.webp",
+        "author2": "/img/author-2x.webp",
         "name": "Emma Clarke",
         "datetime": "04-10-2024",
         "date": "April 10, 2024",
@@ -228,13 +228,16 @@
             "title": "Subscribe to Design Newsletter",
             "links": [
                 {
-                    "link": "/"
+                    "link": "/",
+                    "icon": "img/sprite.svg#twitter"
                 },
                 {
-                    "link": "/"
+                    "link": "/",
+                    "icon": "img/sprite.svg#facebook"
                 },
                 {
-                    "link": "/"
+                    "link": "/",
+                    "icon": "img/sprite.svg#telegram"
                 }
             ]
         },

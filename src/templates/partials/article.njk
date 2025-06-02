@@ -1,7 +1,7 @@
 <section class="article">
     <picture class="article__picture">
         <source srcset="{{ article.image1 }}, {{ article.image2 }} 2x">
-        <img src="{{ article.image1 }}" alt="image" class="article__image" width="408px" height="127px"/>
+        <img src="{{ article.image1 }}" alt="image" class="article__image"/>
     </picture>
     <div class="article__box">
         <aside class="article__side">
@@ -54,7 +54,7 @@
                             <figure class="article__figure">
                                 <picture class="article__picture">
                                     <source srcset="{{ article.listimage1 }}, {{ article.listimage2 }} 2x">
-                                    <img src="{{ article.listimage1 }}" alt="image" class="article__image" width="408px" height="462px"/>
+                                    <img src="{{ article.listimage1 }}" alt="image" class="article__list-image" width="408px" height="462px"/>
                                 </picture>
                                 <figcaption class="article__figure-caption">{{ article.caption }}</figcaption>
                                 <a href="{{ article.link }}">{{ article.button }}</a>
@@ -64,7 +64,9 @@
                 {% endfor %}
             </ul>
             <div class="article__quote-box">
-                <img src="icon.svg" alt="" class="article__quote-icon">
+                <svg class="article__quote-icon">
+                    <use href="./img/quotation.svg"></use>
+                </svg>
                 <blockquote class="article__quote section-title section-title--medium">
                     {{ article.quote }}
                 </blockquote>

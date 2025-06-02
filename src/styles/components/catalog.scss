@@ -27,7 +27,7 @@
         transition: transform 0.3s ease-in-out;
         display: flex;
         flex-direction: column;
-        padding: 34px 48px;
+        padding: 34px 16px;
         z-index: 1001;
 
         @include desk-l {
@@ -50,16 +50,23 @@
     }
 
     &__sidebar-reset {
+        display: flex;
+        flex-direction: row-reverse;
+
         @include desk-l {
-            position: absolute;
-            bottom: -80px;
-            width: 217px;
+            position: relative;
+            width: 100%;
+            order: 1;
         }
+    }
+
+    &__sidebar-iconx {
+        width: 24px;
+        height: 24px;
     }
 
     &__sidebar-header {
         display: flex;
-        padding: 24px 16px;
         box-shadow: 0 4px 40px #1D395F05;
         position: fixed;
         top: 0;
@@ -84,7 +91,7 @@
         overflow-y: scroll;
 
         @include desk-l {
-            margin-top: auto;
+            margin-top: 0;
         }
     }
 
@@ -147,6 +154,10 @@
         }
     }
 
+    &__filter-icon {
+        fill: var(--base-color);
+    }
+
     &__select-box {
         display: flex;
         gap: 8px;
@@ -160,6 +171,7 @@
         display: flex;
         gap: 24px;
         margin-top: 24px;
+        justify-content: space-between;
 
         @include desk {
             margin-top: 0;
@@ -180,6 +192,14 @@
         border: 2px solid var(--secondary-button-border-color);
         border-radius: 8px;
         padding: 6px 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__tag-icon {
+        width: 16px;
+        height: 16px;
     }
 
     &__settings-text {
@@ -188,17 +208,23 @@
         font-size: var(--body-text2);
         font-weight: var(--weight-4);
         line-height: var(--line-height-l2);
+        align-self: center;
+    }
+
+
+    &__gallery-icon {
+        fill: var(--base-color);
     }
 
     &__products {
         display: grid;
         grid-template-columns: auto;
         list-style: none;
+        gap: 32px;
 
         @include desk {
             margin-top: 48px;
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
         }
     }
 

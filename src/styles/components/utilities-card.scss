@@ -10,11 +10,18 @@
         color: var(--primary-color);
         font-weight: var(--weight-5);
         line-height: var(--line-height-l1);
+        align-self: center;
     }
 
     &__box {
         padding: 32px;
         border-radius: 20px;
         background-color: var(--base-alt2-color);
+    }
+
+    &__icon {
+        width: 150px;
+        height: 150px;
+        fill: var(--primary-button-color);
     }
 }

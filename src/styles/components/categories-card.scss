@@ -20,6 +20,11 @@
         max-width: 294px;
     }
 
+    &__icon {
+        width: 48px;
+        height: 48px;
+    }
+
     &__title {
         color: var(--primary-color);
         font-weight: var(--weight-7);

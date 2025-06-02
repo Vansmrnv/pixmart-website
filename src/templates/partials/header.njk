@@ -8,8 +8,10 @@
             </div>
         </div>
     </button>
-    <a href="{{ header.logo }}" class="header__logo">
-        <img src="logo.svg" alt="" class="header__logo"/>
+    <a href="{{ header.logo }}" class="header__logo-link">
+        <svg class="header__logo">
+            <use href="img/sprite.svg#logo_white"></use>
+        </svg>
     </a>
 
     <nav class="header__nav">
@@ -21,12 +23,20 @@
             {% endfor %}
         </ul>
     </nav>
-    <button class="header__searcher button button--secondary button--icon"></button>
+    <button class="header__searcher button button--secondary button--icon-small">
+        <svg class="header__searcher-icon">
+            <use href="img/sprite.svg#search-md"></use>
+        </svg>
+    </button>
     <form action="/submit-search" method="post" class="header__search">
         <img src="icon.svg" alt="">
         <label for="search"></label>
         <input id="search" type="text" pattern="^[a-zA-Z0-9\s]+$" placeholder="Search for Digital Assets" class="header__search-input text-input text-input--small" required>
         <button type="submit" hidden></button>
     </form>
-    <button type="button" class="header__busket button button--primary button--icon"></button>
+    <button type="button" class="header__basket button button--primary button--icon-small">
+        <svg class="header__basket-icon">
+            <use href="img/sprite.svg#shopping-bag-02"></use>
+        </svg>
+    </button>
 </header>

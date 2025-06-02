@@ -12,6 +12,19 @@
         max-width: 620px;
     }
 
+    &__icon {
+        width: 32px;
+        height: 32px;
+        padding: 8px;
+        border: 2px solid #1D36532B;
+        border-radius: 8px;
+        margin-left: auto;
+    }
+
+    &[open] use {
+        transform: rotate(180deg);
+    }
+
     &[open] {
         outline: 2px solid var(--primary-button-color);
         width: 100%;

@@ -9,6 +9,14 @@
     position: relative;
     z-index: 1;
 
+    @include desk {
+        width: 293.33px;
+    }
+
+    @include desk-l {
+        width: 325px;
+    }
+
     &__picture {
         width: 100%;
     }
@@ -16,6 +24,8 @@
     &__image {
         border-radius: 20px;
         background-color: #F4F7FA;
+        width: 100%;
+        object-fit: cover;
     }
 
     &__details {
@@ -46,7 +56,7 @@
         font-weight: var(--weight-7);
         grid-column-start: 1;
         grid-column-end: 2;
-
+        align-self: center;
     }
 
     &__buttons {
@@ -56,8 +66,8 @@
 
     &__tag {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 16px;
+        left: 16px;
         border-radius: 100px;
         padding: 8px 16px;
         z-index: 2;
@@ -65,12 +75,7 @@
     }
 
     &__tag--mark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 100px;
-        padding: 8px 16px;
-        z-index: 2;
+        position: absolute; 
         background-color: #007772;
     }
 
@@ -91,6 +96,10 @@
         font-weight: var(--weight-5);
         font-size: var(--body-text2);
         line-height: var(--line-height-l2);
+    }
+
+    &__bagicon {
+        fill: var(--base-color);
     }
 }
 

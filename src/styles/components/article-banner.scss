@@ -3,6 +3,7 @@
 .article-banner {
 
     padding: 0 16px;
+    background-image: linear-gradient(to bottom #F0F6FD, #FFFFFF00);
 
     @include desk {
         padding: 0 40px;
@@ -33,6 +34,11 @@
         color: var(--primary-color);
         font-weight: var(--weight-7);
         margin-top: 24px;
+
+        @include desk {
+            font-size: var(--heading1);
+            line-height: var(--line-height-h1);
+        }
     }
 
 }

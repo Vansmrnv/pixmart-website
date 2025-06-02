@@ -328,13 +328,16 @@
             "title": "Subscribe to Design Newsletter",
             "links": [
                 {
-                    "link": "/"
+                    "link": "/",
+                    "icon": "img/sprite.svg#twitter"
                 },
                 {
-                    "link": "/"
+                    "link": "/",
+                    "icon": "img/sprite.svg#facebook"
                 },
                 {
-                    "link": "/"
+                    "link": "/",
+                    "icon": "img/sprite.svg#telegram"
                 }
             ]
         },

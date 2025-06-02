@@ -19,6 +19,24 @@
 
     }
 
+    &__image {
+        border-radius: 20px;
+        object-position: 0% 5%;
+        width: 408px;
+        height: 127px;
+        object-fit: cover;
+
+        @include desk {
+            width: 944px;
+            height: 293.52px;
+        }
+
+        @include desk-l {
+            width: 1280px;
+            height: 398px;
+        }
+    }
+
     &__box {
         display: flex;
         flex-direction: column;
@@ -37,19 +55,26 @@
 
     &__author-box {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 60px 1fr;
         width: fit-content;
+        column-gap: 16px;
     }
 
     &__author {
         grid-row: 1 / span 2;
     }
 
-    &__name {
+    &__author-image {
+        border-radius: 50%;
+        width: 100%;
+    }
+
+    &__author-name {
         color: var(--primary-color);
         font-weight: var(--weight-7);
         grid-column: 2/3;
         grid-row: 1/2;
+        align-self: center;
     }
 
     &__date {
@@ -175,6 +200,19 @@
         flex-direction: column;
         gap: 32px;
         list-style: none;
+    }
+
+    &__list-image {
+        width: 408px;
+        border-radius: 20px;
+
+        @include desk {
+            width: 644px;
+        }
+
+        @include desk-l {
+            width: 980px;
+        }
     }
 
     &__texts-item {

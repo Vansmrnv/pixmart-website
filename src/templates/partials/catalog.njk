@@ -2,10 +2,18 @@
     <aside class="catalog__sidebar">
         <div class="catalog__sidebar-header">
             <h4 class="catalog__sidebar-title section-title section-title--medium">{{ catalog.filtertitle }}</h4>
-            <button type="button" class="catalog__sidebar-closer button button--secondary button--icon-small"></button>
+            <button type="button" class="catalog__sidebar-closer button button--secondary button--icon-small">
+                <svg class="catalog__sidebar-icon">
+                    <use href="img/sprite.svg#x-close"></use>
+                </svg>
+            </button>
         </div>
         <form class="catalog__form" action="url" method="post">
-            <button type="reset" class="catalog__sidebar-reset button button--secondary button--medium">{{ catalog.buttonreset }}</button>
+            <button type="reset" class="catalog__sidebar-reset button button--secondary button--medium">{{ catalog.buttonreset }}
+                <svg class="catalog__sidebar-iconx">
+                    <use href="img/sprite.svg#x-close"></use>
+                </svg>
+            </button>
             {% for item in catalog.filters %}
                 <article class="catalog__filter">
                     <h4 class="catalog__filter-title section-title section-title--medium">{{ item.title }}</h4>
@@ -38,22 +46,36 @@
                         <option value="{{ item.value }}" class="catalog__select-option">{{ item.name }}</option>
                     {% endfor %}
                 </select>
-                <button type="button" class="catalog__filter-button button button--primary button--icon-small"><img src="icon.svg" alt=""></button>
+                <button type="button" class="catalog__filter-button button button--primary button--icon-small">
+                    <svg class="catalog__filter-icon">
+                        <use href="img/sprite.svg#filter-lines"></use>
+                    </svg>
+                </button>
             </form>
 
             <form action="/switch-view" method="post" class="catalog__view">
                 <p class="catalog__settings-text">{{ catalog.text }}</p>
-                {% for option in catalog.viewOptions.options %}
-                    {% set isChecked = viewOptions.defualtView == option.value %}
-                    <input type="radio" id="{{ option.id }}" name="view" value="{{ option.value }}" class="catalog__view-input" {% if isChecked %}checked{% endif %}>
-                    <label for="{{ option.id }}" class="catalog__view-label {% if isChecked %}button button--primary button--icon-small{% else %}button button--secondary button--icon-small{% endif %}"><img src="icon.svg" alt=""></label>
-                {% endfor %}
+                <div class="catalog__view-buttons">
+                    <button class="button button--primary button--icon-small">
+                        <svg class="catalog__gallery-icon">
+                            <use href="img/sprite.svg#grid-01"></use>
+                        </svg>
+                    </button>
+                    <button class="button button--secondary button--icon-small">
+                        <svg class="catalog__view-icon">
+                            <use href="img/sprite.svg#list"></use>
+                        </svg>
+                    </button>
+                </div>
             </form>
         </div>
         <ul class="catalog__tags">
             {% for item in catalog.tags %}
                 <li class="catalog__tag">{{ item }}
-                    <img class="catalog__tag-icon" src="icon.svg" alt=""></li>
+                    <svg class="catalog__tag-icon">
+                        <use href="img/sprite.svg#x-close"></use>
+                    </svg>
+                </li>
             {% endfor %}
         </ul>
         <ul class="catalog__products">

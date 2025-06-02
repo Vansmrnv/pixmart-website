@@ -1,17 +1,16 @@
 @use '../global/mixins.scss' as *;
 
 .catalog-banner {
+    padding: 0 16px;
+
+    @include desk {
+        padding: 0 80px;
+    }
 
     &__title {
         color: var(--primary-color);
         font-weight: var(--weight-7);
-        margin-left: 16px;
         margin-top: 64px;
-
-        @include desk {
-            margin-left: 80px;
-
-        }
     }
 
     &__title--highlight {

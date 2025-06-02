@@ -24,7 +24,7 @@
             }
         ]
     },
-    "contacts":{
+    "contacts": {
         "id": "CONTACTS",
         "title": "Get in Touch with Us",
         "text": "We are here to help you navigate your creative journey. Reach out for any questions, support, or feedback.",
@@ -44,7 +44,7 @@
                 "title": "Monday to Friday : 9 AM - 5 PM EST"
             }
         ],
-        "tag":{
+        "tag": {
             "title": "PixMart HQ",
             "text": "123 Creative Ave, Design City, 45678"
         },
@@ -58,11 +58,11 @@
             }
         ],
         "message": "Message",
-        "example":{
+        "example": {
             "name": "Amelia Robert Johnson",
             "email": "amelia.robertjohnson@pixmart.com",
             "message": "Enter your message ..."
-        }, 
+        },
         "switch1": "Subscribe me to Newsletter",
         "switch2": "I have read the User & Privacy Policy",
         "submit": "Send Message"
@@ -164,13 +164,16 @@
             "title": "Subscribe to Design Newsletter",
             "links": [
                 {
-                    "link": "/"
+                    "link": "/",
+                    "icon": "img/sprite.svg#twitter"
                 },
                 {
-                    "link": "/"
+                    "link": "/",
+                    "icon": "img/sprite.svg#facebook"
                 },
                 {
-                    "link": "/"
+                    "link": "/",
+                    "icon": "img/sprite.svg#telegram"
                 }
             ]
         },

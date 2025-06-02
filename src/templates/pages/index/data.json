@@ -50,11 +50,26 @@
   },
   "utilities": {
     "title": [
-      "UI Kits",
-      "Social Media",
-      "Presentation",
-      "Fonts",
-      "Illustrations"
+      {
+        "title": "UI Kits",
+        "icon": "img/sprite.svg#computericon"
+      },
+      {
+        "title": "Social Media",
+        "icon": "img/sprite.svg#phoneicon"
+      },
+      {
+        "title": "Presentation",
+        "icon": "img/sprite.svg#boardicon"
+      },
+      {
+        "title": "Fonts",
+        "icon": "img/sprite.svg#texticon"
+      },
+      {
+        "title": "Illustrations",
+        "icon": "img/sprite.svg#painticon"
+      }
     ]
   },
   "categories": {
@@ -68,25 +83,29 @@
         "title": "Templates",
         "subtitle1": "For all needs",
         "subtitle2": "Modern",
-        "link": "/"
+        "link": "/",
+        "icon": "img/sprite.svg#computericon"
       },
       {
         "title": "App Icons",
         "subtitle1": "High-quality",
         "subtitle2": "Elegant",
-        "link": "/"
+        "link": "/",
+        "icon": "img/sprite.svg#phoneicon"
       },
       {
         "title": "Slides",
         "subtitle1": "Pitch-ready",
         "subtitle2": "Creative",
-        "link": "/"
+        "link": "/",
+        "icon": "img/sprite.svg#boardicon"
       },
       {
         "title": "Design Tools",
         "subtitle1": "Easy to use",
         "subtitle2": "Unique",
-        "link": "/"
+        "link": "/",
+        "icon": "img/sprite.svg#painticon"
       }
     ]
   },
@@ -324,13 +343,16 @@
       "title": "Subscribe to Design Newsletter",
       "links": [
         {
-          "link": "/"
+          "link": "/",
+          "icon": "img/sprite.svg#twitter"
         },
         {
-          "link": "/"
+          "link": "/",
+          "icon": "img/sprite.svg#facebook"
         },
         {
-          "link": "/"
+          "link": "/",
+          "icon": "img/sprite.svg#telegram"
         }
       ]
     },

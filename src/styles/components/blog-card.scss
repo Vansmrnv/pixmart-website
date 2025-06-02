@@ -2,7 +2,7 @@
 
 .blog-card {
 
-    min-width: 320px;
+    width: 408px;
     padding: 20px;
     border-radius: 20px;
     display: flex;
@@ -11,13 +11,18 @@
     background-color: var(--base-color);
     filter: drop-shadow(0px 10px 30px #1D395F0D);
 
-    &__picture {
+    @include desk {
         width: 100%;
+    }
+
+    @include desk-l {
+        width: 410.67px;
     }
 
     &__image {
         object-fit: cover;
         border-radius: 20px;
+        width: 100%;
     }
 
     &__title {
