@@ -9,6 +9,7 @@
     background-color: var(--base-color);
     width: 100%;
     z-index: 1000;
+    min-height: 92px;
 
     @include desk {
         padding: 24px 40px;

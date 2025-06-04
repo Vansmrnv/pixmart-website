@@ -13,16 +13,17 @@
     transition: all 0.3s ease;
 
     @include desk {
-        max-width: 210px;
+        max-width: 100%;
     }
 
     @include desk-l {
-        max-width: 294px;
+        width: 100%;
     }
 
     &__icon {
         width: 48px;
         height: 48px;
+        fill: var(--primary-button-color);
     }
 
     &__title {
@@ -53,5 +54,9 @@
 
     &:hover &__subtitle {
         color: var(--white1-color);
+    }
+
+    &:hover &__icon {
+        fill: var(--base-color);
     }
 }

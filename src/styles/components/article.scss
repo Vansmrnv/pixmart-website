@@ -203,15 +203,15 @@
     }
 
     &__list-image {
-        width: 408px;
+        width: 100%;
         border-radius: 20px;
 
         @include desk {
-            width: 644px;
+            width: 100%;
         }
 
         @include desk-l {
-            width: 980px;
+            width: 100%;
         }
     }
 
@@ -226,9 +226,27 @@
         font-weight: var(--weight-7);
     }
 
+    &__figure-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__figure-link {
+        font-family: var(--main-font);
+        color: var(--primary-button-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-6);
+        line-height: var(--line-height-l2);
+    }
+
     &__quote-box {
         display: flex;
         gap: 16px;
+    }
+
+    &__quote-icon {
+        align-self: flex-start;
+        fill: var(--primary-button-color);
     }
 
     &__quote {

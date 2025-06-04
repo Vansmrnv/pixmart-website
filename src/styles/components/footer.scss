@@ -7,7 +7,7 @@
     gap: 64px;
 
     @include desk {
-        padding: 64px 40px;
+        padding: 64px 40px 0px 40px;
         gap: 72px;
     }
 
@@ -113,6 +113,7 @@
         color: var(--primary-color);
         font-weight: var(--weight-7);
         margin-top: 8px;
+        max-width: 216px;
 
         @include desk {
             align-self: center;

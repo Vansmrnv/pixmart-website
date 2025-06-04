@@ -13,6 +13,7 @@
 
     &__image {
         background-color: #F4F7FA;
+        border-radius: 20px;
     }
 
     &__link {
@@ -24,8 +25,20 @@
         margin: auto;
     }
 
-    &__picture:hover .product-card__link {
+    &__link:hover {
         opacity: 1;
+    }
+
+    &__link:hover &__image {
+        opacity: 0.5;
+    }
+
+    &__image:hover .product-card__link {
+        opacity: 1;
+    }
+
+    &__image:hover {
+        opacity: 0.5;
     }
 
     &__tag {
@@ -36,6 +49,7 @@
         right: 0;
         border-radius: 0 20px;
         background-color: var(--primary-button-color);
+        padding: 16px;
     }
 
 
@@ -81,5 +95,11 @@
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 2;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: var(--base-color);
     }
 }

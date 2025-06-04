@@ -35,16 +35,16 @@
     "link2": "/",
     "pictures": [
       {
-        "image1": "/",
-        "image2": "/"
+        "image1": "/img/banner2-1x.webp",
+        "image2": "/img/banner2-2x.webp"
       },
       {
-        "image1": "/",
-        "image2": "/"
+        "image1": "/img/banner1-1x.webp",
+        "image2": "/img/banner1-2x.webp"
       },
       {
-        "image1": "/",
-        "image2": "/"
+        "image1": "/img/banner3-1x.webp",
+        "image2": "/img/banner3-2x.webp"
       }
     ]
   },
@@ -126,8 +126,8 @@
       },
       {
         "link": "/",
-        "image1": "/",
-        "image2": "/",
+        "image1": "/img/healthcare-1x.webp",
+        "image2": "/img/healthcare-2x.webp",
         "title": "Healthcare Pro",
         "subtitle1": "Medical",
         "subtitle2": "Wellness",

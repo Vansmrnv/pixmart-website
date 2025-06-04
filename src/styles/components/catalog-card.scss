@@ -81,11 +81,6 @@
 
     &__tag--disabled {
         position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 100px;
-        padding: 8px 16px;
-        z-index: 2;
         color: var(--gray1-color);
         background-color: var(--base-color);
     }

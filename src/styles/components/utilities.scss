@@ -1,7 +1,7 @@
 @use '../global/mixins.scss' as *;
 
 .utilities {
-    padding: 0 16px;
+    padding: 0;
 
     @include desk {
         padding: 0 40px;
@@ -20,6 +20,12 @@
 
         @include desk {
             overflow-x: hidden;
+            gap: 16px;
+        }
+
+        @include desk-l {
+            gap: 32px;
+            justify-content: center;
         }
     }
 }

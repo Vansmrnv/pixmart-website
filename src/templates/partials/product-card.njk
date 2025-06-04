@@ -6,7 +6,9 @@
     <a href="{{ item.link }}" class="product-card__link button button--primary button--large">{{ products.button }}</a>
     {% if item.status == "popular" %}
         <div class="product-card__tag">
-            <img src="icon.svg" alt="" class="product-card__icon">
+            <svg class="product-card__icon">
+                <use href="img/sprite.svg#trophy-01"></use>
+            </svg>
         </div>
     {% endif %}
     <div class="product-card__details">

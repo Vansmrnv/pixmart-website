@@ -56,8 +56,10 @@
                                     <source srcset="{{ article.listimage1 }}, {{ article.listimage2 }} 2x">
                                     <img src="{{ article.listimage1 }}" alt="image" class="article__list-image" width="408px" height="462px"/>
                                 </picture>
-                                <figcaption class="article__figure-caption">{{ article.caption }}</figcaption>
-                                <a href="{{ article.link }}">{{ article.button }}</a>
+                                <div class="article__figure-box">
+                                    <figcaption class="article__figure-caption">{{ article.caption }}</figcaption>
+                                    <a href="{{ article.link }}" class="article__figure-link">{{ article.button }}</a>
+                                </div>
                             </figure>
                         </li>
                     {% endif %}
@@ -65,7 +67,7 @@
             </ul>
             <div class="article__quote-box">
                 <svg class="article__quote-icon">
-                    <use href="./img/quotation.svg"></use>
+                    <use href="img/sprite.svg#quotation"></use>
                 </svg>
                 <blockquote class="article__quote section-title section-title--medium">
                     {{ article.quote }}

@@ -65,8 +65,8 @@
         "products": [
             {
                 "link": "/",
-                "image1": "/",
-                "image2": "/",
+                "image1": "/img/lenschron-1x.webp",
+                "image2": "/img/lenschron-2x.webp",
                 "title": "Lens Chronicles",
                 "subtitle1": "Photography",
                 "subtitle2": "Creative",
@@ -115,8 +115,8 @@
             },
             {
                 "link": "/",
-                "image1": "/",
-                "image2": "/",
+                "image1": "/img/gamingrise-1x.webp",
+                "image2": "/img/gamingrise-2x.webp",
                 "title": "Gaming Rise",
                 "subtitle1": "eSports",
                 "subtitle2": "Trends",
@@ -125,8 +125,8 @@
             },
             {
                 "link": "/",
-                "image1": "/",
-                "image2": "/",
+                "image1": "/img/editpro-1x.webp",
+                "image2": "/img/editpro-2x.webp",
                 "title": "Edit Pro",
                 "subtitle1": "Design",
                 "subtitle2": "Tools",
@@ -175,8 +175,8 @@
             },
             {
                 "link": "/",
-                "image1": "/",
-                "image2": "/",
+                "image1": "/img/kindergarten-1x.webp",
+                "image2": "/img/kindergarten-2x.webp",
                 "title": "Kindergarten",
                 "subtitle1": "Education",
                 "subtitle2": "Kids",
