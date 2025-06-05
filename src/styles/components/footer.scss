@@ -1,24 +1,23 @@
 @use '../global/mixins.scss' as *;
 
 .footer {
-    padding: 64px 16px 0 16px;
     display: flex;
     flex-direction: column;
-    gap: 64px;
-
-    @include desk {
-        padding: 64px 40px 0px 40px;
-        gap: 72px;
-    }
 
     &__top {
         display: flex;
         flex-direction: column;
         gap: 16px;
+        padding: 32px 16px 72px;
 
         @include desk {
             flex-direction: row;
             justify-content: space-between;
+            padding: 64px 40px 72px;
+        }
+
+        @include desk-l {
+            padding: 64px 80px 72px;
         }
     }
 
@@ -27,12 +26,11 @@
     }
 
     &__details {
-        
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
         @include desk {
             max-width: 320px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
         }
     }
 
@@ -80,10 +78,16 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
+        padding: 0 16px 64px;
 
         @include desk {
             flex-direction: row;
             justify-content: space-between;
+            padding: 0 40px 135px;
+        }
+
+        @include desk-l {
+            padding: 0 80px 135px;
         }
     }
 
@@ -131,11 +135,8 @@
     }
 
     &__bottom {
-        width: 100vw;
+        width: 100%;
         position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-top: -8px;
         background-color: var(--primary-color);
         padding: 24px 16px;
 

@@ -33,20 +33,12 @@
     "link1": "/",
     "button2": "Watch About Us",
     "link2": "/",
-    "pictures": [
-      {
-        "image1": "/img/banner2-1x.webp",
-        "image2": "/img/banner2-2x.webp"
-      },
-      {
-        "image1": "/img/banner1-1x.webp",
-        "image2": "/img/banner1-2x.webp"
-      },
-      {
-        "image1": "/img/banner3-1x.webp",
-        "image2": "/img/banner3-2x.webp"
-      }
-    ]
+    "image1a": "/img/ornaments-1x.webp",
+    "image1b": "/img/ornaments-2x.webp",
+    "image2a": "/img/ornaments1-1x.webp",
+    "image2b": "/img/ornaments1-2x.webp",
+    "image3a": "/img/ornaments2-1x.webp",
+    "image3b": "/img/ornaments2-2x.webp"
   },
   "utilities": {
     "title": [

@@ -28,19 +28,18 @@
         color: var(--primary-color);
         font-weight: var(--weight-7);
         text-align: center;
+        margin-bottom: 48px;
     }
 
     &__list {
         display: flex;
         flex-direction: column;
         gap: 16px;
-        margin-top: 32px;
-        
+        align-items: end;
 
         @include desk {
             flex-direction: row;
             justify-content: center;
-            align-items: end;
         }
     }
 }

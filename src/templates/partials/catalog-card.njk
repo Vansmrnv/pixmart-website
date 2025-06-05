@@ -1,4 +1,4 @@
-<article class="catalog-card" {% if item.status == "SOLD OUT" %}disabled{% endif %}>
+<article class="catalog-card {% if item.status == "SOLD OUT" %}catalog-card--disabled{% endif %}">
     <picture class="catalog-card__picture">
         <source srcset="{{ item.image1 }}, {{ item.image2 }} 2x"/>
         <img src="{{ item.image1 }}" alt="image" class="catalog-card__image" width="408px" height="260px"/>
@@ -15,7 +15,7 @@
     {% endif %}
     {% if item.status == "SOLD OUT" %}
         <div class="catalog-card__tag  catalog-card__tag--disabled">
-            <span class="catalog-card__status">{{ item.status }}</span>
+            <span class="catalog-card__status catalog-card__status--disabled">{{ item.status }}</span>
         </div>
     {% endif %}
     <div class="catalog-card__details">
@@ -26,12 +26,12 @@
         <div class="catalog-card__buttons">
             {% if item.status != "SOLD OUT" %}
                 <button type="button" class="button button--secondary button--icon-small">
-                    <svg class="catalog-card__icon">
+                    <svg class="catalog-card__icon" width="24px" height="24px">
                         <use href="img/sprite.svg#heart"></use>
                     </svg>
                 </button>
                 <button type="button" class="button button--primary button--icon-small">
-                    <svg class="catalog-card__bagicon">
+                    <svg class="catalog-card__bagicon" width="24px" height="24px">
                         <use href="img/sprite.svg#shopping-bag-02"></use>
                     </svg>
                 </button>

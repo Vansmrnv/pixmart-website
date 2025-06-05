@@ -2,7 +2,8 @@
 
 .catalog-banner {
     padding: 0 16px;
-
+    background-image: url("/img/bgwaves.svg");
+    background-size: 100% 100%;
     @include desk {
         padding: 0 80px;
     }

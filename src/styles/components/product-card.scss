@@ -7,6 +7,15 @@
     width: 305px;
     position: relative;
 
+
+    :hover .product-card__link {
+        opacity: 1;
+    }
+
+    :hover .product-card__image {
+        opacity: 0.5;
+    }
+
     &__picture {
         width: fit-content;
     }
@@ -23,22 +32,6 @@
         top: 104px;
         left: 16px;
         margin: auto;
-    }
-
-    &__link:hover {
-        opacity: 1;
-    }
-
-    &__link:hover &__image {
-        opacity: 0.5;
-    }
-
-    &__image:hover .product-card__link {
-        opacity: 1;
-    }
-
-    &__image:hover {
-        opacity: 0.5;
     }
 
     &__tag {

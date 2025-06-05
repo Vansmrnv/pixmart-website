@@ -9,7 +9,8 @@
 
     @include desk {
         padding: 120px 40px;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     @include desk-l {
@@ -53,27 +54,7 @@
         visibility: hidden;
     }
 
-    &__images {
-        display: grid;
-        grid-template-columns: 131px 171px;
-        grid-template-rows: repeat(3, 1fr);
-        width: 100%;
-    }
-
-    &__image:first-child {
-        grid-area: 1 / 1 / 4 / 2;
-        width: 100%;
-    }
-
-    &__image:nth-child(2) {
-        border: 3.09px solid var(--base-color);
-        border-radius: 6.19px;
-        grid-area: 1 / 2 / 2 / 3;
-        width: 100%;
-    }
-
-    &__image:last-child {
-        grid-area: 2 / 1 / 4 / 3;
+    &__image {
         width: 100%;
     }
 }

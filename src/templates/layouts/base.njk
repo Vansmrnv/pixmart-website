@@ -20,14 +20,15 @@
         const searchOpener = document.querySelector(".header__searcher");
         const search = document.querySelector(".header__search");
 
-        burgerOpener.addEventListener("click", () => {
+        burgerOpener.addEventListener("click", (event) => {
+          event.stopPropagation();
           nav
             .classList
             .toggle("header__nav--active");
         });
 
         window.addEventListener("resize", () => {
-          if (window.innerWidth >= 500) {
+          if (window.innerWidth >= 1024) {
             nav
               .classList
               .remove("header__nav--active");
@@ -42,7 +43,7 @@
         });
 
         window.addEventListener("resize", () => {
-          if (window.innerWidth >= 500) {
+          if (window.innerWidth >= 1024) {
             search
               .classList
               .remove("header__search--active")
@@ -72,7 +73,7 @@
         });
 
         window.addEventListener("resize", () => {
-          if (window.innerWidth >= 500) {
+          if (window.innerWidth >= 1024) {
             filters
               .classList
               .remove("catalog__sidebar--active");
@@ -87,6 +88,31 @@
         $(".header__burger-icon").click(function () {
           $(this).toggleClass("activated");
         });
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const scrollableList = document.querySelector('.products__list');
+        const leftBtn = document.querySelector('.left-button');
+        const rightBtn = document.querySelector('.right-button');
+
+        // Scroll amount (adjust as needed)
+        const scrollAmount = 300;
+
+        leftBtn.addEventListener('click', () => {
+          scrollableList.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+          });
+        });
+
+        rightBtn.addEventListener('click', () => {
+          scrollableList.scrollBy({left: scrollAmount, behavior: 'smooth'});
+        });
+
+        scrollableList.addEventListener('scroll', updateButtonVisibility);
+        updateButtonVisibility(); // Initial check
       });
     </script>
   </head>

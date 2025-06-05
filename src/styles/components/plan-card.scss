@@ -66,14 +66,10 @@
 
 .plan-card--highlight {
     outline: 2px solid var(--primary-button-color);
-    margin-bottom: 32px;
+    transform: translateY(-32px);
 
     @include desk {
         padding: 56px 32px 32px 32px;
-    }
-
-    @include desk-l {
-        padding: 32px;
     }
 
 }

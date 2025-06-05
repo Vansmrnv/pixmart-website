@@ -14,12 +14,13 @@
         </div>
     </div>
     <div class="banner__images">
-        {% for item in banner.pictures %}
-            <picture class="banner__picture">
-                <source srcset="{{ item.image1 }}, {{ item.image2 }} 2x">
-                <img src="{{ item.image1 }}" alt="image" class="banner__image"/>
-            </picture>
-        {% endfor %}
+        <picture class="banner__picture">
+            <source scrset="{{ banner.image3a }}, {{ banner.image3b }} 2x" media="(min-width: 1440px)">
+            <source scrset="{{ banner.image2a }}, {{ banner.image2b }} 2x" media="(min-width: 1024px)">
+            {# <source srcset="{{ banner.image1a }}, {{ banner.image1b }} 2x" media="(min-width: 440px)"> #}
+            <img src="{{ banner.image1a }}" alt="image" class="banner__image"/>
+        </picture>
+
         <div class="banner__icon-box">
             <img src="icon.svg" alt="" class="banner__icon">
         </div>

@@ -93,11 +93,15 @@
         line-height: var(--line-height-l2);
     }
 
+    &__status--disabled {
+        color: var(--gray-color);
+    }
+
     &__bagicon {
         fill: var(--base-color);
     }
 }
 
-.catalog-card:disabled {
+.catalog-card--disabled {
     opacity: 0.5;
 }

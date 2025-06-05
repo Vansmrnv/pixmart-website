@@ -13,6 +13,12 @@
 
     &__image {
         background-color: #F4F7FA;
+        width: 100%;
+        height: 100%;
+
+        @include desk {
+            object-fit: cover;
+        }
     }
     
     &__title {

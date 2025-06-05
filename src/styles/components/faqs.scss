@@ -2,16 +2,30 @@
 
 .faqs {
     padding: 0 16px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 64px;
     justify-content: space-between;
+    position: relative;
 
     @include desk {
         flex-direction: row;
         padding: 0 80px;
         gap: 40px;
-        background-image: radial-gradient(#0F73F6 var(--base-color));
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    ::before {
+        @include desk {
+            content: "";
+            position: absolute;
+            width: 689px;
+            height: 498px;
+            top: 164px;
+            left: 412px;
+            background-image: radial-gradient(70% 30%, #0F73F6, #FFFFFF);
+            filter: blur(200px);
+            z-index: -1;
+        }
     }
 
     &__details {

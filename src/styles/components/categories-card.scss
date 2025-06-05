@@ -2,8 +2,8 @@
 
 .categories-card {
 
-    width: fit-content;
-    max-width: 194px;
+    // width: fit-content;
+    // max-width: 194px;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
         font-size: var(--body-text2);
         font-weight: var(--weight-4);
         line-height: var(--line-height-l2);
-        white-space: nowrap;
+        // white-space: nowrap;
         transition: color 0.3s ease;
     }
 

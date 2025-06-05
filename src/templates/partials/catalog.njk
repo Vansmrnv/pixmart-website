@@ -3,14 +3,14 @@
         <div class="catalog__sidebar-header">
             <h4 class="catalog__sidebar-title section-title section-title--medium">{{ catalog.filtertitle }}</h4>
             <button type="button" class="catalog__sidebar-closer button button--secondary button--icon-small">
-                <svg class="catalog__sidebar-icon">
+                <svg class="catalog__sidebar-icon" width="24px" height="24px">
                     <use href="img/sprite.svg#x-close"></use>
                 </svg>
             </button>
         </div>
         <form class="catalog__form" action="url" method="post">
             <button type="reset" class="catalog__sidebar-reset button button--secondary button--medium">{{ catalog.buttonreset }}
-                <svg class="catalog__sidebar-iconx">
+                <svg class="catalog__sidebar-iconx" width="24px" height="24px">
                     <use href="img/sprite.svg#x-close"></use>
                 </svg>
             </button>
@@ -47,7 +47,7 @@
                     {% endfor %}
                 </select>
                 <button type="button" class="catalog__filter-button button button--primary button--icon-small">
-                    <svg class="catalog__filter-icon">
+                    <svg class="catalog__filter-icon" width="24px" height="24px">
                         <use href="img/sprite.svg#filter-lines"></use>
                     </svg>
                 </button>
@@ -57,12 +57,12 @@
                 <p class="catalog__settings-text">{{ catalog.text }}</p>
                 <div class="catalog__view-buttons">
                     <button class="button button--primary button--icon-small">
-                        <svg class="catalog__gallery-icon">
+                        <svg class="catalog__gallery-icon" width="24px" height="24px">
                             <use href="img/sprite.svg#grid-01"></use>
                         </svg>
                     </button>
                     <button class="button button--secondary button--icon-small">
-                        <svg class="catalog__view-icon">
+                        <svg class="catalog__view-icon" width="24px" height="24px">
                             <use href="img/sprite.svg#list"></use>
                         </svg>
                     </button>
@@ -72,7 +72,7 @@
         <ul class="catalog__tags">
             {% for item in catalog.tags %}
                 <li class="catalog__tag">{{ item }}
-                    <svg class="catalog__tag-icon">
+                    <svg class="catalog__tag-icon" width="16px" height="16px">
                         <use href="img/sprite.svg#x-close"></use>
                     </svg>
                 </li>
