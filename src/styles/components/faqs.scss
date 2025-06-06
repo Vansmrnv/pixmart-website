@@ -14,7 +14,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    ::before {
+    &::before {
         @include desk {
             content: "";
             position: absolute;

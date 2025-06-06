@@ -7,6 +7,7 @@
     flex-direction: column;
     position: relative;
     width: 100%;
+    box-shadow: 0 4px 40px #1D395F14;
 
     &__tag-box {
         position: absolute;
@@ -50,6 +51,11 @@
         padding: 40px 0;
     }
 
+    &__icon {
+        align-self: center;
+        fill: #0265DC;
+    }
+
     &__item {
         display: flex;
         gap: 16px;
@@ -67,9 +73,12 @@
 .plan-card--highlight {
     outline: 2px solid var(--primary-button-color);
     transform: translateY(-32px);
+    margin-top: 48px;
+    box-shadow: none;
 
     @include desk {
         padding: 56px 32px 32px 32px;
+        margin-top: 0px;
     }
 
 }

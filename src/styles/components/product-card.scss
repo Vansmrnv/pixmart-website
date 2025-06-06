@@ -8,11 +8,11 @@
     position: relative;
 
 
-    :hover .product-card__link {
+    &:hover .product-card__link {
         opacity: 1;
     }
 
-    :hover .product-card__image {
+    &:hover .product-card__image {
         opacity: 0.5;
     }
 

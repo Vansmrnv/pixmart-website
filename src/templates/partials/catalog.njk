@@ -21,11 +21,20 @@
                         <div class="catalog__filters">
                             {% for option in item.options %}
                                 {% set optionId = "input_" + item.name + "_" + loop.index %}
-                                <div class="form-item">
-                                    <input class="catalog__form-input checkbox-input" id="{{ optionId }}" type="{{ item.type }}" name="{{ item.name }}" {% if item.defaultAll or (item.default == option) %}checked{% endif %}>
-                                    <label class="catalog__form-label checkbox-label" for="{{ optionId }}">{{ option }}</label>
-                                </div>
+                                {% if item.name != "style" %}
+                                    <div class="form-item">
+                                        <input class="catalog__form-input checkbox-input" id="{{ optionId }}" type="{{ item.type }}" name="{{ item.name }}" {% if item.defaultAll or (item.default == option) %}checked{% endif %}>
+                                        <label class="catalog__form-label checkbox-label" for="{{ optionId }}">{{ option }}</label>
+                                    </div>
+                                {% else %}
+                                    <label class="switcher">
+                                        <input type="{{ item.type }}" name="{{ item.name }}" class="switcher__input" {% if item.defaultAll or (item.default == option) %}checked{% endif %}/>
+                                        <span class="switcher__label"></span>
+                                        <span class="switcher__label-show">{{ option }}</span>
+                                    </label>
+                                {% endif %}
                             {% endfor %}
+
                         </div>
                     {% endif %}
                 </article>

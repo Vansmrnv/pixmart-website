@@ -33,15 +33,18 @@
         "details": [
             {
                 "link": "/",
-                "title": "+1 (555) 123-4567"
+                "title": "+1 (555) 123-4567",
+                "icon": "img/sprite.svg#phone"
             },
             {
                 "link": "/",
-                "title": "support@pixmart.com"
+                "title": "support@pixmart.com",
+                "icon": "img/sprite.svg#mail-01"
             },
             {
                 "link": "/",
-                "title": "Monday to Friday : 9 AM - 5 PM EST"
+                "title": "Monday to Friday : 9 AM - 5 PM EST",
+                "icon": "img/sprite.svg#clock"
             }
         ],
         "tag": {

@@ -21,9 +21,12 @@
     }
 
     &__box {
-        padding: 8px;
+        display: grid;
         border: 2px solid #1D36532B;
         border-radius: 8px;
+        min-height: 32px;
+        place-content: center;
+        align-self: flex-start;
     }
 
     &__icon {

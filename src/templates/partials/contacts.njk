@@ -7,13 +7,21 @@
         <ul class="contacts__details">
             {% for item in contacts.details %}
                 <li class="contacts__detail">
-                    <img src="icon.svg" alt="" class="contacts__icon">
+                    <svg class="contacts__details-icon" width="24px" height="24px">
+                        <use href="{{ item.icon }}"></use>
+                    </svg>
                     <a href="{{ item.link }}" class="contacts__detail-link">{{ item.title }}</a>
                 </li>
             {% endfor %}
         </ul>
-        <img src="map.webp" alt="" class="contacts__map">
+        <picture class="contacts__map">
+            <source srcset="img/map.webp-1x, img/map.webp-2x 2x">
+            <img src="img/map.webp-1x" alt="image" class="contacts__map-image"/>
+        </picture>
         <div class="contacts__tag">
+            <svg class="contacts__icon" width="24px" height="24px">
+                <use href="img/sprite.svg#marker-pin-03"></use>
+            </svg>
             <img src="icon.svg" alt="" class="contacts__icon">
             <span class="contacts__tag-title">{{ contacts.tag.title }}</span>
             <p class="contacts__tag-text">{{ contacts.tag.text }}</p>

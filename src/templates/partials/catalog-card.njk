@@ -1,4 +1,4 @@
-<article class="catalog-card {% if item.status == "SOLD OUT" %}catalog-card--disabled{% endif %}">
+<article class="catalog-card{% if item.status == 'SOLD OUT' %} catalog-card--disabled{% endif %}">
     <picture class="catalog-card__picture">
         <source srcset="{{ item.image1 }}, {{ item.image2 }} 2x"/>
         <img src="{{ item.image1 }}" alt="image" class="catalog-card__image" width="408px" height="260px"/>

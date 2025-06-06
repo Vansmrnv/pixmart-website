@@ -29,6 +29,14 @@
         font-weight: var(--weight-7);
         text-align: center;
         margin-bottom: 48px;
+
+        @include desk {
+            margin-bottom: 104px;
+        }
+
+        @include desk-l {
+            margin-bottom: 80px;
+        }
     }
 
     &__list {

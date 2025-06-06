@@ -39,7 +39,12 @@
     }
 
     &:invalid {
+        outline: none;
+    }
+
+    &:user-invalid {
         outline: 2px solid var(--negative-color);
+
     }
 
     &::placeholder {
@@ -141,25 +146,25 @@
 }
 
 .checkbox-input[type="checkbox"]:checked {
-    background-image: url("checkbox.svg");
+    background-image: url("/img/tick.svg");
     background-color: #0265dc;
     border: none;
     transition: background-color 0.3s ease, border 0.3s ease;
 
     &:hover {
-        background-image: url("checkbox.svg");
+        background-image: url("/img/tick.svg");
         background-color: #3892f3;
         transition: background-color 0.2s ease;
     }
 
     &:active {
-        background-image: url("checkbox.svg");
+        background-image: url("/img/tick.svg");
         background-color: #b5deff;
         transition: background-color 0.1s ease;
     }
 
     &:focus-visible {
-        background-image: url("checkbox.svg");
+        background-image: url("/img/tick.svg");
         border: 2px solid #0265dc;
         transition: border 0.2s ease;
     }
@@ -215,7 +220,7 @@
     display: inline-block;
     width: var(--switcher-width);
     height: 20px;
-    background-color: var(--switcher-bg-off);
+    background-color: #22344966;
     border-radius: 19px;
     transition: var(--switcher-transition);
     vertical-align: middle;
@@ -225,7 +230,7 @@
 .switcher__input+.switcher__label::after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 54%;
     left: 2px;
     width: var(--switcher-toggle-size);
     height: var(--switcher-toggle-size);
@@ -237,7 +242,7 @@
 
 /* Checked State */
 .switcher__input:checked+.switcher__label::before {
-    background-color: var(--switcher-bg-on);
+    background-color: #0265DC;
 }
 
 .switcher__input:checked+.switcher__label::after {
@@ -247,22 +252,17 @@
 
 /* Hover State */
 .switcher:hover .switcher__input:not(:checked)+.switcher__label::before {
-    background-color: #d1d5db;
+    background-color: #1F324745;
 }
 
 .switcher:hover .switcher__input:checked+.switcher__label::before {
-    background-color: #1d7df2;
+    background-color: #3892F3;
 }
 
 /* Focus State */
 .switcher__input:focus-visible+.switcher__label::before {
     box-shadow: 0 0 0 3px var(--switcher-focus);
 }
-
-/* Active/Pressed State */
-/* .switcher__input:active + .switcher__label::after {
-  width: calc(var(--switcher-toggle-size) + 2px);
-} */
 
 /* Disabled State */
 .switcher__input:disabled+.switcher__label {
