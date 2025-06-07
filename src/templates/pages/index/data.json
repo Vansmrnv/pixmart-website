@@ -72,30 +72,30 @@
     "link": "/",
     "cards": [
       {
-        "title": "Templates",
-        "subtitle1": "For all needs",
-        "subtitle2": "Modern",
+        "title": "Text",
+        "subtitle1": "Text",
+        "subtitle2": "Text",
         "link": "/",
         "icon": "img/sprite.svg#computericon"
       },
       {
-        "title": "App Icons",
-        "subtitle1": "High-quality",
-        "subtitle2": "Elegant",
+        "title": "Text",
+        "subtitle1": "Text",
+        "subtitle2": "Text",
         "link": "/",
         "icon": "img/sprite.svg#phoneicon"
       },
       {
-        "title": "Slides",
-        "subtitle1": "Pitch-ready",
-        "subtitle2": "Creative",
+        "title": "Text",
+        "subtitle1": "Text",
+        "subtitle2": "Text",
         "link": "/",
         "icon": "img/sprite.svg#boardicon"
       },
       {
-        "title": "Design Tools",
-        "subtitle1": "Easy to use",
-        "subtitle2": "Unique",
+        "title": "Text",
+        "subtitle1": "Text",
+        "subtitle2": "Text",
         "link": "/",
         "icon": "img/sprite.svg#painticon"
       }

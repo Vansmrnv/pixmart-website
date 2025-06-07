@@ -38,13 +38,8 @@
         outline: 2px solid var(--primary-button-hover);
     }
 
-    &:invalid {
-        outline: none;
-    }
-
     &:user-invalid {
         outline: 2px solid var(--negative-color);
-
     }
 
     &::placeholder {
@@ -63,13 +58,41 @@
 .form-select {
     @extend .text-input;
     cursor: pointer;
-    background-image: url(icon.svg);
-    background-repeat: no-repeat;
-    background-position: right 20px;
+    appearance: none;
+    min-width: 156px;
 }
+
+.form-select__wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.form-select__wrapper::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    background-image: url("/img/chevron-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+}
+
+.form-select__wrapper:focus-within::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
 
 .form-select--small {
     @extend .text-input--small;
+    font-size: var(--body-text2);
+    line-height: var(--line-height-l2);
+    font-weight: var(--weight-6);
 }
 
 
@@ -148,6 +171,7 @@
 .checkbox-input[type="checkbox"]:checked {
     background-image: url("/img/tick.svg");
     background-color: #0265dc;
+    background-position: 60%;
     border: none;
     transition: background-color 0.3s ease, border 0.3s ease;
 

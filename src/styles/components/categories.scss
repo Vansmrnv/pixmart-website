@@ -1,7 +1,7 @@
 @use '../global/mixins.scss' as *;
 
 .categories {
-    padding: 0 16px;
+    padding: 64px 16px 0px;
     display: flex;
     flex-direction: column;
     gap: 64px;
@@ -9,14 +9,13 @@
     width: 100%;
 
     @include desk {
-        padding: 0px 40px;
-        // flex-direction: row-reverse;
+        padding: 120px 40px 0px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
     @include desk-l {
-        padding: 0px 80px;
+        padding: 120px 80px 0px;
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -42,6 +41,7 @@
     &__title {
         color: var(--primary-color);
         font-weight: var(--weight-7);
+        max-width: 408px;
     }
 
     &__text {
@@ -61,6 +61,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         list-style: none;
+        width: 100%;
 
         @include desk {
             grid-row: 1;

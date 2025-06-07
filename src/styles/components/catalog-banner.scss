@@ -1,17 +1,37 @@
 @use '../global/mixins.scss' as *;
 
 .catalog-banner {
-    padding: 0 16px;
-    background-image: url("/img/bgwaves.svg");
-    background-size: 100% 100%;
+    padding: 64px 16px;
+    background-image: url("../img/bgwaves.svg");
+    background-size: cover;
+    background-position: 10%;
+
     @include desk {
-        padding: 0 80px;
+        padding: 64px 80px 100px;
+        background-position: 0%;
+    }
+
+    @include desk-l {
+        padding: 64px 80px 100px;
     }
 
     &__title {
         color: var(--primary-color);
         font-weight: var(--weight-7);
-        margin-top: 64px;
+        margin: 0px;
+        max-width: 373px;
+
+        @include desk {
+            font-family: var(--title-font);
+            font-size: var(--heading1);
+            line-height: var(--line-height-h1);
+            letter-spacing: var(--letter-spacing);
+            max-width: 480px;
+        }
+
+        @include desk-l {
+            max-width: 580px;
+        }
     }
 
     &__title--highlight {

@@ -2,6 +2,7 @@
 
 .catalog {
     padding: 0 16px;
+    padding-top: 0;
 
     @include desk {
         padding: 0 40px;
@@ -32,7 +33,7 @@
 
         @include desk-l {
             position: relative;
-            width: 100%;
+            width: auto;
             height: auto;
             transform: translateX(0%);
             background-color: var(--base-color);

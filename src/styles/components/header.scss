@@ -16,6 +16,10 @@
         align-items: center;
     }
 
+    @include desk-l {
+        padding: 24px 80px;
+    }
+
     &__burger {
         position: relative;
 
@@ -138,6 +142,13 @@
         font-size: var(--body-text2);
         font-weight: var(--weight-6);
         line-height: var(--line-height-l1);
+
+        @include desk {
+            font-family: var(--main-font);
+            color: var(--primary-color);
+            font-size: var(--body-text3);
+            line-height: var(--line-height-l3);
+        }
     }
 
     &__searcher {

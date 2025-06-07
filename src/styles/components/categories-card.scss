@@ -40,8 +40,11 @@
         font-size: var(--body-text2);
         font-weight: var(--weight-4);
         line-height: var(--line-height-l2);
-        // white-space: nowrap;
         transition: color 0.3s ease;
+
+        @include desk {
+            white-space: nowrap;
+        }
     }
 
     &:hover {

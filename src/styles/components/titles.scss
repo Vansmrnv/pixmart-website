@@ -2,15 +2,18 @@
     font-family: var(--title-font);
     font-size: var(--heading1);
     line-height: var(--line-height-h1);
+    letter-spacing: -0.5px;
 
     &--small {
         font-size: var(--heading5);
         line-height: var(--line-height-h5);
+        letter-spacing: 0px;
     }
 
     &--medium {
         font-size: var(--heading4);
         line-height: var(--line-height-h4);
+        letter-spacing: 0px;
     }
 
     &--big {

@@ -26,22 +26,26 @@ a {
     text-decoration: none;
 }
 
-section:not(:first-child) {
+// section:not(:first-child) {
+//     padding-top: 64px;
+
+//     @include desk {
+//         padding-top: 120px;
+//     }
+// }
+
+// section:last-child {
+//     padding-bottom: 64px;
+
+//     @include desk {
+//         padding-bottom: 120px;
+//     }
+// }
+
+footer {
     padding-top: 64px;
 
     @include desk {
         padding-top: 120px;
     }
-}
-
-section:last-child {
-    padding-bottom: 64px;
-
-    @include desk {
-        padding-bottom: 120px;
-    }
-}
-
-footer {
-    padding-top: 64px;
 }

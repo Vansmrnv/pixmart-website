@@ -2,13 +2,16 @@
 
 .utilities {
     padding: 0;
+    padding-top: 64px;
 
     @include desk {
         padding: 0 40px;
+        padding-top: 68px;
     }
 
     @include desk-l {
         padding: 0 80px;
+        padding-top: 120px;
     }
 
     &__list {

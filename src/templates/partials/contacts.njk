@@ -15,14 +15,13 @@
             {% endfor %}
         </ul>
         <picture class="contacts__map">
-            <source srcset="img/map.webp-1x, img/map.webp-2x 2x">
-            <img src="img/map.webp-1x" alt="image" class="contacts__map-image"/>
+            <source srcset="img/map-1x.webp, img/map-2x.webp 2x">
+            <img src="img/map-1x.webp" alt="image" class="contacts__map-image" width="100%" height="314px"/>
         </picture>
         <div class="contacts__tag">
             <svg class="contacts__icon" width="24px" height="24px">
                 <use href="img/sprite.svg#marker-pin-03"></use>
             </svg>
-            <img src="icon.svg" alt="" class="contacts__icon">
             <span class="contacts__tag-title">{{ contacts.tag.title }}</span>
             <p class="contacts__tag-text">{{ contacts.tag.text }}</p>
         </div>
@@ -39,26 +38,30 @@
 
         <div class="contacts__form-item">
             <label class="contacts__form-label form-label" for="subject">{{ contacts.selector }}</label>
-            <select name="subject" id="subject" class="contacts__form-select form-select">
-                {% for item in contacts.selectors %}
-                    <option value="{{ item.value }}" class="contacts__select-option">{{ item.name }}</option>
-                {% endfor %}
-            </select>
+            <div class="form-select__wrapper">
+                <select name="subject" id="subject" class="contacts__form-select form-select">
+                    {% for item in contacts.selectors %}
+                        <option value="{{ item.value }}" class="contacts__select-option">{{ item.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
         </div>
         <div class="contacts__form-item">
             <label class="contacts__form-label form-label" for="message">{{ contacts.message }}</label>
             <textarea class="contacts__form-area text-input" name="welcome" id="message" placeholder="{{ contacts.example.message }}" required></textarea>
         </div>
-        <div class="contacts__form-checkboxes">
-            <div class="contacts__form-checkbox">
-                <label for="subscribe_switch" class="checkbox-label">{{ contacts.switch1 }}</label>
-                <input id="subscribe_switch" class="checkbox-input" type="checkbox"/>
+        <div class="contacts__container">
+            <div class="contacts__form-checkboxes">
+                <div class="contacts__form-checkbox">
+                    <label for="subscribe_switch" class="checkbox-label">{{ contacts.switch1 }}</label>
+                    <input id="subscribe_switch" class="checkbox-input" type="checkbox"/>
+                </div>
+                <div class="contacts__form-checkbox">
+                    <label for="agree_switch" class="checkbox-label" >{{ contacts.switch2 }}</label>
+                    <input id="agree_switch" class="checkbox-input" type="checkbox" checked/>
+                </div>
             </div>
-            <div class="contacts__form-checkbox">
-                <label for="agree_switch" class="checkbox-label" >{{ contacts.switch2 }}</label>
-                <input id="agree_switch" class="checkbox-input" type="checkbox" checked/>
-            </div>
+            <button class="contacts__button button button--primary button--large" type="submit">{{ contacts.submit }}</button>
         </div>
-        <button class="contacts__button button button--primary button--large" type="submit">{{ contacts.submit }}</button>
     </form>
 </section>

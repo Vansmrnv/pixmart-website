@@ -2,17 +2,17 @@
 
 .plans {
 
-    padding: 0 16px;
+    padding: 64px 16px 0px;
     display: flex;
     flex-direction: column;
     gap: 16px;
 
     @include desk {
-        padding: 0 40px;
+        padding: 120px 40px 0px;
     }
 
     @include desk-l {
-        padding: 0 80px;
+        padding: 120px 80px 0px;
     }
 
     &__id {
