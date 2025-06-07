@@ -8,8 +8,8 @@
         <div class="banner__buttons">
             <a href="{{ banner.link1 }}" class="button button--primary button--large">{{ banner.button1 }}</a>
             <a href="{{ banner.link2 }}" class="button button--tertiary button--large">
-                <svg class="banner__icon">
-                    <use href="img/sprite.svg#play"></use>
+                <svg class="banner__icon" width="24px" height="24px">
+                    <use href="img/sprite.svg#play-filled"></use>
                 </svg>{{ banner.button2 }}</a>
         </div>
     </div>
@@ -20,12 +20,5 @@
             <source srcset="{{ banner.image1a }}, {{ banner.image1b }} 2x" media="(min-width: 440px)">
             <img src="{{ banner.image1a }}" alt="image" class="banner__image"/>
         </picture>
-
-        <div class="banner__icon-box">
-            <img src="icon.svg" alt="" class="banner__icon">
-        </div>
-        <div class="banner__icon-box">
-            <img src="icon.svg" alt="" class="banner__icon">
-        </div>
     </div>
 </section>

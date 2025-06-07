@@ -24,6 +24,7 @@
         width: 48px;
         height: 48px;
         fill: var(--primary-button-color);
+        color: var(--primary-button-color);
     }
 
     &__title {
@@ -61,5 +62,6 @@
 
     &:hover &__icon {
         fill: var(--base-color);
+        color: var(--base-color);
     }
 }

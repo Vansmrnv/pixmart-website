@@ -115,6 +115,22 @@
         updateButtonVisibility(); // Initial check
       });
     </script>
+    <script>
+      const select = document.querySelector('.form-select');
+      const wrapper = select.closest('.form-select__wrapper');
+
+      select.addEventListener('focus', () => {
+        wrapper
+          .classList
+          .add('form-select__wrapper--open');
+      });
+
+      select.addEventListener('blur', () => {
+        wrapper
+          .classList
+          .remove('form-select__wrapper--open');
+      });
+    </script>
   </head>
   <body>
     {% include "partials/header.njk" %}
