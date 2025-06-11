@@ -9,16 +9,22 @@
     width: 100%;
     box-shadow: 0 4px 40px #1D395F14;
 
-    &__tag-box {
+    // &__tag-box {
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     border-radius: 0 20px;
+    //     padding: 7px 24px;
+    //     background-color: var(--primary-button-color)
+    // }
+
+    &__tag {
         position: absolute;
         top: 0;
         right: 0;
         border-radius: 0 20px;
         padding: 7px 24px;
-        background-color: var(--primary-button-color)
-    }
-
-    &__tag {
+        background-color: var(--primary-button-color);
         color: var(--base-color);
         font-weight: var(--weight-7);
     }
@@ -73,7 +79,7 @@
 .plan-card--highlight {
     outline: 2px solid var(--primary-button-color);
     transform: translateY(-32px);
-    margin-top: 48px;
+    margin-top: 30px;
     box-shadow: none;
 
     @include desk {

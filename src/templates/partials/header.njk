@@ -1,12 +1,8 @@
 <header class="header">
     <button type="button" class="header__burger button button--primary button--icon-small">
-        <div class="header__burger-container">
-            <div class="header__burger-icon">
-                <span class="header__burger-line"></span>
-                <span class="header__burger-line"></span>
-                <span class="header__burger-line"></span>
-            </div>
-        </div>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
     </button>
     <a href="{{ header.logo }}" class="header__logo-link">
         <svg class="header__logo">
@@ -29,12 +25,12 @@
         </svg>
     </button>
     <form action="/submit-search" method="post" class="header__search">
-        <label for="search"></label>
-        <input id="search" type="text" pattern="^[a-zA-Z0-9\s]+$" placeholder="Search for Digital Assets" class="header__search-input text-input text-input--small" required>
-        <button type="submit" hidden></button>
+        <label for="search" class="header__search-label">search</label>
+        <input id="search" type="search" pattern="^[a-zA-Z0-9\s]+$" placeholder="Search for Digital Assets" class="header__search-input text-input text-input--small" required>
+        <button type="submit" class="header__search-submit">submit</button>
     </form>
     <button type="button" class="header__basket button button--primary button--icon-small">
-        <svg class="header__basket-icon" width="24px" height="24px"> 
+        <svg class="header__basket-icon" width="24px" height="24px">
             <use href="img/sprite.svg#shopping-bag-02"></use>
         </svg>
     </button>

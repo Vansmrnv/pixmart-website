@@ -34,7 +34,7 @@
         "author1": "/img/author-1x.webp",
         "author2": "/img/author-2x.webp",
         "name": "Emma Clarke",
-        "datetime": "04-10-2024",
+        "datetime": "2024-04-10",
         "date": "April 10, 2024",
         "list1title": "Categories",
         "list1": [
@@ -61,12 +61,12 @@
         "list2": [
             {
                 "title": "Text",
-                "datetime": "02-15-2024",
+                "datetime": "2024-02-15",
                 "date": "March 15, 2024"
             },
             {
                 "title": "Text",
-                "datetime": "02-15-2024",
+                "datetime": "2024-02-15",
                 "date": "March 15, 2024"
             }
         ],
@@ -132,6 +132,7 @@
         ]
     },
     "footer": {
+        "link": "http://localhost:8080/index.html",
         "text": "Your premium digital assets solution with high quality and comprehensive range of products and services.",
         "nav": [
             {

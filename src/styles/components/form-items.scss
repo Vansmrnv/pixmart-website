@@ -124,6 +124,7 @@
     border-radius: 4px;
     background: #fff no-repeat center center;
     transition: border-color 0.3s ease, background-color 0.3s ease;
+    flex-shrink: 0;
 
     &:hover {
         background-color: #f4f7fa;
@@ -136,7 +137,7 @@
         transition: all 0.1s ease;
     }
 
-    &:invalid {
+    &:user-invalid {
         border: 2px solid #ea3829;
     }
 }
@@ -151,8 +152,8 @@
         transition: border 0.2s ease;
     }
 
-    &:invalid {
-        border: 2px solid #ea3829;
+    &:user-invalid {
+        outline: 2px solid #ea3829;
     }
 }
 
@@ -192,7 +193,7 @@
         transition: border 0.2s ease;
     }
 
-    &:invalid {
+    &:user-invalid {
         border: 2px solid #ea3829;
     }
 }
@@ -207,8 +208,8 @@
         transition: border 0.2s ease;
     }
 
-    &:invalid {
-        border: 2px solid #ea3829;
+    &:user-invalid {
+        outline: 2px solid #ea3829;
     }
 }
 

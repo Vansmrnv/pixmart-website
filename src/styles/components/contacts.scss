@@ -79,6 +79,10 @@
         color: var(--primary-color);
     }
 
+    &__detail-link:hover {
+        color: var(--primary-button-color);
+    }
+
     &__map-image {
         margin-top: 32px;
         width: 100%;
@@ -137,7 +141,7 @@
     }
 
     &__form-area {
-        height: 180px;
+        resize: none;
     }
 
     &__form-checkbox {

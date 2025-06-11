@@ -1,7 +1,7 @@
 <article class="product-card">
     <picture class="product-card__picture">
         <source srcset="{{ item.image1 }}, {{ item.image2 }} 2x"/>
-        <img src="{{ item.image1 }}" alt="image" class="product-card__image" width="305px" height="272px"/>
+        <img src="{{ item.image1 }}" alt="image" class="product-card__image" width="305" height="272"/>
     </picture>
     <a href="{{ item.link }}" class="product-card__link button button--primary button--large">{{ products.button }}</a>
     {% if item.status == "popular" %}

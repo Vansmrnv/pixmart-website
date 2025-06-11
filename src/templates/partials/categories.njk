@@ -9,9 +9,7 @@
     <ul class="categories__list">
         {% for item in categories.cards %}
             <li class="categories__list-item">
-                <a href="{{ item.link }}">
                     {% include 'partials/categories-card.njk'%}
-                </a>
             </li>
         {% endfor %}
     </ul>

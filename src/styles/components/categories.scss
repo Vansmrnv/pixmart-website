@@ -15,7 +15,7 @@
     }
 
     @include desk-l {
-        padding: 120px 80px 0px;
+        padding: 110px 80px 0px;
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -26,6 +26,7 @@
         width: 100%;
 
         @include desk {
+            gap: 16px;
             grid-column: 2/3;
         }
     }

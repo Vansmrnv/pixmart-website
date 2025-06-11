@@ -12,6 +12,7 @@
         padding: 0 80px;
         display: flex;
         gap: 24px;
+        justify-content: space-between;
     }
 
     &__sidebar {
@@ -94,6 +95,7 @@
 
         @include desk-l {
             margin-top: 0;
+            overflow: visible;
         }
     }
 
@@ -111,7 +113,7 @@
     &__filters {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 16px;
     }
 
     &__slider {
@@ -132,7 +134,7 @@
     &__box {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 20px;
 
         @include desk {
             gap: 0;
@@ -184,19 +186,13 @@
     &__tags {
         display: flex;
         gap: 8px;
-        margin-top: 24px;
         list-style: none;
-    }
+        margin-bottom: 30px;
 
-    &__tag {
-        color: var(--primary-color);
-        background-color: var(--secondary-button-color);
-        border: 2px solid var(--secondary-button-border-color);
-        border-radius: 8px;
-        padding: 6px 12px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        @include desk {
+            margin-top: 24px;
+            margin-bottom: auto;
+        }
     }
 
     &__tag-icon {
@@ -223,6 +219,7 @@
         grid-template-columns: auto;
         list-style: none;
         gap: 32px;
+        justify-content: center;
 
         @include desk {
             margin-top: 48px;
@@ -231,12 +228,13 @@
     }
 
     &__button {
-        margin-top: 24px;
+        margin-top: 28px;
+        margin-bottom: 4px;
 
         @include desk {
             width: fit-content;
             align-self: center;
-            margin-top: 48px;
+            margin-top: 52px;
         }
     }
 }

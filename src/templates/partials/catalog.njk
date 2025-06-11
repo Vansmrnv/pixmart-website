@@ -16,7 +16,7 @@
             </button>
             {% for item in catalog.filters %}
                 <article class="catalog__filter">
-                    <h4 class="catalog__filter-title section-title section-title--medium">{{ item.title }}</h4>
+                    <h2 class="catalog__filter-title section-title section-title--medium">{{ item.title }}</h2>
                     {% if item.type == "checkbox" or item.type == "radio" %}
                         <div class="catalog__filters">
                             {% for option in item.options %}
@@ -82,17 +82,19 @@
         </div>
         <ul class="catalog__tags">
             {% for item in catalog.tags %}
-                <li class="catalog__tag">{{ item }}
-                    <svg class="catalog__tag-icon" width="16px" height="16px">
-                        <use href="img/sprite.svg#x-close"></use>
-                    </svg>
+                <li class="catalog__tag">
+                    <button class="button button--secondary button--small">{{ item }}
+                        <svg class="catalog__tag-icon" width="16px" height="16px">
+                            <use href="img/sprite.svg#x-close"></use>
+                        </svg>
+                    </button>
                 </li>
             {% endfor %}
         </ul>
         <ul class="catalog__products">
             {% for item in catalog.products %}
                 <li class="catalog__product">
-                    <a href="{{ item.link }}">{% include 'partials/catalog-card.njk'%}</a>
+                    {% include 'partials/catalog-card.njk'%}
                 </li>
             {% endfor %}
         </ul>

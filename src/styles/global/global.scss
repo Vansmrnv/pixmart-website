@@ -16,6 +16,7 @@ body {
     background-color: var(--base-color);
     overflow-x: hidden;
     padding-top: 92px;
+    min-width: 440px;
 }
 
 main {
@@ -26,26 +27,22 @@ a {
     text-decoration: none;
 }
 
-// section:not(:first-child) {
-//     padding-top: 64px;
+header {
+    max-width: 1440px;
+    margin-inline: auto;
+}
 
-//     @include desk {
-//         padding-top: 120px;
-//     }
-// }
-
-// section:last-child {
-//     padding-bottom: 64px;
-
-//     @include desk {
-//         padding-bottom: 120px;
-//     }
-// }
+section {
+    max-width: 1440px;
+    margin-inline: auto;
+}
 
 footer {
     padding-top: 64px;
+    max-width: 1440px;
+    margin-inline: auto;
 
     @include desk {
-        padding-top: 120px;
+        padding-top: 130px;
     }
 }

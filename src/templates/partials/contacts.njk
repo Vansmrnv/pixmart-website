@@ -16,7 +16,7 @@
         </ul>
         <picture class="contacts__map">
             <source srcset="img/map-1x.webp, img/map-2x.webp 2x">
-            <img src="img/map-1x.webp" alt="image" class="contacts__map-image" width="100%" height="314px"/>
+            <img src="img/map-1x.webp" alt="image" class="contacts__map-image" width="408" height="314"/>
         </picture>
         <div class="contacts__tag">
             <svg class="contacts__icon" width="24px" height="24px">
@@ -29,7 +29,7 @@
     <form action="url" method="post" class="contacts__form">
         <div class="contacts__form-item">
             <label class="contacts__form-label form-label" for="name">{{ contacts.name }}</label>
-            <input class="contacts__form-input text-input" id="name" type="text" placeholder="{{ contacts.example.name }}"/>
+            <input class="contacts__form-input text-input" id="name" type="text" placeholder="{{ contacts.example.name }}" required/>
         </div>
         <div class="contacts__form-item">
             <label class="contacts__form-label form-label" for="contact_email">{{ contacts.email }}</label>
@@ -48,7 +48,7 @@
         </div>
         <div class="contacts__form-item">
             <label class="contacts__form-label form-label" for="message">{{ contacts.message }}</label>
-            <textarea class="contacts__form-area text-input" name="welcome" id="message" placeholder="{{ contacts.example.message }}" required></textarea>
+            <textarea class="contacts__form-area text-input" name="welcome" id="message" cols="30" rows="8" placeholder="{{ contacts.example.message }}" required></textarea>
         </div>
         <div class="contacts__container">
             <div class="contacts__form-checkboxes">
@@ -58,7 +58,7 @@
                 </div>
                 <div class="contacts__form-checkbox">
                     <label for="agree_switch" class="checkbox-label" >{{ contacts.switch2 }}</label>
-                    <input id="agree_switch" class="checkbox-input" type="checkbox" checked/>
+                    <input id="agree_switch" class="checkbox-input" type="checkbox" checked required/>
                 </div>
             </div>
             <button class="contacts__button button button--primary button--large" type="submit">{{ contacts.submit }}</button>

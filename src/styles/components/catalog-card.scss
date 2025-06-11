@@ -19,6 +19,9 @@
 
     &__picture {
         width: 100%;
+        @include desk {
+            max-height: 260px;
+        }
     }
 
     &__image {

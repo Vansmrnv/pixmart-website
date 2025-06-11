@@ -32,12 +32,12 @@
         "button": "Shop Now",
         "details": [
             {
-                "link": "/",
+                "link": "tel:+1555123-4567",
                 "title": "+1 (555) 123-4567",
                 "icon": "img/sprite.svg#phone"
             },
             {
-                "link": "/",
+                "link": "mailto:support@pixmart.com",
                 "title": "support@pixmart.com",
                 "icon": "img/sprite.svg#mail-01"
             },
@@ -58,6 +58,10 @@
             {
                 "value": "generalinquiry",
                 "name": "General Inquiry"
+            },
+            {
+                "value": "text",
+                "name": "text"
             }
         ],
         "message": "Message",
@@ -71,6 +75,7 @@
         "submit": "Send Message"
     },
     "footer": {
+        "link": "http://localhost:8080/index.html",
         "text": "Your premium digital assets solution with high quality and comprehensive range of products and services.",
         "nav": [
             {

@@ -13,14 +13,11 @@
         padding: 64px 80px 64px;
     }
 
-    &__box {
+    &__tag {
         width: fit-content;
         padding: 8px 16px;
         background-color: var(--primary-button-color);
         border-radius: 100px;
-    }
-
-    &__box-tag {
         font-family: var(--main-font);
         color: var(--primary-button-text-color);
         font-size: var(--body-text2);
@@ -34,8 +31,7 @@
         font-weight: var(--weight-7);
         margin: 0px;
         margin-top: 24px;
-        max-width: 380px;
-
+        
         @include desk {
             font-size: var(--heading1);
             line-height: var(--line-height-h1);

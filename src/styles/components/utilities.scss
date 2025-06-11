@@ -21,10 +21,12 @@
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
+        margin-left: 24px;
 
         @include desk {
             overflow-x: hidden;
             gap: 16px;
+            margin-left: 0px;
         }
 
         @include desk-l {

@@ -41,7 +41,7 @@
     &__nav {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 28px;
         margin-top: 16px;
 
         @include desk {
@@ -131,12 +131,24 @@
 
     &__form {
         display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+
+        @include desk {
+            flex-direction: row;
+        }
+    }
+
+    &__form-tools {
+        display: flex;
         gap: 8px;
     }
 
     &__form-label {
         visibility: hidden;
         position: absolute;
+        word-break: break-all;
     }
 
     &__bottom {

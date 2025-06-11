@@ -5,10 +5,11 @@
     padding: 64px 16px 0px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
 
     @include desk {
         padding: 120px 40px 0px;
+        gap: 16px;
     }
 
     @include desk-l {
@@ -31,11 +32,11 @@
         margin-bottom: 48px;
 
         @include desk {
-            margin-bottom: 104px;
+            margin-bottom: 64px;
         }
 
         @include desk-l {
-            margin-bottom: 80px;
+            margin-bottom: 40px;
         }
     }
 

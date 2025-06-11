@@ -1,18 +1,18 @@
 @use '../global/mixins.scss' as *;
 
 .catalog-banner {
-    padding: 64px 16px;
+    padding: 79px 16px;
     background-image: url("../img/bgwaves.svg");
     background-size: cover;
     background-position: 10%;
 
     @include desk {
-        padding: 64px 80px 100px;
+        padding: 84px 80px 76px;
         background-position: 0%;
     }
 
     @include desk-l {
-        padding: 64px 80px 100px;
+        padding: 80px 80px 80px;
     }
 
     &__title {
@@ -20,6 +20,7 @@
         font-weight: var(--weight-7);
         margin: 0px;
         max-width: 373px;
+        transform: translateY(-20px);
 
         @include desk {
             font-family: var(--title-font);
