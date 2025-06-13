@@ -1,6 +1,6 @@
 {
   "header": {
-    "logo": "http://localhost:8080/index.html",
+    "logo": "/",
     "nav": [
       {
         "title": "About",
@@ -239,7 +239,7 @@
     ]
   },
   "footer": {
-    "link": "http://localhost:8080/index.html",
+    "link": "/",
     "text": "Your premium digital assets solution with high quality and comprehensive range of products and services.",
     "nav": [
       {

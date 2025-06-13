@@ -39,7 +39,7 @@
         <div class="contacts__form-item">
             <label class="contacts__form-label form-label" for="subject">{{ contacts.selector }}</label>
             <div class="form-select__wrapper">
-                <select name="subject" id="subject" class="contacts__form-select form-select">
+                <select name="subject" id="subject" class="contacts__form-select form-select" required>
                     {% for item in contacts.selectors %}
                         <option value="{{ item.value }}" class="contacts__select-option">{{ item.name }}</option>
                     {% endfor %}

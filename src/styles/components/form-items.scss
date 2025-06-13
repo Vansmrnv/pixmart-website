@@ -189,12 +189,14 @@
 
     &:focus-visible {
         background-image: url("/img/tick.svg");
-        border: 2px solid #0265dc;
+        outline: 2px solid #0265dc;
         transition: border 0.2s ease;
+        outline-style: outset;
     }
 
     &:user-invalid {
-        border: 2px solid #ea3829;
+        outline: 2px solid #ea3829;
+        outline-style: outset;
     }
 }
 

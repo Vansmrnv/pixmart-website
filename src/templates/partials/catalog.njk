@@ -1,7 +1,7 @@
 <section class="catalog">
     <aside class="catalog__sidebar">
         <div class="catalog__sidebar-header">
-            <h4 class="catalog__sidebar-title section-title section-title--medium">{{ catalog.filtertitle }}</h4>
+            <h2 class="catalog__sidebar-title section-title section-title--medium">{{ catalog.filtertitle }}</h2>
             <button type="button" class="catalog__sidebar-closer button button--secondary button--icon-small">
                 <svg class="catalog__sidebar-icon" width="24px" height="24px">
                     <use href="img/sprite.svg#x-close"></use>
@@ -16,7 +16,7 @@
             </button>
             {% for item in catalog.filters %}
                 <article class="catalog__filter">
-                    <h2 class="catalog__filter-title section-title section-title--medium">{{ item.title }}</h2>
+                    <h3 class="catalog__filter-title section-title section-title--medium">{{ item.title }}</h3>
                     {% if item.type == "checkbox" or item.type == "radio" %}
                         <div class="catalog__filters">
                             {% for option in item.options %}
@@ -40,7 +40,7 @@
                 </article>
             {% endfor %}
             <div class="catalog__slide-box">
-                <h4 class="catalog__slider-title section-title section-title--medium">{{ catalog.slidertitle }}</h4>
+                <h2 class="catalog__slider-title section-title section-title--medium">{{ catalog.slidertitle }}</h2>
                 <input type="range" min="5" max="50" value="25" class="catalog__slider" id="range">
             </div>
         </form>
@@ -51,7 +51,7 @@
             <form action="url" method="post" class="catalog__select-box">
                 <label for="type" hidden></label>
                 <div class="form-select__wrapper">
-                    <select name="type" id="type" class="catalog__select form-select form-select--small">
+                    <select name="type" id="type" class="catalog__select form-select form-select--small" required>
                         {% for item in catalog.selectors %}
                             <option value="{{ item.value }}" class="catalog__select-option">{{ item.name }}</option>
                         {% endfor %}
