@@ -9,15 +9,6 @@
     width: 100%;
     box-shadow: 0 4px 40px #1D395F14;
 
-    // &__tag-box {
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //     border-radius: 0 20px;
-    //     padding: 7px 24px;
-    //     background-color: var(--primary-button-color)
-    // }
-
     &__tag {
         position: absolute;
         top: 0;
@@ -85,6 +76,10 @@
     @include desk {
         padding: 56px 32px 32px 32px;
         margin-top: 0px;
+    }
+
+    @include desk-l {
+        padding: 32px;
     }
 
 }

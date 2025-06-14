@@ -25,6 +25,7 @@
     color: var(--primary-color);
     font-size: var(--body-text3);
     line-height: var(--line-height-l3);
+    min-width: 240px;
 
     &:hover {
         outline: 2px solid var(--primary-button-hover);
@@ -52,6 +53,7 @@
 
 .text-input--small {
     padding: 10px 12px;
+    max-height: 40px;
 }
 
 
@@ -62,13 +64,13 @@
     min-width: 156px;
 }
 
-.form-select__wrapper {
+.select-wrapper {
     position: relative;
     display: inline-block;
     width: 100%;
 }
 
-.form-select__wrapper::after {
+.select-wrapper::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -83,7 +85,7 @@
     height: 16px;
 }
 
-.form-select__wrapper:focus-within::after {
+.select-wrapper:focus-within::after {
   transform: translateY(-50%) rotate(180deg);
 }
 
@@ -113,6 +115,7 @@
     flex-direction: row;
     gap: 9px;
     align-items: center;
+    margin-left: 5px;
 }
 
 .checkbox-input:where([type="checkbox"], [type="radio"]) {
@@ -138,7 +141,12 @@
     }
 
     &:user-invalid {
-        border: 2px solid #ea3829;
+        outline: 2px solid #ea3829;
+        outline-style: auto;
+    }
+
+    &:user-invalid:hover {
+        background-color: #f4f7fa;
     }
 }
 
@@ -189,14 +197,14 @@
 
     &:focus-visible {
         background-image: url("/img/tick.svg");
-        outline: 2px solid #0265dc;
+        outline: 2px solid #3892F3;
+        outline-offset: 0px;
         transition: border 0.2s ease;
-        outline-style: outset;
     }
 
     &:user-invalid {
         outline: 2px solid #ea3829;
-        outline-style: outset;
+        outline-style: auto;
     }
 }
 

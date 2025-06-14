@@ -15,6 +15,11 @@
         padding: 80px 80px 80px;
     }
 
+    &__wrapper {
+        max-width: 1280px;
+        margin-inline: auto;
+    }
+
     &__title {
         color: var(--primary-color);
         font-weight: var(--weight-7);

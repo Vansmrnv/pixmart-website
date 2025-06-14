@@ -1,16 +1,18 @@
 <section class="categories">
-    <div class="categories__details">
-        <span class="categories__id">{{ categories.id }}</span>
-        <h2 class="categories__title section-title section-title--great">{{ categories.title }}</h2>
-        <p class="categories__text">
-            {{ categories.text }}</p>
-        <a href="{{ categories.link }}" class="categories__link button button--primary button--large">{{ categories.button }}</a>
-    </div>
-    <ul class="categories__list">
-        {% for item in categories.cards %}
-            <li class="categories__list-item">
+    <div class="categories__wrapper">
+        <div class="categories__details">
+            <span class="categories__id">{{ categories.id }}</span>
+            <h2 class="categories__title section-title section-title--great">{{ categories.title }}</h2>
+            <p class="categories__text">
+                {{ categories.text }}</p>
+            <a href="{{ categories.link }}" class="categories__link button button--primary button--large">{{ categories.button }}</a>
+        </div>
+        <ul class="categories__list">
+            {% for item in categories.cards %}
+                <li class="categories__list-item">
                     {% include 'partials/categories-card.njk'%}
-            </li>
-        {% endfor %}
-    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </section>

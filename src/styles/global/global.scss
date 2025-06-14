@@ -26,22 +26,10 @@ a {
     text-decoration: none;
 }
 
-header {
-    max-width: 1440px;
-    margin-inline: auto;
-}
-
-section {
-    max-width: 1440px;
-    margin-inline: auto;
-}
-
 footer {
     padding-top: 64px;
-    max-width: 1440px;
-    margin-inline: auto;
 
     @include desk {
-        padding-top: 130px;
+        padding-top: 120px;
     }
 }

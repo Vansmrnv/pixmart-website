@@ -1,24 +1,28 @@
 <section class="banner">
-    <div class="banner__details">
-        <h1 class="banner__title section-title">{{ banner.title1 }}
-            <span class="banner__title banner__title--highlight">
-                {{ banner.highlight }}
-            </span>{{ banner.title2 }}</h1>
-        <p class="banner__text">{{ banner.text }}</p>
-        <div class="banner__buttons">
-            <a href="{{ banner.link1 }}" class="button button--primary button--large">{{ banner.button1 }}</a>
-            <a href="{{ banner.link2 }}" class="button button--tertiary button--large">
-                <svg class="banner__icon" width="24px" height="24px">
-                    <use href="img/sprite.svg#play-filled"></use>
-                </svg>{{ banner.button2 }}</a>
+    <div class="banner__wrapper">
+        <div class="banner__details">
+            <h1 class="banner__title section-title">
+                {{ banner.title1 }}
+                <span class="banner__title banner__title--highlight">
+                    {{ banner.highlight }}
+                </span>
+                {{ banner.title2 }}</h1>
+            <p class="banner__text">{{ banner.text }}</p>
+            <div class="banner__buttons">
+                <a href="{{ banner.link1 }}" class="button button--primary button--large">{{ banner.button1 }}</a>
+                <a href="{{ banner.link2 }}" class="button button--tertiary button--large">
+                    <svg class="banner__icon" width="24px" height="24px">
+                        <use href="img/sprite.svg#play-filled"></use>
+                    </svg>{{ banner.button2 }}</a>
+            </div>
         </div>
-    </div>
-    <div class="banner__images">
-        <picture class="banner__picture">
-            <source srcset="{{ banner.image3a }}, {{ banner.image3b }} 2x" media="(min-width: 1440px)">
-            <source srcset="{{ banner.image2a }}, {{ banner.image2b }} 2x" media="(min-width: 1024px)">
-            <source srcset="{{ banner.image1a }}, {{ banner.image1b }} 2x" media="(min-width: 440px)">
-            <img src="{{ banner.image1a }}" alt="image" class="banner__image" width="624" height="544"/>
-        </picture>
+        <div class="banner__images">
+            <picture class="banner__picture">
+                <source srcset="{{ banner.image3a }}, {{ banner.image3b }} 2x" media="(min-width: 1440px)">
+                <source srcset="{{ banner.image2a }}, {{ banner.image2b }} 2x" media="(min-width: 1024px)">
+                <source srcset="{{ banner.image1a }}, {{ banner.image1b }} 2x" media="(min-width: 440px)">
+                <img src="{{ banner.image1a }}" alt="image" class="banner__image" width="624" height="544"/>
+            </picture>
+        </div>
     </div>
 </section>

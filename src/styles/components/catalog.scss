@@ -10,9 +10,17 @@
 
     @include desk-l {
         padding: 0 80px;
-        display: flex;
-        gap: 24px;
-        justify-content: space-between;
+    }
+
+    &__wrapper {
+        max-width: 1280px;
+        margin-inline: auto;
+
+        @include desk-l {
+            display: flex;
+            gap: 24px;
+            justify-content: space-between;
+        }
     }
 
     &__sidebar {
@@ -221,7 +229,13 @@
         gap: 32px;
         justify-content: center;
 
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
         @include desk {
+            gap: 32px;
             margin-top: 48px;
             grid-template-columns: repeat(3, 1fr);
         }
@@ -231,9 +245,12 @@
         margin-top: 28px;
         margin-bottom: 4px;
 
-        @include desk {
+        @include tablet {
             width: fit-content;
             align-self: center;
+        }
+
+        @include desk {
             margin-top: 52px;
         }
     }

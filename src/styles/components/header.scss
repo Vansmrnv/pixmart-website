@@ -1,7 +1,7 @@
 @use '../global/mixins.scss' as *;
 
 .header {
-    display: flex;
+
     padding: 24px 16px;
     box-shadow: 0 4px 40px #1D395F05;
     position: fixed;
@@ -10,6 +10,17 @@
     width: 100%;
     z-index: 1000;
     min-height: 92px;
+
+    &__wrapper {
+        display: flex;
+        max-width: 1280px;
+        margin-inline: auto;
+
+        @include desk {
+            align-items: center;
+            margin-inline: auto;
+        }
+    }
 
     @include desk {
         padding: 24px 40px;
@@ -87,7 +98,7 @@
     &__logo-link {
         align-self: center;
     }
-    
+
     &__logo {
         width: 107.4286px;
         height: 24px;

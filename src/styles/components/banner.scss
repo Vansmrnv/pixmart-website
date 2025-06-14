@@ -2,15 +2,23 @@
 
 .banner {
     padding: 32px 16px 64px 16px;
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 36px;
     background-image: linear-gradient(to right, #F0F6FD, var(--base-color));
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 36px;
+
+        @include desk {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 1320px;
+            margin-inline: auto;
+        }
+    }
 
     @include desk {
         padding: 120px 28.45px 110px 40px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
     }
 
     @include desk-l {

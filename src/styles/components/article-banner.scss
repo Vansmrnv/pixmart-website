@@ -13,6 +13,11 @@
         padding: 64px 80px 64px;
     }
 
+    &__wrapper {
+        max-width: 1280px;
+        margin-inline: auto;
+    }
+
     &__tag {
         width: fit-content;
         padding: 8px 16px;
