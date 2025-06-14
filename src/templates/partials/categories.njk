@@ -7,12 +7,21 @@
                 {{ categories.text }}</p>
             <a href="{{ categories.link }}" class="categories__link button button--primary button--large">{{ categories.button }}</a>
         </div>
-        <ul class="categories__list">
-            {% for item in categories.cards %}
-                <li class="categories__list-item">
-                    {% include 'partials/categories-card.njk'%}
-                </li>
-            {% endfor %}
-        </ul>
+        <div class="categories__list">
+            <div class="categories__column">
+                {% for item in categories.cards1 %}
+                    <div class="categories__list-item">
+                        {% include 'partials/categories-card.njk'%}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="categories__column">
+                {% for item in categories.cards2 %}
+                    <div class="categories__list-item">
+                        {% include 'partials/categories-card.njk'%}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </section>

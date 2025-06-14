@@ -28,6 +28,12 @@
     "title1": "Craft Your Success with Our",
     "highlight": "Digital",
     "title2": "Assets",
+
+    "heading1": "Сraft Your",
+    "heading2": "Success with",
+    "heading3": "Our",
+    "heading3a": "Assets",
+
     "text": "From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources.",
     "button1": "Shop Now",
     "link1": "/",
@@ -70,7 +76,7 @@
     "text": "From fonts and icons to mockups and templates, our comprehensive categories ensure that you find exactly what you need to your projects.",
     "button": "Shop Now",
     "link": "/",
-    "cards": [
+    "cards1": [
       {
         "title": "Text",
         "subtitle1": "Text",
@@ -84,7 +90,9 @@
         "subtitle2": "Text",
         "link": "/",
         "icon": "img/sprite.svg#phoneicon"
-      },
+      }
+    ],
+    "cards2": [
       {
         "title": "Text",
         "subtitle1": "Text",

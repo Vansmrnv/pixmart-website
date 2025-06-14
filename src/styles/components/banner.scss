@@ -45,6 +45,31 @@
         color: var(--primary-color);
         font-weight: var(--weight-7);
         margin: 0px;
+
+        @include desk-l {
+            position: absolute;
+            visibility: hidden;
+        }
+    }
+
+    &__heading {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin: 0px;
+        position: absolute;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+
+        @include desk-l {
+            position: relative;
+            visibility: visible;
+        }
+    }
+
+    &__heading-line {
+        display: flex;
+        gap: 9px;
     }
 
     &__title--highlight {

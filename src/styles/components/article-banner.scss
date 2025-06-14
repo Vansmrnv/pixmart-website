@@ -1,4 +1,4 @@
-@use '../global/mixins.scss' as *; 
+@use '../global/mixins.scss' as *;
 
 .article-banner {
 
@@ -32,11 +32,14 @@
 
 
     &__title {
+        font-size: var(--heading2);
+        line-height: var(--line-height-h2);
+        letter-spacing: var(--letter-spacing);
         color: var(--primary-color);
         font-weight: var(--weight-7);
         margin: 0px;
         margin-top: 24px;
-        
+
         @include desk {
             font-size: var(--heading1);
             line-height: var(--line-height-h1);
@@ -45,7 +48,24 @@
         }
 
         @include desk-l {
-            max-width: 1000px;
+            position: absolute;
+            visibility: hidden;
+        }
+    }
+
+    &__heading {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin: 0px;
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        visibility: hidden;
+
+        @include desk-l {
+            position: relative;
+            visibility: visible;
         }
     }
 

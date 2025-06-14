@@ -48,17 +48,19 @@
         </div>
     </div>
     <div class="footer__bottom">
-        <ul class="footer__list">
-            {% for item in footer.bottom.links %}
-                <li class="footer__list-item">
-                    <a href="{{ item.link }}" class="footer__bottom-link">{{ item.title }}
-                        {% if loop.index != 3 %}
-                            <span class="footer__bottom-separator">|</span>
-                        {% endif %}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-        <p class="footer__bottom-text">{{ footer.bottom.text }}</p>
+        <div class="footer__bottom-wrapper">
+            <ul class="footer__list">
+                {% for item in footer.bottom.links %}
+                    <li class="footer__list-item">
+                        <a href="{{ item.link }}" class="footer__bottom-link">{{ item.title }}
+                            {% if loop.index != 3 %}
+                                <span class="footer__bottom-separator">|</span>
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <p class="footer__bottom-text">{{ footer.bottom.text }}</p>
+        </div>
     </div>
 </footer>

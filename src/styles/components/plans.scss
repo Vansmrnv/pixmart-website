@@ -6,7 +6,6 @@
 
     @include desk {
         padding: 120px 40px 0px;
-        gap: 16px;
     }
 
     @include desk-l {
@@ -16,7 +15,7 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 16px;
         max-width: 1280px;
         margin-inline: auto;
     }
@@ -41,7 +40,7 @@
         }
 
         @include desk-l {
-            margin-bottom: 80px;
+            margin-bottom: 64px;
         }
     }
 

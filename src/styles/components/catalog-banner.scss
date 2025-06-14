@@ -24,8 +24,9 @@
         color: var(--primary-color);
         font-weight: var(--weight-7);
         margin: 0px;
-        max-width: 373px;
-        transform: translateY(-20px);
+        transform: translateY(-10px);
+        display: flex;
+        flex-direction: column;
 
         @include desk {
             font-family: var(--title-font);
