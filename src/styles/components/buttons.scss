@@ -14,10 +14,19 @@
     align-items: center;
     border: none;
     position: relative;
+    justify-content: center;
 
     &:focus-visible {
         outline: 4px solid var(--primary-button-hover);
     }
+}
+
+.button-text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
 }
 
 // Button Variants

@@ -15,11 +15,11 @@
             </h1>
             <p class="banner__text">{{ banner.text }}</p>
             <div class="banner__buttons">
-                <a href="{{ banner.link1 }}" class="button button--primary button--large">{{ banner.button1 }}</a>
+                <a href="{{ banner.link1 }}" class="button button--primary button--large"><span class="button-text">{{ banner.button1 }}</span></a>
                 <a href="{{ banner.link2 }}" class="button button--tertiary button--large">
                     <svg class="banner__icon" width="24px" height="24px">
                         <use href="img/sprite.svg#play-filled"></use>
-                    </svg>{{ banner.button2 }}</a>
+                    </svg><span class="button-text">{{ banner.button2 }}</span></a>
             </div>
         </div>
         <div class="banner__images">

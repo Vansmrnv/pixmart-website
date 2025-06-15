@@ -3,7 +3,7 @@
     <div class="faqs__details">
         <span class="faqs__id">{{ faqs.id }}</span>
         <h2 class="faqs__title section-title section-title--great">{{ faqs.title }}</h2>
-        <a href="{{ faqs.link }}" class="faqs__link button button--secondary button--large">{{ faqs.button }}</a>
+        <a href="{{ faqs.link }}" class="faqs__link button button--secondary button--large"><span class="button-text">{{ faqs.button }}</span></a>
     </div>
     <ul class="faqs__list">
         {% for item in faqs.cards %}

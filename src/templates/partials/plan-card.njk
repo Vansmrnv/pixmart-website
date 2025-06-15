@@ -16,9 +16,9 @@
         {% endfor %}
     </ul>
     {% if item.status == "none"%}
-        <a href="{{ item.link }}" class="button button--secondary button--large">{{ item.button }}</a>
+        <a href="{{ item.link }}" class="button button--secondary button--large"><span class="button-text">{{ item.button }}</span></a>
     {% endif %}
     {% if item.status == "BEST SELLER"%}
-        <a href="{{ item.link }}" class="button button--primary button--large">{{ item.button }}</a>
+        <a href="{{ item.link }}" class="button button--primary button--large"><span class="button-text">{{ item.button }}</span></a>
     {% endif %}
 </li>

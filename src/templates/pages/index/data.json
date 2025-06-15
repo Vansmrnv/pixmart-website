@@ -1,6 +1,5 @@
 {
   "header": {
-    "logo": "/",
     "nav": [
       {
         "title": "About",
@@ -247,7 +246,6 @@
     ]
   },
   "footer": {
-    "link": "/",
     "text": "Your premium digital assets solution with high quality and comprehensive range of products and services.",
     "nav": [
       {

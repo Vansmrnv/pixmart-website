@@ -167,9 +167,9 @@
 
 .checkbox-input:where([type="checkbox"], [type="radio"]):where( :active:not(:disabled),
     :focus-visible) {
-    border-color: #3892f3;
+    border-color: transparent;
     outline: none;
-    transition: border-color 0.2s ease;
+    transition: border-color, outline-color 0.2s ease;
 }
 
 .checkbox-input:where([type="checkbox"], [type="radio"]):disabled {

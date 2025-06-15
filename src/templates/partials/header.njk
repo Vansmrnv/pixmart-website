@@ -5,7 +5,7 @@
             <span class="header__burger-line"></span>
             <span class="header__burger-line"></span>
         </button>
-        <a href="{{ header.logo }}" class="header__logo-link">
+        <a {% if header.logo %}href="{{ header.logo }}"{% endif %} class="header__logo-link">
             <svg class="header__logo">
                 <use href="img/sprite.svg#logo_white"></use>
             </svg>

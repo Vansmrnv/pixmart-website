@@ -5,7 +5,7 @@
             <h1 class="contacts__title section-title">{{ contacts.title }}</h1>
             <h2 hidden>Contact Information</h2>
             <p class="contacts__text">{{ contacts.text }}</p>
-            <a href="{{ contacts.link }}" class="contacts__link button button--primary button--large">{{ contacts.button }}</a>
+            <a href="{{ contacts.link }}" class="contacts__link button button--primary button--large"><span class="button-text">{{ contacts.button }}</span></a>
             <ul class="contacts__details">
                 {% for item in contacts.details %}
                     <li class="contacts__detail">
@@ -66,7 +66,7 @@
                         <input id="agree_switch" class="checkbox-input" type="checkbox" checked required/>
                     </div>
                 </div>
-                <button class="contacts__button button button--primary button--large" type="submit">{{ contacts.submit }}</button>
+                <button class="contacts__button button button--primary button--large" type="submit"><span class="button-text">{{ contacts.submit }}</span></button>
             </div>
         </form>
     </div>

@@ -10,7 +10,7 @@
                 </button>
             </div>
             <form class="catalog__form" action="url" method="post">
-                <button type="reset" class="catalog__sidebar-reset button button--secondary button--medium">{{ catalog.buttonreset }}
+                <button type="reset" class="catalog__sidebar-reset button button--secondary button--medium"><span class="button-text">{{ catalog.buttonreset }}</span>
                     <svg class="catalog__sidebar-iconx" width="24px" height="24px">
                         <use href="img/sprite.svg#x-close"></use>
                     </svg>
@@ -45,7 +45,7 @@
                     <input type="range" min="5" max="50" value="25" class="catalog__slider" id="range">
                 </div>
             </form>
-            <button type="submit" class="catalog__sidebar-button button button--primary button--large">{{ catalog.buttonsubmit }}</button>
+            <button type="submit" class="catalog__sidebar-button button button--primary button--large"><span class="button-text">{{ catalog.buttonsubmit }}</span></button>
         </aside>
         <div class="catalog__box">
             <div class="catalog__settings">
@@ -84,7 +84,7 @@
             <ul class="catalog__tags">
                 {% for item in catalog.tags %}
                     <li class="catalog__tag">
-                        <button class="button button--secondary button--small">{{ item }}
+                        <button class="button button--secondary button--small"><span class="button-text">{{ item }}</span>
                             <svg class="catalog__tag-icon" width="16px" height="16px">
                                 <use href="img/sprite.svg#x-close"></use>
                             </svg>
@@ -99,7 +99,7 @@
                     </li>
                 {% endfor %}
             </ul>
-            <button type="button" class="catalog__button button button--secondary button--large">{{ catalog.buttonload }}</button>
+            <button type="button" class="catalog__button button button--secondary button--large"><span class="button-text">{{ catalog.buttonload }}</span></button>
         </div>
     </div>
 </section>
