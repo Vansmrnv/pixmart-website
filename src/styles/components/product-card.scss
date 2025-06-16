@@ -1,0 +1,98 @@
+@use '../global/mixins.scss' as *;
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 305px;
+    position: relative;
+
+
+    &:hover .product-card__link {
+        opacity: 1;
+    }
+
+    &:hover .product-card__image {
+        opacity: 0.5;
+    }
+
+    &__picture {
+        width: fit-content;
+    }
+
+    &__image {
+        background-color: #F4F7FA;
+        border-radius: 20px;
+    }
+
+    &__link {
+        position: absolute;
+        opacity: 0;
+        width: 273px;
+        top: 104px;
+        left: 16px;
+        margin: auto;
+    }
+
+    &__tag {
+        position: absolute;
+        visibility: visible;
+        width: fit-content;
+        top: 0;
+        right: 0;
+        border-radius: 0 20px;
+        background-color: var(--primary-button-color);
+        padding: 16px;
+    }
+
+
+    &__details {
+        width: 305px;
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 4px;
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        justify-self: start;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    &__subtitle {
+        font-family: var(--main-font);
+        color: var(--gray1-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+        justify-self: start;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    &__text {
+        color: var(--primary-button-color);
+        font-family: var(--main-font);
+        font-weight: var(--weight-5);
+        font-size: var(--body-text2);
+        line-height: var(--line-height-l2);
+        align-self: center;
+        justify-self: end;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: var(--base-color);
+    }
+}

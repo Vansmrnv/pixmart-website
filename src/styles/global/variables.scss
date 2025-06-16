@@ -1,0 +1,92 @@
+:root {
+    // fonts
+    --title-font: 'Plus Jakarta Sans', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    --main-font: 'Libre Franklin', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+
+    // heading font-size
+    --heading1: 52px;
+    --heading2: 36px;
+    --heading3: 28px;
+    --heading4: 24px;
+    --heading5: 20px;
+
+    // main text font-size
+    --body-text1: 18px;
+    --body-text2: 16px;
+    --body-text3: 14px;
+
+    // weights
+    --weight-7: 700;
+    --weight-6: 600;
+    --weight-5: 500;
+    --weight-4: 400;
+
+    // line heights
+    --line-height-h1: 62px;
+    --line-height-h2: 48px;
+    --line-height-h3: 36px;
+    --line-height-h4: 32px;
+    --line-height-h5: 26px;
+
+    --line-height-l1: 28px;
+    --line-height-l2: 24px;
+    --line-height-l3: 20px;
+
+    // letter-spacing
+    --letter-spacing: -0.5px;
+
+    // colors
+    // text elements colors
+    --primary-color: #0D0D15; // 70% transparency
+    --gray-color: #2A3541D9; // 85% transparency
+    --gray1-color: #2A3541B2;
+    --white-color: #F8F7FF;
+    --white1-color: #EFF5FAD1; 
+
+    // Background colors
+    --base-color: #FFFFFF;
+    --base-alt2-color: #F4F7FA;
+
+    // Criticality statuses
+    --negative-color: #EA3829;
+
+    // Button colors 
+    --primary-button-text-color: #F5F8FB;
+    --primary-button-color: #0265DC;
+    --primary-button-hover: #3892F3;
+    --primary-button-pressed: #0054B6;
+
+    --secondary-button-border-color: #1D36532B;
+    --secondary-button-color: #FFFFFF;
+    --secondary-button-hover: #294D7517;
+
+    --tertiary-button-color: #FFFFFF00;
+    --tertiary-button-hover: #294D7517;
+
+    --button-disabled: #1D36532B;
+
+
+
+    // Switcher 
+
+    --switcher-width: 40px;
+    --switcher-height: 24px;
+    --switcher-toggle-size: 16px;
+    --switcher-transition: all 0.3s ease;
+
+    --switcher-bg-disabled: #f3f4f6;
+
+    --switcher-toggle-off: #ffffff;
+    --switcher-toggle-on: #ffffff;
+
+    --switcher-focus: rgba(56, 146, 243, 0.3);
+    --switcher-text: #374151;
+    --switcher-text-disabled: #9ca3af;
+}
+
+// Screen sizes 
+
+$screen-desk-l: 1440px;
+$screen-desk: 1024px;
+$screen-tablet: 768px;
+$screen-mobile: 440px;

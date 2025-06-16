@@ -1,0 +1,363 @@
+{
+    "header": {
+        "logo": "http://localhost:8080/index.html",
+        "nav": [
+            {
+                "title": "About",
+                "link": "http://localhost:8080/index.html"
+            },
+            {
+                "title": "Products",
+                "link": "http://localhost:8080/catalog.html"
+            },
+            {
+                "title": "Creators",
+                "link": "/"
+            },
+            {
+                "title": "Blog",
+                "link": "http://localhost:8080/blog.html"
+            },
+            {
+                "title": "Contact",
+                "link": "http://localhost:8080/contacts.html"
+            }
+        ]
+    },
+    "catalogbanner": {
+        "title1": "Explore Top",
+        "highlight": "UI Kits",
+        "title2": "Design Assets"
+    },
+    "catalog": {
+        "slidertitle": "Price",
+        "buttonreset": "Clear all filters",
+        "buttonsubmit": "Save",
+        "buttonload": "Load more",
+        "selectors": [
+            {
+                "name": "Best Seller",
+                "value": "bestseller"
+            }
+        ],
+        "text": "Showing 12 out of 120 results.",
+        "viewOptions": {
+            "defaultView": "gallery",
+            "options": [
+                {
+                    "id": "gallery",
+                    "value": "gallery",
+                    "icon": "icon-gallery.svg",
+                    "isChecked": true
+                },
+                {
+                    "id": "tape",
+                    "value": "tape",
+                    "icon": "icon-tape.svg",
+                    "isChecked": false
+                }
+            ]
+        },
+        "tags": [
+            "UI Kit",
+            "UI Kit"
+        ],
+        "products": [
+            {
+                "link": "/",
+                "image1": "/img/lenschron-1x.webp",
+                "image2": "/img/lenschron-2x.webp",
+                "title": "Lens Chronicles",
+                "subtitle1": "Photography",
+                "subtitle2": "Creative",
+                "price": "00.00",
+                "status": "SOLD OUT"
+            },
+            {
+                "link": "/",
+                "image1": "/img/careersuccess-1x.webp",
+                "image2": "/img/careersuccess-2x.webp",
+                "title": "Career Success",
+                "subtitle1": "Guidance",
+                "subtitle2": "Jobs",
+                "price": "20.99",
+                "status": "NEW"
+            },
+            {
+                "link": "/",
+                "image1": "/img/dreamhomes-1x.webp",
+                "image2": "/img/dreamhomes-2x.webp",
+                "title": "Dream Homes",
+                "subtitle1": "Real Estate",
+                "subtitle2": "Modern",
+                "price": "45.99",
+                "status": "POPULAR"
+            },
+            {
+                "link": "/",
+                "image1": "/img/foodishcatering-1x.webp",
+                "image2": "/img/foodishcatering-2x.webp",
+                "title": "Foodish Catering",
+                "subtitle1": "Food",
+                "subtitle2": "Events",
+                "price": "15.99",
+                "status": "POPULAR"
+            },
+            {
+                "link": "/",
+                "image1": "/img/caringhearts-1x.webp",
+                "image2": "/img/caringhearts-2x.webp",
+                "title": "Caring Hearts",
+                "subtitle1": "Healthcare",
+                "subtitle2": "Support",
+                "price": "19.99",
+                "status": "NEW"
+            },
+            {
+                "link": "/",
+                "image1": "/img/gamingrise-1x.webp",
+                "image2": "/img/gamingrise-2x.webp",
+                "title": "Gaming Rise",
+                "subtitle1": "eSports",
+                "subtitle2": "Trends",
+                "price": "00.00",
+                "status": "SOLD OUT"
+            },
+            {
+                "link": "/",
+                "image1": "/img/editpro-1x.webp",
+                "image2": "/img/editpro-2x.webp",
+                "title": "Edit Pro",
+                "subtitle1": "Design",
+                "subtitle2": "Tools",
+                "price": "00.00",
+                "status": "SOLD OUT"
+            },
+            {
+                "link": "/",
+                "image1": "/img/bankingredifined-1x.webp",
+                "image2": "/img/bankingredifined-2x.webp",
+                "title": "Banking Redefined",
+                "subtitle1": "Finance",
+                "subtitle2": "Secure",
+                "price": "25.99",
+                "status": "NEW"
+            },
+            {
+                "link": "/",
+                "image1": "/img/exploringfun-1x.webp",
+                "image2": "/img/exploringfun-2x.webp",
+                "title": "Exploring Fun",
+                "subtitle1": "Travel",
+                "subtitle2": "Adventure",
+                "price": "41.99",
+                "status": "POPULAR"
+            },
+            {
+                "link": "/",
+                "image1": "/img/admindashboard-1x.webp",
+                "image2": "/img/admindashboard-2x.webp",
+                "title": "Admin Dashboard",
+                "subtitle1": "Data",
+                "subtitle2": "Tools",
+                "price": "15.99",
+                "status": "POPULAR"
+            },
+            {
+                "link": "/",
+                "image1": "/img/analyticaldashboard-1x.webp",
+                "image2": "/img/analyticaldashboard-2x.webp",
+                "title": "Analytical Dashboard",
+                "subtitle1": "Data",
+                "subtitle2": "Tools",
+                "price": "10.99",
+                "status": "NEW"
+            },
+            {
+                "link": "/",
+                "image1": "/img/kindergarten-1x.webp",
+                "image2": "/img/kindergarten-2x.webp",
+                "title": "Kindergarten",
+                "subtitle1": "Education",
+                "subtitle2": "Kids",
+                "price": "00.00",
+                "status": "SOLD OUT"
+            }
+        ],
+        "filtertitle": "Filters",
+        "filters": [
+            {
+                "title": "Categories",
+                "name": "categories",
+                "type": "checkbox",
+                "default": "All Categories",
+                "options": [
+                    "All Categories",
+                    "Technology",
+                    "Travel & Tourism",
+                    "Health & Fitness",
+                    "E-Commerce",
+                    "Education",
+                    "Entertainment",
+                    "Others",
+                    "Others"
+                ]
+            },
+            {
+                "title": "Format Type",
+                "name": "format",
+                "type": "radio",
+                "default": "Figma",
+                "options": [
+                    "Figma",
+                    "Sketch",
+                    "Adobe XD",
+                    "Adobe Photoshop",
+                    "Adobe Illustration"
+                ]
+            },
+            {
+                "title": "Style",
+                "name": "style",
+                "type": "checkbox",
+                "defaultAll": true,
+                "options": [
+                    "Minimalist",
+                    "Modern",
+                    "Playful",
+                    "Dark Mode",
+                    "Photocentric"
+                ]
+            }
+        ]
+    },
+    "footer": {
+        "link": "http://localhost:8080/index.html",
+        "text": "Your premium digital assets solution with high quality and comprehensive range of products and services.",
+        "nav": [
+            {
+                "title": "Company",
+                "items": [
+                    {
+                        "title": "Homepage v1",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Homepage v2",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Homepage v3",
+                        "link": "/"
+                    },
+                    {
+                        "title": "About Us",
+                        "link": "/"
+                    },
+                    {
+                        "title": "About Us",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Blog Articles",
+                        "link": "/"
+                    }
+                ]
+            },
+            {
+                "title": "Products",
+                "items": [
+                    {
+                        "title": "Website",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Mobile App",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Social Media Feeds",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Presentation",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Product Mockups",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Illustrations",
+                        "link": "/"
+                    }
+                ]
+            },
+            {
+                "title": "Account",
+                "items": [
+                    {
+                        "title": "Your Cart",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Check Out",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Refund Policy",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Company Policy",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Send A Message",
+                        "link": "/"
+                    },
+                    {
+                        "title": "Customer Support",
+                        "link": "/"
+                    }
+                ]
+            }
+        ],
+        "socials": {
+            "submit": "Subscribe",
+            "placeholder": "Enter your email address ...",
+            "title": "Subscribe to Design Newsletter",
+            "links": [
+                {
+                    "link": "/",
+                    "icon": "img/sprite.svg#twitter"
+                },
+                {
+                    "link": "/",
+                    "icon": "img/sprite.svg#facebook"
+                },
+                {
+                    "link": "/",
+                    "icon": "img/sprite.svg#telegram"
+                }
+            ]
+        },
+        "bottom": {
+            "text": "Copyright © 2024 Pixmart. All rights reserved.",
+            "links": [
+                {
+                    "title": "Privacy Policy",
+                    "link": "/"
+                },
+                {
+                    "title": "Terms and Condition",
+                    "link": "/"
+                },
+                {
+                    "title": "Site Map",
+                    "link": "/"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@use '../global/mixins.scss' as *;
+
+.catalog-banner {
+    padding: 79px 16px;
+    background-image: url("../img/bgwaves.svg");
+    background-size: cover;
+    background-position: 10%;
+
+    @include desk {
+        padding: 84px 80px 76px;
+        background-position: 0%;
+    }
+
+    @include desk-l {
+        padding: 80px 80px 80px;
+    }
+
+    &__wrapper {
+        max-width: 1280px;
+        margin-inline: auto;
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin: 0px;
+        transform: translateY(-10px);
+        display: flex;
+        flex-direction: column;
+
+        @include desk {
+            font-family: var(--title-font);
+            font-size: var(--heading1);
+            line-height: var(--line-height-h1);
+            letter-spacing: var(--letter-spacing);
+            max-width: 480px;
+        }
+
+        @include desk-l {
+            max-width: 580px;
+        }
+    }
+
+    &__title--highlight {
+        color: var(--primary-button-color);
+    }
+}

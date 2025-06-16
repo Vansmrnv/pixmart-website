@@ -1,0 +1,81 @@
+<section class="article">
+    <div class="article__wrapper">
+        <picture class="article__picture">
+            <source srcset="{{ article.image1 }}, {{ article.image2 }} 2x">
+            <img src="{{ article.image1 }}" alt="image" class="article__image" width="408" height="127"/>
+        </picture>
+        <div class="article__box">
+            <aside class="article__side">
+                <div class="article__author-box">
+                    <picture class="article__author">
+                        <source srcset="{{ article.author1 }}, {{ article.author2 }} 2x">
+                        <img src="{{ article.author2 }}" alt="image" class="article__author-image"/>
+                    </picture>
+                    <h2 class="article__author-name section-title section-title--small">{{ article.name }}</h2>
+                    <time datetime="{{ article.datetime }}" class="article__author-date">{{ article.date }}</time>
+                </div>
+                <div class="article__category">
+                    <h2 class="article__category-title section-title section-title--medium">{{ article.list1title }}</h2>
+                    <ul class="article__categories">
+                        {% for item in article.list1 %}
+                            <li class="article__categories-item">
+                                {{ item.title}}
+                                <ul class="article__categories-items">
+                                    {% for item in item.list %}
+                                        <li class="article__categories-subitem">{{ item }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="article__latest">
+                    <h2 class="article__list-title section-title section-title--medium">{{ article.list2title }}</h2>
+                    <ul class="article__points">
+                        {% for item in article.list2 %}
+                            <li class="article__point">
+                                <h3 class="article__point-title section-title section-title--small">{{ item.title }}</h3>
+                                <time datetime="{{ item.datetime }}" class="article__point-date">{{ item.date }}</time>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </aside>
+            <div class="article__content">
+                <p class="article__text">{{ article.paragraph1 }}</p>
+                <ul class="article__texts">
+                    {% for item in article.texts %}
+                        <li class="article__texts-item">
+                            <h3 class="article__text-title section-title section-title--medium">{{ item.title }}</h3>
+                            <p class="article__text">{{ item.description }}</p>
+                        </li>
+
+                        {% if loop.index == 2 %}
+                            <li class="article__texts-image">
+                                <figure class="article__figure">
+                                    <picture class="article__picture">
+                                        <source srcset="{{ article.listimage1 }}, {{ article.listimage2 }} 2x">
+                                        <img src="{{ article.listimage1 }}" alt="image" class="article__list-image" width="408" height="462"/>
+                                    </picture>
+                                    <figcaption class="article__figure-box">
+                                        <p class="article__figure-caption">{{ article.caption }}</p>
+                                        <a href="{{ article.link }}" class="article__figure-link">{{ article.button }}</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <div class="article__quote-box">
+                    <svg class="article__quote-icon" width="64px" height="64px">
+                        <use href="img/sprite.svg#quotation"></use>
+                    </svg>
+                    <blockquote class="article__quote section-title section-title--medium">
+                        {{ article.quote }}
+                    </blockquote>
+                </div>
+                <p class="article__text">{{ article.paragraph1 }}</p>
+            </div>
+        </div>
+    </div>
+</section>

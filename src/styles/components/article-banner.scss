@@ -1,0 +1,72 @@
+@use '../global/mixins.scss' as *;
+
+.article-banner {
+
+    padding: 64px 16px 64px;
+    background-image: linear-gradient(to bottom, #F0F6FD, #FFFFFF00);
+
+    @include desk {
+        padding: 64px 40px 64px;
+    }
+
+    @include desk-l {
+        padding: 64px 80px 64px;
+    }
+
+    &__wrapper {
+        max-width: 1280px;
+        margin-inline: auto;
+    }
+
+    &__tag {
+        width: fit-content;
+        padding: 8px 16px;
+        background-color: var(--primary-button-color);
+        border-radius: 100px;
+        font-family: var(--main-font);
+        color: var(--primary-button-text-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-5);
+        line-height: var(--line-height-l2);
+    }
+
+
+    &__title {
+        font-size: var(--heading2);
+        line-height: var(--line-height-h2);
+        letter-spacing: var(--letter-spacing);
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin: 0px;
+        margin-top: 24px;
+
+        @include desk {
+            font-size: var(--heading1);
+            line-height: var(--line-height-h1);
+            letter-spacing: var(--letter-spacing);
+            max-width: 920px;
+        }
+
+        @include desk-l {
+            position: absolute;
+            visibility: hidden;
+        }
+    }
+
+    &__heading {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin: 0px;
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        visibility: hidden;
+
+        @include desk-l {
+            position: relative;
+            visibility: visible;
+        }
+    }
+
+}

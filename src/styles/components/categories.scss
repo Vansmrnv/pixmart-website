@@ -1,0 +1,97 @@
+@use '../global/mixins.scss' as *;
+
+.categories {
+    padding: 64px 16px 0px;
+    width: 100%;
+
+    @include desk {
+        padding: 120px 40px 0px;
+    }
+
+    @include desk-l {
+        padding: 120px 80px 0px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        align-items: center;
+
+        @include desk {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 1280px;
+            margin-inline: auto;
+        }
+
+        @include desk-l {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+
+        @include desk {
+            gap: 16px;
+            grid-column: 2/3;
+        }
+    }
+
+    &__id {
+        font-family: var(--main-font);
+        color: #0F73F6;
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        max-width: 408px;
+    }
+
+    &__text {
+        font-family: var(--main-font);
+        color: var(--primary-color);
+        font-size: var(--body-text1);
+        line-height: var(--line-height-l2);
+        margin-bottom: 16px;
+    }
+
+    &__link {
+        width: fit-content;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        list-style: none;
+        width: 100%;
+
+        @include desk {
+            grid-row: 1;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__column:nth-child(1) {
+        padding-bottom: 80px;
+    }
+
+    &__column:nth-child(2) {
+        padding-top: 80px;
+    }
+}

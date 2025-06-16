@@ -1,0 +1,67 @@
+@use '../global/mixins.scss' as *;
+
+.categories-card {
+
+    // width: fit-content;
+    // max-width: 194px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 24px;
+    background-color: var(--base-alt2-color);
+    transition: all 0.3s ease;
+
+    @include desk {
+        max-width: 100%;
+    }
+
+    @include desk-l {
+        width: 100%;
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        fill: var(--primary-button-color);
+        color: var(--primary-button-color);
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        text-decoration: none;
+        margin-top: 8px;
+        transition: color 0.3s ease;
+    }
+
+    &__subtitle {
+        font-family: var(--main-font);
+        color: var(--gray1-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+        transition: color 0.3s ease;
+
+        @include desk {
+            white-space: nowrap;
+        }
+    }
+
+    &:hover {
+        background-color: var(--primary-button-color);
+    }
+
+    &:hover &__title {
+        color: var(--white-color);
+    }
+
+    &:hover &__subtitle {
+        color: var(--white1-color);
+    }
+
+    &:hover &__icon {
+        fill: var(--base-color);
+        color: var(--base-color);
+    }
+}

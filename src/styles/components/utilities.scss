@@ -1,0 +1,42 @@
+@use '../global/mixins.scss' as *;
+
+.utilities {
+    padding: 0;
+    padding-top: 64px;
+
+    @include desk {
+        padding: 0 40px;
+        padding-top: 68px;
+    }
+
+    @include desk-l {
+        padding: 0 80px;
+        padding-top: 120px;
+    }
+
+    &__wrapper {
+        max-width: 1280px;
+        margin-inline: auto;
+    }
+
+    &__list {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(5, 1fr);
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin-left: 24px;
+
+        @include desk {
+            overflow-x: hidden;
+            gap: 16px;
+            margin-left: 0px;
+        }
+
+        @include desk-l {
+            gap: 32px;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,128 @@
+@use '../global/mixins.scss' as *;
+
+.banner {
+    padding: 32px 16px 64px 16px;
+    background-image: linear-gradient(to right, #F0F6FD, var(--base-color));
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 36px;
+
+        @include desk {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 1320px;
+            margin-inline: auto;
+        }
+    }
+
+    @include desk {
+        padding: 120px 28.45px 110px 40px;
+    }
+
+    @include desk-l {
+        padding: 47px 40px 47px 80px;
+    }
+
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @include desk {
+            max-width: 410px;
+        }
+
+        @include desk-l {
+            max-width: 520px;
+            align-self: center;
+        }
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin: 0px;
+
+        @include desk-l {
+            position: absolute;
+            visibility: hidden;
+        }
+    }
+
+    &__heading {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin: 0px;
+        position: absolute;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+
+        @include desk-l {
+            position: relative;
+            visibility: visible;
+        }
+    }
+
+    &__heading-line {
+        display: flex;
+        gap: 9px;
+    }
+
+    &__title--highlight {
+        color: var(--primary-button-color);
+    }
+
+    &__text {
+        font-family: var(--title-font);
+        color: var(--gray-color);
+        font-weight: var(--weight-5);
+        font-size: var(--heading5);
+        line-height: var(--line-height-l1);
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include mobile {
+            justify-content: flex-start;
+        }
+    }
+
+    &__icon {
+        fill: #0265DC;
+    }
+
+
+    &__icon-box {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        height: 276px;
+
+        @include desk {
+            height: 386px;
+        }
+
+        @include desk-l {
+            height: 544px;
+        }
+    }
+
+    &__images {
+
+        @include desk {
+            align-self: center;
+        }
+    }
+}

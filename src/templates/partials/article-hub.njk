@@ -1,0 +1,17 @@
+<section class="article-hub">
+    <div class="article-hub__wrapper">
+        <div class="article-hub__details">
+            <h2 class="article-hub__title section-title section-title--great">{{ articlehub.title }}</h2>
+            <a href="{{ articlehub.link }}" class="article-hub__link">{{ articlehub.button }}</a>
+        </div>
+        <ul class="article-hub__list">
+            {% for item in articlehub.cards %}
+                <li class="article-hub__item">
+                    <a href="{{ item.link }}">
+                        {% include 'partials/blog-card.njk' %}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+{% extends "layouts/base.njk" %}
+
+{% set title = "PixMart Blog" %}
+{{ title }}
+{% set url = "http://localhost:8080/blog.html"%}
+
+{% block content %}
+    {% include 'partials/article-banner.njk' %}
+
+    {% include 'partials/article.njk' %}
+
+    {% include 'partials/article-hub.njk' %}
+{% endblock %}

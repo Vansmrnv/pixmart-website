@@ -1,0 +1,286 @@
+@use '../global/mixins.scss' as *;
+
+.article {
+    padding: 0px 16px 64px;
+
+    @include desk {
+        padding: 0 40px 120px;
+    }
+
+    @include desk-l {
+        padding: 0 80px 90px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        justify-content: center;
+        max-width: 1280px;
+        margin-inline: auto;
+
+        @include desk {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+
+        }
+    }
+
+    &__image {
+        border-radius: 20px;
+        object-position: 0% 5%;
+        width: 408px;
+        height: 127px;
+        object-fit: cover;
+
+        @include desk {
+            width: 944px;
+            height: 293.52px;
+        }
+
+        @include desk-l {
+            width: 1280px;
+            height: 398px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include desk {
+            flex-direction: row;
+        }
+    }
+
+    &__side {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__author-box {
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        width: fit-content;
+        column-gap: 16px;
+    }
+
+    &__author {
+        grid-row: 1 / span 2;
+    }
+
+    &__author-image {
+        border-radius: 50%;
+        width: 100%;
+    }
+
+    &__author-name {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        grid-column: 2/3;
+        grid-row: 1/2;
+        align-self: center;
+    }
+
+    &__date {
+        font-family: var(--main-font);
+        color: var(--primary-color);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+
+    &__category {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-top: 40px;
+        border-top: 2px solid var(--primary-color);
+        list-style-position: inside;
+
+    }
+
+    &__category-title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__categories {
+        font-family: var(--main-font);
+        color: var(--gray-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+        list-style: none;
+    }
+
+    &__categories-items {
+        font-family: var(--main-font);
+        color: var(--primary-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-6);
+        line-height: var(--line-height-l2);
+        list-style: none;
+        margin-left: 16px;
+    }
+
+    &__categories-item::before {
+        content: "";
+        background-color: var(--primary-button-color);
+        display: inline-block;
+        position: relative;
+        left: 0;
+        bottom: 1px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+
+    &__categories-subitem::before {
+        content: "";
+        background-color: var(--primary-button-color);
+        display: inline-block;
+        position: relative;
+        left: 0;
+        bottom: 1px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+
+    &__categories-item::marker,
+    &__categories-subitem::marker {
+        appearance: none;
+    }
+
+    &__categories-subitem {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    &__latest {
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+        border-top: 2px solid var(--primary-color);
+        list-style-position: inside;
+    }
+
+    &__list-title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__points {
+        list-style: none;
+    }
+
+    &__point {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__point:first-child::after {
+        content: "";
+        flex-grow: 1;
+        width: 260px;
+        height: 1px;
+        background-color: #22222226;
+        margin-top: 12px;
+    }
+
+    &__point-title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin-top: 24px;
+    }
+
+    &__point-date {
+        font-family: var(--main-font);
+        color: var(--gray-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__text {
+        font-family: var(--main-font);
+        color: var(--gray-color);
+        font-size: var(--body-text1);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l1);
+    }
+
+    &__texts {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        list-style: none;
+    }
+
+    &__list-image {
+        width: 100%;
+        border-radius: 20px;
+
+        @include desk {
+            width: 100%;
+        }
+
+        @include desk-l {
+            width: 100%;
+        }
+    }
+
+    &__texts-item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__text-title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__figure-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__figure-link {
+        font-family: var(--main-font);
+        color: var(--primary-button-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-6);
+        line-height: var(--line-height-l2);
+    }
+
+    &__quote-box {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        gap: 16px;
+    }
+
+    &__quote-icon {
+        fill: var(--primary-button-color);
+    }
+
+    &__quote {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+}

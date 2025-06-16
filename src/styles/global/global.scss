@@ -1,0 +1,35 @@
+@use '../global/mixins.scss' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--base-color);
+    padding-top: 92px;
+    min-width: 440px;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    padding-top: 64px;
+
+    @include desk {
+        padding-top: 120px;
+    }
+}

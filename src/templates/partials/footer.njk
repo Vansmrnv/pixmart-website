@@ -1,0 +1,66 @@
+<footer class="footer">
+    <div class="footer__wrapper">
+        <div class="footer__top">
+            <div class="footer__details">
+                <a {% if footer.link %}href="{{ footer.link }}"{% endif %}>
+                    <svg class="footer__logo" width="300px" height="58px">
+                        <use href="img/sprite.svg#logo_white"></use>
+                    </svg>
+                </a>
+                <p class="footer__text">{{ footer.text }}</p>
+            </div>
+            <nav class="footer__nav">
+                {% for item in footer.nav %}
+                    <div class="footer__navigation">
+                        <strong class="footer__nav-title section-title section-title--small">{{ item.title }}</strong>
+                        <ul class="footer__nav-list">
+                            {% for item in item.items %}
+                                <li class="footer__nav-item">
+                                    <a href="#" class="footer__link">{{ item.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+            </nav>
+        </div>
+        <div class="footer__socials">
+            <ul class="footer__icons">
+                {% for item in footer.socials.links %}
+                    <li class="footer__icons-item">
+                        <a href="{{ item.link }}" class="footer__link button button--secondary button--icon-large">
+                            <svg class="footer__icon">
+                                <use href="{{ item.icon }}"></use>
+                            </svg>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div class="footer__socials-box">
+                <form action="/submit-search" method="post" class="footer__form">
+                    <label for="email" class="footer__socials-title section-title section-title--medium">{{ footer.socials.title }}</label>
+                    <div class="footer__form-tools">
+                        <input id="email" type="email" pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/." placeholder="{{ footer.socials.placeholder }}" class="footer__input text-input" required>
+                        <button type="submit" class="button button--primary button--large"><span class="button-text">{{ footer.socials.submit }}</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="footer__bottom-wrapper">
+            <ul class="footer__list">
+                {% for item in footer.bottom.links %}
+                    <li class="footer__list-item">
+                        <a href="{{ item.link }}" class="footer__bottom-link">{{ item.title }}
+                            {% if loop.index != 3 %}
+                                <span class="footer__bottom-separator">|</span>
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <p class="footer__bottom-text">{{ footer.bottom.text }}</p>
+        </div>
+    </div>
+</footer>

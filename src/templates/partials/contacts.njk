@@ -1,0 +1,73 @@
+<section class="contacts">
+    <div class="contacts__wrapper">
+        <article class="contacts__info">
+            <span class="contacts__id">{{ contacts.id }}</span>
+            <h1 class="contacts__title section-title">{{ contacts.title }}</h1>
+            <h2 hidden>Contact Information</h2>
+            <p class="contacts__text">{{ contacts.text }}</p>
+            <a href="{{ contacts.link }}" class="contacts__link button button--primary button--large"><span class="button-text">{{ contacts.button }}</span></a>
+            <ul class="contacts__details">
+                {% for item in contacts.details %}
+                    <li class="contacts__detail">
+                        <svg class="contacts__details-icon" width="24px" height="24px">
+                            <use href="{{ item.icon }}"></use>
+                        </svg>
+                        <a href="{{ item.link }}" class="contacts__detail-link">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <h3 hidden>Map</h3>
+            <picture class="contacts__map">
+                <source srcset="img/map-1x.webp, img/map-2x.webp 2x">
+                <img src="img/map-1x.webp" alt="image" class="contacts__map-image" width="408" height="314"/>
+            </picture>
+            <div class="contacts__tag">
+                <svg class="contacts__icon" width="24px" height="24px">
+                    <use href="img/sprite.svg#marker-pin-03"></use>
+                </svg>
+                <span class="contacts__tag-title">{{ contacts.tag.title }}</span>
+                <p class="contacts__tag-text">{{ contacts.tag.text }}</p>
+            </div>
+        </article>
+        <form action="url" method="post" class="contacts__form">
+            <h2 hidden>Contacts Form</h2>
+            <div class="contacts__form-item">
+                <label class="contacts__form-label form-label" for="name">{{ contacts.name }}</label>
+                <input class="contacts__form-input text-input" id="name" type="text" placeholder="{{ contacts.example.name }}" required/>
+            </div>
+            <div class="contacts__form-item">
+                <label class="contacts__form-label form-label" for="contact_email">{{ contacts.email }}</label>
+                <input type="email" class="contacts__form-input text-input" id="contact_email" placeholder="{{ contacts.example.email }}" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required/>
+            </div>
+
+            <div class="contacts__form-item">
+                <label class="contacts__form-label form-label" for="subject">{{ contacts.selector }}</label>
+                <div class="select-wrapper">
+                    <select name="subject" id="subject" class="contacts__form-select form-select" required>
+                        <option value="" class="contacts__select-option">Default</option>
+                        {% for item in contacts.selectors %}
+                            <option value="{{ item.value }}" class="contacts__select-option">{{ item.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="contacts__form-item">
+                <label class="contacts__form-label form-label" for="message">{{ contacts.message }}</label>
+                <textarea class="contacts__form-area text-input" name="welcome" id="message" cols="30" rows="8" placeholder="{{ contacts.example.message }}" required></textarea>
+            </div>
+            <div class="contacts__container">
+                <div class="contacts__form-checkboxes">
+                    <div class="contacts__form-checkbox">
+                        <label for="subscribe_switch" class="checkbox-label">{{ contacts.switch1 }}</label>
+                        <input id="subscribe_switch" class="checkbox-input" type="checkbox"/>
+                    </div>
+                    <div class="contacts__form-checkbox">
+                        <label for="agree_switch" class="checkbox-label" >{{ contacts.switch2 }}</label>
+                        <input id="agree_switch" class="checkbox-input" type="checkbox" checked required/>
+                    </div>
+                </div>
+                <button class="contacts__button button button--primary button--large" type="submit"><span class="button-text">{{ contacts.submit }}</span></button>
+            </div>
+        </form>
+    </div>
+</section>

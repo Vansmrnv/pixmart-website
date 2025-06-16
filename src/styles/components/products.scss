@@ -1,0 +1,89 @@
+@use '../global/mixins.scss' as *;
+
+.products {
+    padding: 0;
+    padding-top: 64px;
+
+    @include desk {
+        padding: 0;
+        padding-top: 140px;
+    }
+
+    @include desk-l {
+        padding: 120px 80px 0px;
+    }
+
+    &__wrapper {
+        max-width: 1280px;
+        margin-inline: auto;
+    }
+
+    &__details {
+        margin-bottom: 48px;
+        padding: 0 16px;
+
+        @include desk {
+            display: flex;
+            padding: 0 40px;
+        }
+
+        @include desk-l {
+            padding: 0;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__id {
+        font-family: var(--main-font);
+        color: #0F73F6;
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__chevrons {
+        position: absolute;
+        visibility: hidden;
+
+        @include desk {
+            position: relative;
+            visibility: visible;
+            margin-left: auto;
+            align-self: flex-end;
+            display: flex;
+            gap: 12px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 16px;
+        list-style: none;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    &__item:first-child {
+        margin-left: 16px;
+
+        @include desk {
+            margin-left: 40px;
+        }
+
+        @include desk-l {
+            margin-left: 0px;
+        }
+    }
+}

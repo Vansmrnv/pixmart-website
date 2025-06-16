@@ -1,0 +1,19 @@
+<article class="product-card">
+    <picture class="product-card__picture">
+        <source srcset="{{ item.image1 }}, {{ item.image2 }} 2x"/>
+        <img src="{{ item.image1 }}" alt="image" class="product-card__image" width="305" height="272"/>
+    </picture>
+    <a href="{{ item.link }}" class="product-card__link button button--primary button--large"><span class="button-text">{{ products.button }}</span></a>
+    {% if item.status == "popular" %}
+        <div class="product-card__tag">
+            <svg class="product-card__icon">
+                <use href="img/sprite.svg#trophy-01"></use>
+            </svg>
+        </div>
+    {% endif %}
+    <div class="product-card__details">
+        <h3 class="product-card__title section-title section-title--big">{{ item.title }}</h3>
+        <span class="product-card__subtitle">{{ item.subtitle1 }} • {{ item.subtitle2 }}</span>
+        <span class="product-card__text">€{{ item.price }}</span>
+    </div>
+</article>

@@ -1,0 +1,105 @@
+<section class="catalog">
+    <div class="catalog__wrapper">
+        <aside class="catalog__sidebar">
+            <div class="catalog__sidebar-header">
+                <h2 class="catalog__sidebar-title section-title section-title--medium">{{ catalog.filtertitle }}</h2>
+                <button type="button" class="catalog__sidebar-closer button button--secondary button--icon-small">
+                    <svg class="catalog__sidebar-icon" width="24px" height="24px">
+                        <use href="img/sprite.svg#x-close"></use>
+                    </svg>
+                </button>
+            </div>
+            <form class="catalog__form" action="url" method="post">
+                <button type="reset" class="catalog__sidebar-reset button button--secondary button--medium"><span class="button-text">{{ catalog.buttonreset }}</span>
+                    <svg class="catalog__sidebar-iconx" width="24px" height="24px">
+                        <use href="img/sprite.svg#x-close"></use>
+                    </svg>
+                </button>
+                {% for item in catalog.filters %}
+                    <article class="catalog__filter">
+                        <h3 class="catalog__filter-title section-title section-title--medium">{{ item.title }}</h3>
+                        {% if item.type == "checkbox" or item.type == "radio" %}
+                            <div class="catalog__filters">
+                                {% for option in item.options %}
+                                    {% set optionId = "input_" + item.name + "_" + loop.index %}
+                                    {% if item.name != "style" %}
+                                        <div class="form-item">
+                                            <input class="catalog__form-input checkbox-input" id="{{ optionId }}" type="{{ item.type }}" name="{{ item.name }}" {% if item.defaultAll or (item.default == option) %}checked{% endif %}>
+                                            <label class="catalog__form-label checkbox-label" for="{{ optionId }}">{{ option }}</label>
+                                        </div>
+                                    {% else %}
+                                        <label class="switcher">
+                                            <input type="{{ item.type }}" name="{{ item.name }}" class="switcher__input" {% if item.defaultAll or (item.default == option) %}checked{% endif %}/>
+                                            <span class="switcher__label"></span>
+                                            <span class="switcher__label-show">{{ option }}</span>
+                                        </label>
+                                    {% endif %}
+                                {% endfor %}
+
+                            </div>
+                        {% endif %}
+                    </article>
+                {% endfor %}
+                <div class="catalog__slide-box">
+                    <h2 class="catalog__slider-title section-title section-title--medium">{{ catalog.slidertitle }}</h2>
+                    <input type="range" min="5" max="50" value="25" class="catalog__slider" id="range">
+                </div>
+            </form>
+            <button type="submit" class="catalog__sidebar-button button button--primary button--large"><span class="button-text">{{ catalog.buttonsubmit }}</span></button>
+        </aside>
+        <div class="catalog__box">
+            <div class="catalog__settings">
+                <form action="url" method="post" class="catalog__select-box">
+                    <label for="type" hidden></label>
+                    <div class="select-wrapper">
+                        <select name="type" id="type" class="catalog__select form-select form-select--small" required>
+                            {% for item in catalog.selectors %}
+                                <option value="{{ item.value }}" class="catalog__select-option">{{ item.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="button" class="catalog__filter-button button button--primary button--icon-small">
+                        <svg class="catalog__filter-icon" width="24px" height="24px">
+                            <use href="img/sprite.svg#filter-lines"></use>
+                        </svg>
+                    </button>
+                </form>
+
+                <form action="/switch-view" method="post" class="catalog__view">
+                    <p class="catalog__settings-text">{{ catalog.text }}</p>
+                    <div class="catalog__view-buttons">
+                        <button class="button button--primary button--icon-small">
+                            <svg class="catalog__gallery-icon" width="24px" height="24px">
+                                <use href="img/sprite.svg#grid-01"></use>
+                            </svg>
+                        </button>
+                        <button class="button button--secondary button--icon-small">
+                            <svg class="catalog__view-icon" width="24px" height="24px">
+                                <use href="img/sprite.svg#list"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <ul class="catalog__tags">
+                {% for item in catalog.tags %}
+                    <li class="catalog__tag">
+                        <button class="button button--secondary button--small"><span class="button-text">{{ item }}</span>
+                            <svg class="catalog__tag-icon" width="16px" height="16px">
+                                <use href="img/sprite.svg#x-close"></use>
+                            </svg>
+                        </button>
+                    </li>
+                {% endfor %}
+            </ul>
+            <ul class="catalog__products">
+                {% for item in catalog.products %}
+                    <li class="catalog__product">
+                        {% include 'partials/catalog-card.njk'%}
+                    </li>
+                {% endfor %}
+            </ul>
+            <button type="button" class="catalog__button button button--secondary button--large"><span class="button-text">{{ catalog.buttonload }}</span></button>
+        </div>
+    </div>
+</section>

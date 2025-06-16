@@ -1,0 +1,110 @@
+@use '../global/mixins.scss' as *;
+
+.catalog-card {
+    min-width: 280px;
+    max-width: 408px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+
+    @include desk {
+        width: 293.33px;
+    }
+
+    @include desk-l {
+        width: 325px;
+    }
+
+    &__picture {
+        width: 100%;
+        @include desk {
+            max-height: 260px;
+        }
+    }
+
+    &__image {
+        border-radius: 20px;
+        background-color: #F4F7FA;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__details {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    &__subtitle {
+        font-family: var(--main-font);
+        color: var(--gray-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-bottom: 12px;
+    }
+
+    &__text {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        align-self: center;
+    }
+
+    &__buttons {
+        grid-column-start: 2;
+        justify-self: end;
+    }
+
+    &__tag {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        border-radius: 100px;
+        padding: 8px 16px;
+        z-index: 2;
+        background-color: var(--primary-button-color);
+    }
+
+    &__tag--mark {
+        position: absolute; 
+        background-color: #007772;
+    }
+
+    &__tag--disabled {
+        position: absolute;
+        color: var(--gray1-color);
+        background-color: var(--base-color);
+    }
+
+    &__status {
+        font-family: var(--main-font);
+        color: #F5F8FB;
+        font-weight: var(--weight-5);
+        font-size: var(--body-text2);
+        line-height: var(--line-height-l2);
+    }
+
+    &__status--disabled {
+        color: var(--gray-color);
+    }
+
+    &__bagicon {
+        fill: var(--base-color);
+    }
+}
+
+.catalog-card--disabled {
+    opacity: 0.5;
+}

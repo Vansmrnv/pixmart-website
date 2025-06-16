@@ -1,0 +1,85 @@
+@use '../global/mixins.scss' as *;
+
+.plan-card {
+    padding: 32px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 4px 40px #1D395F14;
+
+    &__tag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 20px;
+        padding: 7px 24px;
+        background-color: var(--primary-button-color);
+        color: var(--base-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__name {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        margin-bottom: 32px;
+        margin-top: 16px;
+    }
+
+    &__text {
+        font-family: var(--main-font);
+        color: var(--primary-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        border-top: 1px solid #1F324745;
+        padding: 40px 0;
+    }
+
+    &__icon {
+        align-self: center;
+        fill: #0265DC;
+    }
+
+    &__item {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__subtitle {
+        font-family: var(--main-font);
+        color: var(--primary-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+    }
+}
+
+.plan-card--highlight {
+    outline: 2px solid var(--primary-button-color);
+    transform: translateY(-32px);
+    margin-top: 30px;
+    box-shadow: none;
+
+    @include desk {
+        padding: 56px 32px 32px 32px;
+        margin-top: 0px;
+    }
+
+    @include desk-l {
+        padding: 32px;
+    }
+
+}

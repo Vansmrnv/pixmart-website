@@ -1,0 +1,257 @@
+@use '../global/mixins.scss' as *;
+
+.catalog {
+    padding: 0 16px;
+    padding-top: 0;
+
+    @include desk {
+        padding: 0 40px;
+    }
+
+    @include desk-l {
+        padding: 0 80px;
+    }
+
+    &__wrapper {
+        max-width: 1280px;
+        margin-inline: auto;
+
+        @include desk-l {
+            display: flex;
+            gap: 24px;
+            justify-content: space-between;
+        }
+    }
+
+    &__sidebar {
+        width: 100%;
+        position: absolute;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #F4F7FA;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        padding: 34px 16px;
+        z-index: 1001;
+
+        @include desk-l {
+            position: relative;
+            width: auto;
+            height: auto;
+            transform: translateX(0%);
+            background-color: var(--base-color);
+            padding: 0;
+            z-index: auto;
+            align-items: end;
+        }
+    }
+
+    &__sidebar--active {
+        transform: translateX(0%);
+    }
+
+    &__sidebar-closer {
+        margin-left: auto;
+    }
+
+    &__sidebar-reset {
+        display: flex;
+        flex-direction: row-reverse;
+
+        @include desk-l {
+            position: relative;
+            width: 100%;
+            order: 1;
+        }
+    }
+
+    &__sidebar-iconx {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__sidebar-header {
+        display: flex;
+        box-shadow: 0 4px 40px #1D395F05;
+        position: fixed;
+        top: 0;
+        background-color: #FFFFFF;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 24px 16px;
+        z-index: 1001;
+
+        @include desk-l {
+            position: absolute;
+            visibility: hidden;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 88px;
+        overflow-y: scroll;
+
+        @include desk-l {
+            margin-top: 0;
+            overflow: visible;
+        }
+    }
+
+    &__filter {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__filter-title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__filters {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__slider {
+        margin-top: 24px;
+    }
+
+    &__sidebar-button {
+        margin-top: 16px;
+        margin-bottom: 16px;
+
+        @include desk-l {
+            position: absolute;
+            visibility: hidden;
+        }
+    }
+
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include desk {
+            gap: 0;
+        }
+    }
+
+    &__settings {
+        display: block;
+
+        @include desk {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__filter-button {
+        @include desk-l {
+            position: absolute;
+            visibility: hidden;
+        }
+    }
+
+    &__filter-icon {
+        fill: var(--base-color);
+    }
+
+    &__select-box {
+        display: flex;
+        gap: 8px;
+
+        @include desk {
+            align-items: center;
+        }
+    }
+
+    &__view {
+        display: flex;
+        gap: 24px;
+        margin-top: 24px;
+        justify-content: space-between;
+
+        @include desk {
+            margin-top: 0;
+            align-self: center;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        gap: 8px;
+        list-style: none;
+        margin-bottom: 30px;
+
+        @include desk {
+            margin-top: 24px;
+            margin-bottom: auto;
+        }
+    }
+
+    &__tag-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    &__settings-text {
+        font-family: var(--main-font);
+        color: var(--primary-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+        align-self: center;
+    }
+
+
+    &__gallery-icon {
+        fill: var(--base-color);
+    }
+
+    &__products {
+        display: grid;
+        grid-template-columns: auto;
+        list-style: none;
+        gap: 32px;
+        justify-content: center;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @include desk {
+            gap: 32px;
+            margin-top: 48px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__button {
+        margin-top: 28px;
+        margin-bottom: 4px;
+
+        @include tablet {
+            width: fit-content;
+            align-self: center;
+        }
+
+        @include desk {
+            margin-top: 52px;
+        }
+    }
+}

@@ -1,0 +1,221 @@
+@use '../global/mixins.scss' as *;
+
+.footer {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 1280px;
+        margin-inline: auto;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px 16px 72px;
+
+        @include desk {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 64px 40px 72px;
+        }
+
+        @include desk-l {
+            padding: 64px 0px 72px;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include desk {
+            max-width: 320px;
+        }
+    }
+
+    &__text {
+        font-family: var(--main-font);
+        color: var(--primary-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        margin-top: 16px;
+
+        @include tablet {
+            flex-direction: row;
+            gap: 16px;
+        }
+
+        @include desk {
+            flex-direction: row;
+            gap: 64px;
+            margin-top: auto;
+        }
+    }
+
+    &__nav-title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+    }
+
+    &__nav-title:not(:first-child) {
+        margin-top: 8px;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        list-style: none;
+        margin-top: 16px;
+    }
+
+    &__link {
+        font-family: var(--main-font);
+        color: var(--gray-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+    }
+
+
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 16px 64px;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include desk {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 40px 135px;
+        }
+
+        @include desk-l {
+            padding: 0 0px 135px;
+        }
+    }
+
+    &__socials-box {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include desk {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__icon {
+        height: 24px;
+        width: 24px;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 8px;
+        list-style: none;
+
+        @include tablet {
+            align-items: flex-end;
+        }
+    }
+
+    &__socials-title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        max-width: 216px;
+        margin-top: 8px;
+
+        @include desk {
+            margin-top: 0px;
+            align-self: center;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+
+        @include desk {
+            flex-direction: row;
+        }
+    }
+
+    &__form-tools {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__form-label {
+        visibility: hidden;
+        position: absolute;
+        word-break: break-all;
+    }
+
+    &__bottom {
+        width: 100%;
+        position: relative;
+        background-color: var(--primary-color);
+        padding: 24px 16px;
+    }
+
+    &__bottom-wrapper {
+        max-width: 1280px;
+        margin-inline: auto;
+
+        @include desk {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 8px;
+        list-style: none;
+    }
+
+    &__bottom-link {
+        font-family: var(--main-font);
+        color: #E7EEF7A8;
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+    }
+
+    &__bottom-separator {
+        margin-left: 8px;
+    }
+
+    &__bottom-text {
+        font-family: var(--main-font);
+        color: #E7EEF7A8;
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+        margin-top: 32px;
+
+        @include desk {
+            margin-top: auto;
+        }
+    }
+}

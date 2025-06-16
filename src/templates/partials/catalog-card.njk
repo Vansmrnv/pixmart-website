@@ -1,0 +1,41 @@
+<article class="catalog-card{% if item.status == 'SOLD OUT' %} catalog-card--disabled{% endif %}">
+    <picture class="catalog-card__picture">
+        <source srcset="{{ item.image1 }}, {{ item.image2 }} 2x"/>
+        <img src="{{ item.image1 }}" alt="image" class="catalog-card__image" width="408" height="260"/>
+    </picture>
+    {% if item.status == "POPULAR" %}
+        <div class="catalog-card__tag">
+            <span class="catalog-card__status">{{ item.status }}</span>
+        </div>
+    {% endif %}
+    {% if item.status == "NEW" %}
+        <div class="catalog-card__tag catalog-card__tag--mark">
+            <span class="catalog-card__status">{{ item.status }}</span>
+        </div>
+    {% endif %}
+    {% if item.status == "SOLD OUT" %}
+        <div class="catalog-card__tag  catalog-card__tag--disabled">
+            <span class="catalog-card__status catalog-card__status--disabled">{{ item.status }}</span>
+        </div>
+    {% endif %}
+    <div class="catalog-card__details">
+        <h2 class="catalog-card__title section-title section-title--small">{{ item.title }}</h2>
+        <span class="catalog-card__subtitle">{{ item.subtitle1 }} • {{ item.subtitle2 }}</span>
+        <span class="catalog-card__text section-title section-title--small">€{{ item.price }}</span>
+
+        <div class="catalog-card__buttons">
+            {% if item.status != "SOLD OUT" %}
+                <button type="button" class="button button--secondary button--icon-small">
+                    <svg class="catalog-card__icon" width="24px" height="24px">
+                        <use href="img/sprite.svg#heart"></use>
+                    </svg>
+                </button>
+                <button type="button" class="button button--primary button--icon-small">
+                    <svg class="catalog-card__bagicon" width="24px" height="24px">
+                        <use href="img/sprite.svg#shopping-bag-02"></use>
+                    </svg>
+                </button>
+            {% endif %}
+        </div>
+    </div>
+</article>

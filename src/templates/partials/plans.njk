@@ -1,0 +1,11 @@
+<section class="plans">
+    <div class="plans__wrapper">
+        <span class= "plans__id">{{ plans.id }}</span>
+        <h2 class= "plans__title section-title section-title--great">{{ plans.title }}</h2>
+        <ul class="plans__list">
+            {% for item in plans.cards %}
+                {% include 'partials/plan-card.njk' %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>

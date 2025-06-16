@@ -1,0 +1,58 @@
+@use '../global/mixins.scss' as *;
+
+.plans {
+
+    padding: 64px 16px 0px;
+
+    @include desk {
+        padding: 120px 40px 0px;
+    }
+
+    @include desk-l {
+        padding: 120px 80px 0px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: 1280px;
+        margin-inline: auto;
+    }
+
+    &__id {
+        font-family: var(--main-font);
+        color: #0F73F6;
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+        text-align: center;
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        text-align: center;
+        margin-bottom: 48px;
+
+        @include desk {
+            margin-bottom: 64px;
+        }
+
+        @include desk-l {
+            margin-bottom: 64px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: end;
+
+        @include desk {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}

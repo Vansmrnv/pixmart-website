@@ -1,0 +1,55 @@
+@use '../global/mixins.scss' as *;
+
+.faqs-card {
+
+    padding: 24px;
+    border-radius: 10px;
+    background-color: var(--base-color);
+    // max-width: 412px;
+    box-shadow: 0 4px 40px #1D395F14;
+
+    @include desk-l {
+        max-width: 620px;
+    }
+
+    &__question {
+        color: var(--primary-color);
+        font-weight: var(--weight-7);
+        display: grid;
+        grid-template-columns: 1fr 32px;
+        gap: 8px;
+    }
+
+    &__box {
+        display: grid;
+        border: 2px solid #1D36532B;
+        border-radius: 8px;
+        min-height: 32px;
+        place-content: center;
+        align-self: flex-start;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    &[open] use {
+        transform: rotate(180deg);
+        transform-origin: center;
+    }
+
+    &[open] {
+        outline: 2px solid var(--primary-button-color);
+        width: 100%;
+    }
+
+    &__answer {
+        font-family: var(--main-font);
+        color: var(--primary-color);
+        font-size: var(--body-text2);
+        font-weight: var(--weight-4);
+        line-height: var(--line-height-l2);
+        margin-top: 16px;
+    }
+}
